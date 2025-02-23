@@ -5,14 +5,14 @@ FROM node:20.17-slim AS builder
 WORKDIR /
 
 # Copier les fichiers du projet
-COPY ./package*.json ./
-COPY ./tsconfig.json ./
-COPY ./tsconfig.app.json ./
-COPY ./tsconfig.node.json ./
-COPY ./vite.config.ts ./
-COPY ./src ./src
-COPY ./public ./public
-COPY ./index.html ./index.html
+COPY ./app/package*.json ./
+COPY ./app/tsconfig.json ./
+COPY ./app/tsconfig.app.json ./
+COPY ./app/tsconfig.node.json ./
+COPY ./app/vite.config.ts ./
+COPY ./app/src ./src
+COPY ./app/public ./public
+COPY ./app/index.html ./index.html
 
 # Installer les dépendances
 RUN npm install
