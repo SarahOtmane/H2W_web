@@ -1,11 +1,13 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-import tailwindcss from '@tailwindcss/vite'
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
 
-// https://vite.dev/config/
 export default defineConfig({
-  plugins: [
-    react(),
-    tailwindcss(),
-],
-})
+  plugins: [react()],
+  server: {
+    host: "0.0.0.0", // Permet d'accéder au serveur depuis l'extérieur du conteneur
+    port: 5173, // Assure que Vite écoute sur ce port
+    watch: {
+      usePolling: true, // Active la détection des changements dans Docker
+    },
+  },
+});
