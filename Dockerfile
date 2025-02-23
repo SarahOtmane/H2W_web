@@ -10,7 +10,7 @@ COPY ./app/tsconfig.json ./
 COPY ./app/tsconfig.app.json ./
 COPY ./app/tsconfig.node.json ./
 COPY ./app/vite.config.ts ./
-COPY ./app/tailwind.config.js ./
+COPY ./app/tailwind.config.ts ./
 
 # Installer les dépendances
 RUN npm install
