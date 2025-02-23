@@ -1,27 +1,44 @@
 # Étape 1 : Construction
-FROM node:20.17-slim AS builder
+FROM node:20.17-slim AS dev
 
 # Définir le répertoire de travail
-WORKDIR /
+WORKDIR /app
 
-# Copier les fichiers du projet
+# Copier les fichiers nécessaires pour installer les dépendances
 COPY ./app/package*.json ./
 COPY ./app/tsconfig.json ./
 COPY ./app/tsconfig.app.json ./
 COPY ./app/tsconfig.node.json ./
 COPY ./app/vite.config.ts ./
 COPY ./app/tailwind.config.js ./
-COPY ./app/src ./src
-COPY ./app/public ./public
-COPY ./app/index.html ./index.html
 
 # Installer les dépendances
 RUN npm install
 
-# Construire le projet pour la production
+# Copier le reste du projet
+COPY ./app ./
+
+# Activer le hot reload en Docker
+ENV CHOKIDAR_USEPOLLING=true
+ENV HOST=0.0.0.0
+
+# Exécuter Vite en mode développement
+CMD ["npm", "run", "dev"]
+
+
+
+
+
+# Étape 2 : Build pour la production
+FROM node:20.17-slim AS builder
+WORKDIR /app
+COPY --from=dev /app /app
 RUN npm run build
 
-# Étape 2 : Serveur léger pour la production
+
+
+
+# Étape 2 : Serveur Nginx pour la production
 FROM nginx:alpine
 
 # Copier les fichiers construits dans le dossier Nginx
