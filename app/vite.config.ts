@@ -10,4 +10,7 @@ export default defineConfig({
       usePolling: true, // Active la détection des changements dans Docker
     },
   },
+  css: {
+    postcss: "./postcss.config.mjs",
+  },
 });
