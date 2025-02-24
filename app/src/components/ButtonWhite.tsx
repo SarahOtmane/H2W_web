@@ -1,4 +1,3 @@
-import '../App.css';
 
 interface ButtonProps {
     text: string;
