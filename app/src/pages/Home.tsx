@@ -1,11 +1,15 @@
-import Button from "../components/Button";
+import ButtonBlack from "../components/ButtonBlack";
+import icon from "../assets/react.svg"
 
 
 const Home: React.FC = () => {
     return (
         <div>
             <h1>Home</h1>
-            <Button />
+            <ButtonBlack
+                text='Click me'
+                icon={icon}
+            />
         </div>
     );
 }
