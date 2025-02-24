@@ -7,10 +7,16 @@
   --color-gray-border: #dbdeef;
   --color-gray-dark: #c9c9c9;
 
-  --font-Jakarta-bold: 'Plus Jakarta Sans Bold', sans-serif;
-  --font-Jakarta-medium: 'Plus Jakarta Sans Medium', sans-serif;
-  --font-Jakarta-semi-bold: 'Plus Jakarta Sans SemiBold', sans-serif;
   --font-Jakarta-extra-bold: 'Plus Jakarta Sans ExtraBold', sans-serif;
+  --font-Jakarta-bold: 'Plus Jakarta Sans Bold', sans-serif;
+  --font-Jakarta-semi-bold: 'Plus Jakarta Sans SemiBold', sans-serif;
+  --font-Jakarta-medium: 'Plus Jakarta Sans Medium', sans-serif;
+  
+
+  --text-page-title: 3rem;
+  --text-section-title: 2.25rem;
+  --text-subtitle: 1.25rem;
+  --text-body: 1rem;
 } 
 
 
