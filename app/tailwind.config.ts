@@ -4,10 +4,12 @@ export default {
     theme: {
       extend: {
         colors: {
+          black: "#000",
+          white: "#fff",
           lilas: "#B6A7FC",
           orange: "#FF9B3E",
           "gray-background": "#F6F6F6",
-          gray: "#DBDEEF",
+          "gray-border": "#DBDEEF",
           "gray-dark": "#C9C9C9",
         },
       },
