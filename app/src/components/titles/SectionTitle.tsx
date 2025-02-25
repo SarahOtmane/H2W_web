@@ -7,7 +7,7 @@ interface SectionTitleProps {
 
 const SectionTitle: React.FC<SectionTitleProps> = ({text, style}) => {
     return (
-        <h2 className={` ${style? style : ''}`}>{text}</h2>
+        <h2 className={`font-Jakarta-bold text-lg sm:text-xl md:text-2xl lg:text-section-title ${style? style : ''}`}>{text}</h2>
     );
 };
 
