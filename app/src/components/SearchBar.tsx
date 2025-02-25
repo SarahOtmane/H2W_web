@@ -1,4 +1,4 @@
-import searchIcon from '../assets/images/search.svg';
+import Icon from "../Icon";
 
 interface SearchBarProps {
     metier: string;
@@ -39,7 +39,7 @@ const SearchBar: React.FC<SearchBarProps> = ({ metier, localisation, setLocalisa
 
             <button className="flex items-center justify-center bg-black text-white font-Jakarta-semi-bold px-5 py-3 rounded-full transition duration-300 w-full sm:w-auto self-end sm:self-center">
                 <p className="mr-2">Rechercher</p>
-                <img src={searchIcon} alt="search icon" className="w-5 h-5" />
+                <Icon name='research' />
             </button>
 
         </div>
