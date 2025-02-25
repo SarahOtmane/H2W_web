@@ -38,7 +38,7 @@ const icons = {
 
     information: (
         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M10.0006 1.66671C5.41732 1.66671 1.66732 5.41671 1.66732 10C1.66732 14.5834 5.41732 18.3334 10.0007 18.3334C14.584 18.3334 18.334 14.5834 18.334 10C18.334 5.41671 14.584 1.66671 10.0006 1.66671Z" stroke="#9FA6B2" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M10.0006 1.66671C5.41732 1.66671 1.66732 5.41671 1.66732 10C1.66732 14.5834 5.41732 18.3334 10.0007 18.3334C14.584 18.3334 18.334 14.5834 18.334 10C18.334 5.41671 14.584 1.66671 10.0006 1.66671Z" stroke="#9FA6B2" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round"/>
             <path d="M10 13.3334L10 9.16671" stroke="#9FA6B2" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round"/>
             <path d="M10.0039 6.66663L9.99642 6.66663" stroke="#9FA6B2" strokeWidth="1.66667" strokeLinecap="round" strokeLinejoin="round"/>
         </svg>
