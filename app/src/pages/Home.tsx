@@ -1,14 +1,17 @@
-import ButtonBlack from "../components/ButtonBlack";
-import icon from "../assets/react.svg"
+import { useState } from "react";
 
 import '../App.css';
-import ButtonWhite from "../components/ButtonWhite";
-import SelectEspace from "../components/SelectEspace";
-import { useState } from "react";
+import icon from "../assets/react.svg"
+
+import ButtonBlack from "../components/buttons/ButtonBlack";
+import ButtonWhite from "../components/buttons/ButtonWhite";
+import SelectEspace from "../components/fields/SelectEspace";
 import PageTitle from "../components/titles/PageTitle";
 import SectionTitle from "../components/titles/SectionTitle";
 import Subtitle from "../components/titles/Subtitle";
-import TextUnderTitle from "../components/titles/TextUnderTitle";
+import Pg from "../components/Pg";
+import InputLabel from "../components/fields/InputLabel";
+import SearchBar from "../components/SearchBar";
 
 
 const Home: React.FC = () => {
@@ -29,7 +32,13 @@ const Home: React.FC = () => {
             <PageTitle text='Page Title'/>
             <SectionTitle text='Section Title'/>
             <Subtitle text='Subtitle'/>
-            <TextUnderTitle text='Text Under Title' />
+            <Pg text='Text' />
+
+            <div className="w-1/5">
+                <InputLabel label='Label' value='' placeholder="test" setValue={() => {}}/>
+            </div>
+
+            <SearchBar metier='' localisation='' setLocalisation={() => {}} setMetier={() => {}}/>
         </div>
     );
 }
