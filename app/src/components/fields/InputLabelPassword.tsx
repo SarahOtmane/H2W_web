@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import Icon from '../../Icon';
+import Icon from '../../Icon'
 
 interface InputLabelPasswordProps {
     label: string;
@@ -17,7 +17,7 @@ const InputLabelPassword: React.FC<InputLabelPasswordProps> = ({ label, onChange
             <label className="font-Jakarta-medium text-sm sm:text-base md:text-lg lg:text-body ml-1">{label}</label>
             <div className="relative w-full">
                 <input
-                    id="hs-toggle-password"
+                    id={`hs-toggle-password`}
                     type={showPassword ? "text" : "password"}
                     defaultValue={value}
                     placeholder={placeholder}
