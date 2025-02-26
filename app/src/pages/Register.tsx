@@ -7,10 +7,14 @@ import RegisterLeftSection from "../components/forms/RegisterLeftSection";
 import RegisterCardSection from "../components/cards/RegisterCardSection";
 import ButtonWhite from "../components/buttons/ButtonWhite";
 import Icon from "../Icon";
+import RegisterEtape from "../components/RegisterEtape";
+import RegisterCompany from "../components/forms/RegisterCompany";
+import RegisterSchool from "../components/forms/RegisterSchool";
 
 
 const Register: React.FC = () => {
-    const [selected, setSelected] = useState('etudiant');
+    const [selected, setSelected] = useState<string>('etudiant');
+    const [registerEtape, setRegisterEtape] = useState<number>(1);
     const [information, setInformation] = useState({
         prenom: '',
         nom: '',
@@ -37,6 +41,7 @@ const Register: React.FC = () => {
                 <Pg text='Trouvez le professionnel parfait pour répondre à vos besoins quotidiens.'/>
                 <RegisterCardSection selected={selected} setSelected={setSelected} />
                 {selected === 'etudiant' &&
+                    <>
                     <div className="w-full flex flex-col items-center mt-8">
                         <ButtonWhite text="Continuer avec Google" icon={<Icon name="google" />} style="w-full py-5 mt-4" />
                         <div className="flex flex-row items-center w-full px-2 mt-8">
@@ -45,8 +50,18 @@ const Register: React.FC = () => {
                             <div className="w-1/2 border-t-1 border-gray-dark"></div>
                         </div>
                     </div>
+                    <RegisterStudent information={information} setInformation={setInformation} />
+                    </>
                 }
-                <RegisterStudent information={information} setInformation={setInformation} />
+                {!(selected === 'etudiant') &&
+                    <RegisterEtape />
+                }
+                {selected === 'entreprise' &&
+                    <RegisterCompany />
+                }
+                {selected === 'ecole' &&
+                    <RegisterSchool />
+                }
             </div>
         </main>
     )
