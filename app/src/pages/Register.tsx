@@ -8,8 +8,7 @@ import RegisterCardSection from "../components/cards/RegisterCardSection";
 import ButtonWhite from "../components/buttons/ButtonWhite";
 import Icon from "../Icon";
 import RegisterEtape from "../components/RegisterEtape";
-import RegisterCompany from "../components/forms/RegisterCompany";
-import RegisterSchool from "../components/forms/RegisterSchool";
+import RegisterSchoolCompany from "../components/forms/RegisterSchoolCompany";
 
 
 const Register: React.FC = () => {
@@ -54,13 +53,10 @@ const Register: React.FC = () => {
                     </>
                 }
                 {!(selected === 'etudiant') &&
-                    <RegisterEtape />
-                }
-                {selected === 'entreprise' &&
-                    <RegisterCompany />
-                }
-                {selected === 'ecole' &&
-                    <RegisterSchool />
+                    <>
+                    <RegisterEtape text={selected} registerEtape={registerEtape} />
+                    <RegisterSchoolCompany select={selected} information={information} setInformation={setInformation} setRegisterEtape={setRegisterEtape} registerEtape={registerEtape} />
+                    </>
                 }
             </div>
         </main>
