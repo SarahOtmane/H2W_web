@@ -1,3 +1,4 @@
+import Subtitle from "../titles/Subtitle";
 import RegisterEtape1 from "./RegisterEtape1";
 import RegisterEtape2 from "./RegisterEtape2";
 
@@ -36,6 +37,12 @@ const RegisterSchoolCompany: React.FC<RegisterSchoolCompanyProps> = ({select, in
 
             {  registerEtape === 2 &&
                 <RegisterEtape2  information={information} setInformation={setInformation} setRegisterEtape={setRegisterEtape} />
+            }
+            {  registerEtape === 3 &&
+                <div className="flex flex-col mt-14 text-center w-full px-28">
+                    <Subtitle text="Confirmez votre adresse email" />
+                    <p className="mt-4">Nous avons envoyé un email de confirmation à [{information.email}]. <br></br>Cliquez sur le lien dans l’email pour activer votre compte et commencer votre recherche d’alternance.</p>
+                </div>
             }
         </>
     )
