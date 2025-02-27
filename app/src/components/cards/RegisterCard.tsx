@@ -7,12 +7,17 @@ interface RegisterCardProps {
     description: string;
     selected: string;
     setSelected: React.Dispatch<React.SetStateAction<string>>;
+    setRegisterEtape: React.Dispatch<React.SetStateAction<number>>;
     style?: string;
     select: string;
 }
 
-const RegisterCard: React.FC<RegisterCardProps> = ({icon, titre, description, style, selected, setSelected, select}) => {
+const RegisterCard: React.FC<RegisterCardProps> = ({icon, titre, description, style, selected, setSelected, select, setRegisterEtape}) => {
     const registerSelect : boolean = (selected === select ? true : false);
+    const handleChange = () => {
+        setSelected(select);
+        setRegisterEtape(1);
+    }
     return (
         <button 
             className={`
@@ -20,7 +25,7 @@ const RegisterCard: React.FC<RegisterCardProps> = ({icon, titre, description, st
                 ${registerSelect ? 'border-lilas border-2 bg-lilas-light' : 'bg-white border-black'}
                 ${style? style : ''}
             `}
-            onClick={() => setSelected(select)}
+            onClick={() => handleChange()}
         >
             <article className="flex flex-row items-center">
                 {icon}
