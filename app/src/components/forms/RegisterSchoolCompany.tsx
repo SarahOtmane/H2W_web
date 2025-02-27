@@ -1,4 +1,5 @@
 import RegisterEtape1 from "./RegisterEtape1";
+import RegisterEtape2 from "./RegisterEtape2";
 
 interface Information {
     prenom: string;
@@ -31,6 +32,10 @@ const RegisterSchoolCompany: React.FC<RegisterSchoolCompanyProps> = ({select, in
         <>
             {  registerEtape === 1 &&
                 <RegisterEtape1 select={select} information={information} setInformation={setInformation} setRegisterEtape={setRegisterEtape} />
+            }
+
+            {  registerEtape === 2 &&
+                <RegisterEtape2  information={information} setInformation={setInformation} setRegisterEtape={setRegisterEtape} />
             }
         </>
     )
