@@ -4,10 +4,11 @@ import Icon from "../../Icon";
 interface RegisterCardSectionProps {
     selected: string;
     setSelected: React.Dispatch<React.SetStateAction<string>>;
+    setRegisterEtape: React.Dispatch<React.SetStateAction<number>>;
 }
 
 
-const RegisterCardSection: React.FC<RegisterCardSectionProps> = ({selected, setSelected}) => {
+const RegisterCardSection: React.FC<RegisterCardSectionProps> = ({selected, setSelected, setRegisterEtape}) => {
     return(
         <div className="flex flex-row justify-center items-stretch mt-8 w-full h-full">
             <RegisterCard 
@@ -17,6 +18,7 @@ const RegisterCardSection: React.FC<RegisterCardSectionProps> = ({selected, setS
                 style="mr-4"
                 selected={selected}
                 setSelected= {setSelected}
+                setRegisterEtape={setRegisterEtape}
                 select='etudiant'
             />
             <RegisterCard
@@ -26,6 +28,7 @@ const RegisterCardSection: React.FC<RegisterCardSectionProps> = ({selected, setS
                 style="mr-4"
                 selected={selected}
                 setSelected= {setSelected}
+                setRegisterEtape={setRegisterEtape}
                 select='entreprise'
             />
             <RegisterCard
@@ -34,6 +37,7 @@ const RegisterCardSection: React.FC<RegisterCardSectionProps> = ({selected, setS
                 description="Créez un compte école et accompagnez vos étudiants dans la recherche d’alternance."
                 selected={selected}
                 setSelected= {setSelected}
+                setRegisterEtape={setRegisterEtape}
                 select='ecole'
             />
         </div>
