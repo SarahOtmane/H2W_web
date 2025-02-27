@@ -33,7 +33,7 @@ const Register: React.FC = () => {
 
     return(
         <main className="flex flex-row justify-center bg-gray-background w-full px-34 pt-50 mb-20">
-            <RegisterLeftSection />
+            <RegisterLeftSection etape={registerEtape} />
 
             <div className="flex flex-col h-max items-center w-3/5 bg-white px-10 py-12 rounded-[2rem] ml-[-2rem] z-30">
                 <PageTitle text='Créer un compte'/>
