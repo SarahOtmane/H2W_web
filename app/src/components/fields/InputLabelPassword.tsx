@@ -8,9 +8,10 @@ interface InputLabelPasswordProps {
     onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
     style?: string;
     name: string;
+    required?: boolean;
 }
 
-const InputLabelPassword: React.FC<InputLabelPasswordProps> = ({ label, onChange, value, placeholder, style, name }) => {
+const InputLabelPassword: React.FC<InputLabelPasswordProps> = ({ label, onChange, value, placeholder, style, name, required }) => {
     const [showPassword, setShowPassword] = useState(false);
 
     return (
@@ -24,6 +25,7 @@ const InputLabelPassword: React.FC<InputLabelPasswordProps> = ({ label, onChange
                     placeholder={placeholder}
                     onChange={onChange}
                     name={name}
+                    required={required}
                     className="font-Jakarta-regular w-full italic text-sm sm:text-base md:text-lg lg:text-body text-input-text bg-gray-background py-4 pl-4 mt-2 rounded-2xl border-1 border-gray-background focus:outline-lilas"
                 />
                 <button
