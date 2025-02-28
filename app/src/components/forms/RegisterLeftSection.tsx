@@ -11,16 +11,16 @@ interface RegisterLeftSectionProps {
 const RegisterLeftSection: React.FC<RegisterLeftSectionProps> = ({etape}) => {
     return(
         <div 
-            className={`w-2/5 rounded-l-[2rem] bg-cover bg-no-repeat relative flex flex-col justify-center items-center pb-40`}
+            className={`w-2/5 rounded-l-[2rem] bg-cover bg-no-repeat relative flex flex-col justify-center items-center pb-50`}
             style={{backgroundImage: etape===3 ? `url(${back2})` : `url(${back})`}}
         >
             <div className="w-9/12 m-auto mt-14">
                 <SectionTitle text='Étudiants, entreprises, écoles :' style="text-white text-center font-Jakarta-extra-bold" /> 
                 <SectionTitle text='connectons les talents de demain !' style="text-center font-Jakarta-extra-bold" />
             </div>
-            <div className="relative flex flex-col items-end mt-10 mr-10">
+            <div className={ `relative flex flex-col items-end mt-10 mr-10 ${etape===3 ? "mr-40" : "mt-10 mr-10"} `}>
                 {etape===3 ? 
-                    <svg className="absolute -top-2 right-30" width="27" height="31" viewBox="0 0 27 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg className="absolute -top-4 right-1" width="27" height="31" viewBox="0 0 27 31" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M26.2392 3.14269C26.5481 1.41062 24.6312 0.152301 23.1649 1.12466L1.03112 15.8024C-0.165131 16.5957 -0.161019 18.3535 1.03892 19.1412L18.5088 30.609C19.7087 31.3966 21.3232 30.7013 21.5753 29.2882L26.2392 3.14269Z" fill="white"/>
                         <path d="M26.2392 3.14269C26.5481 1.41062 24.6312 0.152301 23.1649 1.12466L1.03112 15.8024C-0.165131 16.5957 -0.161019 18.3535 1.03892 19.1412L18.5088 30.609C19.7087 31.3966 21.3232 30.7013 21.5753 29.2882L26.2392 3.14269Z" fill="white"/>
                         <path d="M26.2392 3.14269C26.5481 1.41062 24.6312 0.152301 23.1649 1.12466L1.03112 15.8024C-0.165131 16.5957 -0.161019 18.3535 1.03892 19.1412L18.5088 30.609C19.7087 31.3966 21.3232 30.7013 21.5753 29.2882L26.2392 3.14269Z" fill="white"/>
