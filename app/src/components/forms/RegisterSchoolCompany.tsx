@@ -28,7 +28,6 @@ interface RegisterSchoolCompanyProps {
 }
 
 const RegisterSchoolCompany: React.FC<RegisterSchoolCompanyProps> = ({select, information, setInformation, setRegisterEtape, registerEtape}) => {
-    console.log(registerEtape)
     return(
         <>
             {  registerEtape === 1 &&
@@ -41,7 +40,7 @@ const RegisterSchoolCompany: React.FC<RegisterSchoolCompanyProps> = ({select, in
             {  registerEtape === 3 &&
                 <div className="flex flex-col mt-14 text-center w-full px-28">
                     <Subtitle text="Confirmez votre adresse email" />
-                    <p className="mt-4">Nous avons envoyé un email de confirmation à [{information.email}]. <br></br>Cliquez sur le lien dans l’email pour activer votre compte et commencer votre recherche d’alternance.</p>
+                    <p className="mt-4">Nous avons envoyé un email de confirmation à <span className="font-Jakarta-bold">[{information.email}]</span>. <br></br>Cliquez sur le lien dans l’email pour activer votre compte et commencer votre recherche d’alternance.</p>
                 </div>
             }
         </>
