@@ -2,7 +2,7 @@
 interface ButtonProps {
     text: string;
     icon?: string;
-    handleClick?: () => void;
+    handleClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
     style?: string;
 }
 
