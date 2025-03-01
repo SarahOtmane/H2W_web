@@ -64,8 +64,16 @@ const icons = {
             <path d="M10.3866 8C10.3866 9.32 9.31995 10.3867 7.99995 10.3867C6.67995 10.3867 5.61328 9.32 5.61328 8C5.61328 6.68 6.67995 5.61333 7.99995 5.61333C9.31995 5.61333 10.3866 6.68 10.3866 8Z" stroke="#9FA6B2" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
             <path d="M7.9999 13.5133C10.3532 13.5133 12.5466 12.1267 14.0732 9.72667C14.6732 8.78667 14.6732 7.20667 14.0732 6.26667C12.5466 3.86667 10.3532 2.48 7.9999 2.48C5.64656 2.48 3.45323 3.86667 1.92656 6.26667C1.32656 7.20667 1.32656 8.78667 1.92656 9.72667C3.45323 12.1267 5.64656 13.5133 7.9999 13.5133Z" stroke="#9FA6B2" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
         </svg>
+    ),
 
-    )
+    attention: (
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 9V14" stroke="#C30000" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+            <path d="M11.9994 21.41H5.93944C2.46944 21.41 1.01944 18.93 2.69944 15.9L5.81944 10.28L8.75944 5.00003C10.5394 1.79003 13.4594 1.79003 15.2394 5.00003L18.1794 10.29L21.2994 15.91C22.9794 18.94 21.5194 21.42 18.0594 21.42H11.9994V21.41Z" stroke="#C30000" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+            <path d="M11.9941 17H12.0031" stroke="#C30000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+    ),
+
 };
 
 type IconProps = {
