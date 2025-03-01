@@ -1,38 +1,16 @@
 import ButtonBlack from "../buttons/ButtonBlack";
 import InputLabel from "../fields/InputLabel";
 
-interface Information {
-    prenom: string;
-    nom: string;
-    email: string;
-    numero: string;
-    motDePasse: string;
-    confirmationMotDePasse: string;
-    nomEntreprise: string;
-    secteurActivite: string;
-    adresse: string;
-    complementAdresse: string;
-    ville: string;
-    codePostal: string;
-    siret: string;
-    nomEcole: string;
-}
+import { Information } from "../../controllers/Register.controller";
 
 interface RegisterEtape1Props {
     select: string;
     information: Information;
-    setInformation: React.Dispatch<React.SetStateAction<Information>>;
     setRegisterEtape: React.Dispatch<React.SetStateAction<number>>;
+    handleChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-const RegisterEtape1: React.FC<RegisterEtape1Props> = ({select, information, setInformation, setRegisterEtape}) => {
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        const { name, value } = e.target;
-        setInformation(prevState => ({
-            ...prevState,
-            [name]: value
-        }));
-    };
+const RegisterEtape1: React.FC<RegisterEtape1Props> = ({select, setRegisterEtape, information, handleChange}) => {
 
     return(
         <form className="flex flex-col w-full mt-14">

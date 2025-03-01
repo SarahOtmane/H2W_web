@@ -3,41 +3,20 @@ import ButtonBlack from "../buttons/ButtonBlack";
 import InputLabel from "../fields/InputLabel";
 import InputLabelPassword from "../fields/InputLabelPassword";
 
-interface Information {
-    prenom: string;
-    nom: string;
-    email: string;
-    numero: string;
-    motDePasse: string;
-    confirmationMotDePasse: string;
-    nomEntreprise: string;
-    secteurActivite: string;
-    adresse: string;
-    complementAdresse: string;
-    ville: string;
-    codePostal: string;
-    siret: string;
-    nomEcole: string;
-}
+import { Information } from "../../controllers/Register.controller";
+
 
 interface RegisterStudentProps {
     information: Information;
-    setInformation: React.Dispatch<React.SetStateAction<Information>>;
+    handleChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-const RegisterStudent: React.FC<RegisterStudentProps> = ({information, setInformation}) =>{
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        const { name, value } = e.target;
-        setInformation(prevState => ({
-            ...prevState,
-            [name]: value
-        }));
-    };
+const RegisterStudent: React.FC<RegisterStudentProps> = ({information, handleChange}) =>{
 
     return(
         <form className="flex flex-col w-full">
             <div className="flex flex-row justify-between w-full mt-10">
-                <InputLabel required name="prenom" type='text' style='w-1/2 mr-4' label="Prénom" placeholder="ex: Thomas" value={information.prenom} onChange={handleChange}/>
+                <InputLabel required name="prenom" type='text' style='w-1/2 mr-4' label="Prénom" placeholder="ex: Thomas" value={information.prenom} onChange={handleChange} error="Champs requis"/>
                 <InputLabel required name="nom" type='text' style='w-1/2 ml-4' label="Nom" placeholder="ex: Durant" value={information.nom} onChange={handleChange}/>
             </div>
             <div className="flex flex-row justify-between w-full mt-5">

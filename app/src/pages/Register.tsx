@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 import PageTitle from "../components/titles/PageTitle";
 import Pg from "../components/Pg";
 import RegisterStudent from "../components/forms/RegisterStudent";
@@ -9,27 +7,20 @@ import ButtonWhite from "../components/buttons/ButtonWhite";
 import Icon from "../Icon";
 import RegisterEtape from "../components/RegisterEtape";
 import RegisterSchoolCompany from "../components/forms/RegisterSchoolCompany";
+import RegisterController from "../controllers/Register.controller";
 
 
 const Register: React.FC = () => {
-    const [selected, setSelected] = useState<string>('etudiant');
-    const [registerEtape, setRegisterEtape] = useState<number>(1);
-    const [information, setInformation] = useState({
-        prenom: '',
-        nom: '',
-        email: '',
-        numero: '',
-        motDePasse: '',
-        confirmationMotDePasse: '',
-        nomEntreprise: '',
-        secteurActivite: '',
-        adresse: '',
-        complementAdresse: '',
-        ville: '',
-        codePostal: '',
-        siret: '',
-        nomEcole: '',
-    })
+
+    const {
+        selected, 
+        setSelected,
+        registerEtape,
+        setRegisterEtape,
+        information,
+        handleChange,
+    } = RegisterController();
+
 
     return(
         <main className="flex flex-row justify-center bg-gray-background w-full px-34 pt-50 mb-20">
@@ -49,13 +40,13 @@ const Register: React.FC = () => {
                             <div className="w-1/2 border-t-1 border-gray-dark"></div>
                         </div>
                     </div>
-                    <RegisterStudent information={information} setInformation={setInformation} />
+                    <RegisterStudent information={information} handleChange={handleChange} />
                     </>
                 }
                 {!(selected === 'etudiant') &&
                     <>
                     <RegisterEtape text={selected} registerEtape={registerEtape} />
-                    <RegisterSchoolCompany select={selected} information={information} setInformation={setInformation} setRegisterEtape={setRegisterEtape} registerEtape={registerEtape} />
+                    <RegisterSchoolCompany select={selected} information={information} handleChange={handleChange} setRegisterEtape={setRegisterEtape} registerEtape={registerEtape} />
                     </>
                 }
             </div>

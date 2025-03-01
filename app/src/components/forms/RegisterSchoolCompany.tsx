@@ -2,40 +2,25 @@ import Subtitle from "../titles/Subtitle";
 import RegisterEtape1 from "./RegisterEtape1";
 import RegisterEtape2 from "./RegisterEtape2";
 
-interface Information {
-    prenom: string;
-    nom: string;
-    email: string;
-    numero: string;
-    motDePasse: string;
-    confirmationMotDePasse: string;
-    nomEntreprise: string;
-    secteurActivite: string;
-    adresse: string;
-    complementAdresse: string;
-    ville: string;
-    codePostal: string;
-    siret: string;
-    nomEcole: string;
-}
+import { Information } from "../../controllers/Register.controller";
 
 interface RegisterSchoolCompanyProps {
     select: string;
     information: Information;
-    setInformation: React.Dispatch<React.SetStateAction<Information>>;
+    handleChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
     setRegisterEtape: React.Dispatch<React.SetStateAction<number>>;
     registerEtape: number;
 }
 
-const RegisterSchoolCompany: React.FC<RegisterSchoolCompanyProps> = ({select, information, setInformation, setRegisterEtape, registerEtape}) => {
+const RegisterSchoolCompany: React.FC<RegisterSchoolCompanyProps> = ({select, information, handleChange, setRegisterEtape, registerEtape}) => {
     return(
         <>
             {  registerEtape === 1 &&
-                <RegisterEtape1 select={select} information={information} setInformation={setInformation} setRegisterEtape={setRegisterEtape} />
+                <RegisterEtape1 select={select} information={information} handleChange={handleChange} setRegisterEtape={setRegisterEtape} />
             }
 
             {  registerEtape === 2 &&
-                <RegisterEtape2  information={information} setInformation={setInformation} setRegisterEtape={setRegisterEtape} />
+                <RegisterEtape2  information={information} handleChange={handleChange} setRegisterEtape={setRegisterEtape} />
             }
             {  registerEtape === 3 &&
                 <div className="flex flex-col mt-14 text-center w-full px-28">
