@@ -15,11 +15,13 @@ export interface Information {
     codePostal: string;
     siret: string;
     nomEcole: string;
+    termsAccepted?: string;
 }
 
 const RegisterController = () => {
     const [selected, setSelected] = useState<string>('etudiant');
     const [registerEtape, setRegisterEtape] = useState<number>(1);
+    const [termsAccepted, setTermsAccepted] = useState<boolean>(false);
 
     const [validFormStudent, setValidFormStudent] = useState<boolean>(false);
 
@@ -38,6 +40,7 @@ const RegisterController = () => {
         codePostal: '',
         siret: '',
         nomEcole: '',
+        termsAccepted: '',
     });
 
     const [error, setError] = useState({
@@ -55,18 +58,23 @@ const RegisterController = () => {
         codePostal: '',
         siret: '',
         nomEcole: '',
+        termsAccepted: '',
     });
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        const { name, value } = e.target;
-        setInformation(prevState => ({
-            ...prevState,
-            [name]: value
-        }));
-        setError(prevState => ({
-            ...prevState,
-            [name]: ''
-        }));
+        const { name, value, type, checked } = e.target;
+        if (type === 'checkbox') {
+            setTermsAccepted(checked);
+        } else {
+            setInformation(prevState => ({
+                ...prevState,
+                [name]: value
+            }));
+            setError(prevState => ({
+                ...prevState,
+                [name]: ''
+            }));
+        }
     };
 
     const validateFormStudent = (e: React.MouseEvent<HTMLButtonElement>) => {
@@ -87,6 +95,7 @@ const RegisterController = () => {
             codePostal: '',
             siret: '',
             nomEcole: '',
+            termsAccepted: '',
         };
         if (information.prenom.trim() === '') {
             newError.prenom = 'Champs requis';
@@ -114,6 +123,15 @@ const RegisterController = () => {
         }
         if(information.motDePasse !== information.confirmationMotDePasse){
             newError.confirmationMotDePasse = 'Les mots de passe ne correspondent pas';
+            newError.motDePasse = 'Les mots de passe ne correspondent pas';
+            valid = false;
+        }
+        const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+        if (!passwordRegex.test(information.motDePasse)) {
+            valid = false;
+        }
+        if (!termsAccepted) {
+            newError.termsAccepted = 'Vous devez accepter les conditions générales';
             valid = false;
         }
         setError(newError);
@@ -131,6 +149,7 @@ const RegisterController = () => {
         validateFormStudent,
         error,
         validFormStudent,
+        termsAccepted,
     };
 }
 

@@ -22,6 +22,7 @@ const Register: React.FC = () => {
         validateFormStudent,
         error,
         validFormStudent,
+        termsAccepted,
     } = RegisterController();
 
 
@@ -43,7 +44,7 @@ const Register: React.FC = () => {
                             <div className="w-1/2 border-t-1 border-gray-dark"></div>
                         </div>
                     </div>
-                    <RegisterStudent information={information} handleChange={handleChange} validateFormStudent={validateFormStudent} error={error} validFormStudent={validFormStudent} />
+                    <RegisterStudent information={information} handleChange={handleChange} validateFormStudent={validateFormStudent} error={error} validFormStudent={validFormStudent} termsAccepted={termsAccepted}  />
                     </>
                 }
                 {!(selected === 'etudiant') &&

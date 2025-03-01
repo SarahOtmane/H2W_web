@@ -6,16 +6,16 @@ import InputCheckbox from "../fields/InputCheckbox";
 
 import { Information } from "../../controllers/Register.controller";
 
-
 interface RegisterStudentProps {
     information: Information;
     handleChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
     error: Information;
     validateFormStudent: (e: React.MouseEvent<HTMLButtonElement>) => void;
     validFormStudent: boolean;
+    termsAccepted: boolean;
 }
 
-const RegisterStudent: React.FC<RegisterStudentProps> = ({information, handleChange, error, validateFormStudent, validFormStudent}) =>{
+const RegisterStudent: React.FC<RegisterStudentProps> = ({information, handleChange, error, validateFormStudent, validFormStudent, termsAccepted}) =>{
 
     return(
         <form className="flex flex-col w-full">
@@ -27,22 +27,30 @@ const RegisterStudent: React.FC<RegisterStudentProps> = ({information, handleCha
                 <InputLabel name="email" type='email' style='w-1/2 mr-4' label="E-mail" placeholder="ex: thomas.durant@email.com" value={information.email} onChange={handleChange} error={validFormStudent ? '' : error.email}/>
                 <InputLabel name="numero" type='tel' style='w-1/2 ml-4' label="Numéro de téléphone" placeholder="ex: 0612345678" value={information.numero} onChange={handleChange} error={validFormStudent ? '' : error.numero}/>
             </div>
-            <InputLabelPassword name="password" style='w-full mt-5' label="Mot de passe" placeholder="********" value={information.motDePasse} onChange={handleChange} error={validFormStudent ? '' : error.motDePasse}/>
-            <div className="flex flex-row items-center mt-1">
-                <Icon name="information"/>
-                <p className="text-input-text ml-1 italic">Doit contenir au moins 8 caractères, 1 majuscule, 1 minuscule, 1 chiffre et 1 caractère spécial</p>
-            </div>
+            <InputLabelPassword name="motDePasse" style='w-full mt-5' label="Mot de passe" placeholder="********" value={information.motDePasse} onChange={handleChange} error={validFormStudent ? '' : error.motDePasse}/>
+            {!error.motDePasse &&
+                <div className="flex flex-row items-center mt-1">
+                    <Icon name="information"/>
+                    <p className="text-input-text ml-1 italic">Doit contenir au moins 8 caractères, 1 majuscule, 1 minuscule, 1 chiffre et 1 caractère spécial</p>
+                </div>
+            }
             <InputLabelPassword name="confirmationMotDePasse" style='w-full mt-5' label="Confirmation du mot de passe" placeholder="Entrez le mot de passe à nouveau" value={information.confirmationMotDePasse} onChange={handleChange} error={validFormStudent ? '' : error.confirmationMotDePasse}/>
-            <div className="flex flex-row items-center mt-5 pl-2 mb-10">
-                <InputCheckbox />
+            <div className="flex flex-row items-center mt-5 pl-2">
+                <InputCheckbox checked={termsAccepted} onChange={handleChange} error={error} />
                 <p className="font-Jakarta-medium text-[15px] ml-2">
-                    En vous inscrivant vous acceptez les 
+                    En vous inscrivant vous acceptez les     
                     <a href='#' className="text-lilas underline underline-offset-2"> conditions générales </a> 
                     et la 
                     <a href='#' className="text-lilas underline underline-offset-2"> politique de confidentialité </a>
                 </p>
             </div>
-            <ButtonBlack text="Je m'inscris" style="py-5" handleClick={validateFormStudent} />
+            {error.termsAccepted &&
+                <div className="mt-2 pl-2 flex">
+                    <Icon name="attention" />
+                    <p className="ml-2 text-custom-red">{error.termsAccepted}</p>
+                </div>
+            }
+            <ButtonBlack text="Je m'inscris" style="py-5 mt-10" handleClick={validateFormStudent} />
             <p className="text-center mt-7">Vous avez déjà un compte ? <a href='#' className="text-lilas">Se connecter</a></p>
         </form>
     )
