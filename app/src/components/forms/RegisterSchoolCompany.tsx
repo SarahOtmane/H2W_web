@@ -10,13 +10,16 @@ interface RegisterSchoolCompanyProps {
     handleChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
     setRegisterEtape: React.Dispatch<React.SetStateAction<number>>;
     registerEtape: number;
+    validForm: boolean;
+    etapeSuivante: (e: React.MouseEvent<HTMLButtonElement>, typeForm: string) => void;
+    error: Information;
 }
 
-const RegisterSchoolCompany: React.FC<RegisterSchoolCompanyProps> = ({select, information, handleChange, setRegisterEtape, registerEtape}) => {
+const RegisterSchoolCompany: React.FC<RegisterSchoolCompanyProps> = ({select, information, handleChange, setRegisterEtape, registerEtape, error, validForm, etapeSuivante}) => {
     return(
         <>
             {  registerEtape === 1 &&
-                <RegisterEtape1 select={select} information={information} handleChange={handleChange} setRegisterEtape={setRegisterEtape} />
+                <RegisterEtape1 select={select} information={information} handleChange={handleChange} error={error} validForm={validForm} etapeSuivante={etapeSuivante} />
             }
 
             {  registerEtape === 2 &&
