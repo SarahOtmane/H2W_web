@@ -12,7 +12,7 @@ interface InputLabelPasswordProps {
     error?: string;
 }
 
-const InputLabelPassword: React.FC<InputLabelPasswordProps> = ({ label, onChange, value, placeholder, style, name, required, error }) => {
+const InputLabelPassword: React.FC<InputLabelPasswordProps> = ({ label, onChange, value, placeholder, style, name, error }) => {
     const [showPassword, setShowPassword] = useState(false);
 
     return (
@@ -26,7 +26,6 @@ const InputLabelPassword: React.FC<InputLabelPasswordProps> = ({ label, onChange
                     placeholder={placeholder}
                     onChange={onChange}
                     name={name}
-                    required={required}
                     className={`font-Jakarta-regular w-full italic text-sm sm:text-base md:text-lg lg:text-body py-4 pl-4 mt-2 rounded-2xl border-1 ${error ? 'text-custom-red border-custom-red' : 'text-input-text bg-gray-background border-gray-background focus:outline-lilas'} `}
                 />
                 {error &&
