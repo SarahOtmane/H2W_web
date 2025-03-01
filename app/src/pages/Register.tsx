@@ -19,12 +19,12 @@ const Register: React.FC = () => {
         setRegisterEtape,
         information,
         handleChange,
-        validateFormStudent,
+        validateForm,
         error,
-        validFormStudent,
+        validForm,
         termsAccepted,
-        etapeSuivante,
-        validForm
+        validateFormEtape1,
+        validFormEtapeSuivante,
     } = RegisterController();
 
 
@@ -46,13 +46,22 @@ const Register: React.FC = () => {
                             <div className="w-1/2 border-t-1 border-gray-dark"></div>
                         </div>
                     </div>
-                    <RegisterStudent information={information} handleChange={handleChange} validateFormStudent={validateFormStudent} error={error} validFormStudent={validFormStudent} termsAccepted={termsAccepted}  />
+                    <RegisterStudent 
+                        information={information} handleChange={handleChange} 
+                        validateForm={validateForm} error={error} 
+                        validForm={validForm} termsAccepted={termsAccepted}  />
                     </>
                 }
                 {!(selected === 'etudiant') &&
                     <>
                     <RegisterEtape text={selected} registerEtape={registerEtape} />
-                    <RegisterSchoolCompany select={selected} information={information} handleChange={handleChange} setRegisterEtape={setRegisterEtape} registerEtape={registerEtape} validForm={validForm} etapeSuivante={etapeSuivante} error={error} />
+                    <RegisterSchoolCompany 
+                        select={selected} information={information} 
+                        handleChange={handleChange} registerEtape={registerEtape} 
+                        validForm={validForm} error={error} 
+                        validateForm={validateForm} termsAccepted={termsAccepted}
+                        validateFormEtape1={validateFormEtape1} validFormEtapeSuivante={validFormEtapeSuivante}
+                    />
                     </>
                 }
             </div>
