@@ -10,7 +10,7 @@ interface RegisterCardSectionProps {
 
 const RegisterCardSection: React.FC<RegisterCardSectionProps> = ({selected, setSelected, setRegisterEtape}) => {
     return(
-        <div className="flex flex-row justify-center items-stretch mt-8 w-full">
+        <div className="grid grid-cols-3 gap-4 mt-8 w-full">
             <RegisterCard 
                 icon={<Icon name="registerStudent" />}
                 titre='Étudiant' 
