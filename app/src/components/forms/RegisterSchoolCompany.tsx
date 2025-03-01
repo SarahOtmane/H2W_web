@@ -8,22 +8,31 @@ interface RegisterSchoolCompanyProps {
     select: string;
     information: Information;
     handleChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-    setRegisterEtape: React.Dispatch<React.SetStateAction<number>>;
     registerEtape: number;
     validForm: boolean;
-    etapeSuivante: (e: React.MouseEvent<HTMLButtonElement>, typeForm: string) => void;
+    validateForm: (e: React.MouseEvent<HTMLButtonElement>, typeForm: string) => void;
+    validateFormEtape1: (e: React.MouseEvent<HTMLButtonElement>, typeForm: string) => void;
+    validFormEtapeSuivante: boolean;
     error: Information;
+    termsAccepted: boolean;
 }
 
-const RegisterSchoolCompany: React.FC<RegisterSchoolCompanyProps> = ({select, information, handleChange, setRegisterEtape, registerEtape, error, validForm, etapeSuivante}) => {
+const RegisterSchoolCompany: React.FC<RegisterSchoolCompanyProps> = ({select, information, handleChange, registerEtape, error, validForm, validateFormEtape1, validFormEtapeSuivante, termsAccepted, validateForm}) => {
     return(
         <>
             {  registerEtape === 1 &&
-                <RegisterEtape1 select={select} information={information} handleChange={handleChange} error={error} validForm={validForm} etapeSuivante={etapeSuivante} />
+                <RegisterEtape1 
+                    select={select} information={information} handleChange={handleChange} 
+                    error={error} validFormEtapeSuivante={validFormEtapeSuivante} validateFormEtape1={validateFormEtape1} 
+                />
             }
 
             {  registerEtape === 2 &&
-                <RegisterEtape2  information={information} handleChange={handleChange} setRegisterEtape={setRegisterEtape} />
+                <RegisterEtape2  
+                    information={information} handleChange={handleChange} 
+                    validateForm={validateForm} error={error} 
+                    validForm={validForm} termsAccepted={termsAccepted}
+                />
             }
             {  registerEtape === 3 &&
                 <div className="flex flex-col mt-14 text-center w-full px-28">
