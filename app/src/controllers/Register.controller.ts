@@ -23,8 +23,8 @@ const RegisterController = () => {
     const [registerEtape, setRegisterEtape] = useState<number>(1);
     const [termsAccepted, setTermsAccepted] = useState<boolean>(false);
 
-    const [validFormStudent, setValidFormStudent] = useState<boolean>(false);
     const [validForm, setValidForm] = useState<boolean>(false);
+    const [validFormEtapeSuivante, setValidFormEtapeSuivante] = useState<boolean>(false);
 
     const [information, setInformation] = useState({
         prenom: '',
@@ -78,7 +78,10 @@ const RegisterController = () => {
         }
     };
 
-    const validateFormStudent = (e: React.MouseEvent<HTMLButtonElement>) => {
+    //Fonction pour valider les formulaires
+    //fonction appelée lors de la validation du formulaire d'inscription etudiant
+    //et dans la seconde etape du formulaire d'inscription entreprise et ecole
+    const validateForm = (e: React.MouseEvent<HTMLButtonElement>, typeForm: string) => {
         e.preventDefault();
         let valid = true;
         const newError = {
@@ -136,10 +139,13 @@ const RegisterController = () => {
             valid = false;
         }
         setError(newError);
-        setValidFormStudent(valid);
+        setValidForm(valid);
+        if(valid && !(typeForm === 'etudiant')){
+            setRegisterEtape(prevState => prevState + 1);
+        }
     }
 
-    const etapeSuivante = (e: React.MouseEvent<HTMLButtonElement>, typeForm: string) => {
+    const validateFormEtape1 = (e: React.MouseEvent<HTMLButtonElement>, typeForm: string) => {
         e.preventDefault();
         let valid = true;
         const newError = {
@@ -192,9 +198,9 @@ const RegisterController = () => {
             newError.siret = 'Champs requis';
             valid = false;
         }
-        setError(newError);
-        setValidForm(valid);
         console.log(newError);
+        setError(newError);
+        setValidFormEtapeSuivante(valid);
         if(valid){
             setRegisterEtape(prevState => prevState + 1);
         }
@@ -208,12 +214,12 @@ const RegisterController = () => {
         information,
         setInformation,
         handleChange,
-        validateFormStudent,
+        validateForm,
         error,
-        validFormStudent,
+        validForm,
         termsAccepted,
-        etapeSuivante,
-        validForm
+        validateFormEtape1,
+        validFormEtapeSuivante,
     };
 }
 
