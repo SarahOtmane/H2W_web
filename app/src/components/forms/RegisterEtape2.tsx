@@ -2,6 +2,7 @@ import Icon from "../../Icon";
 import ButtonBlack from "../buttons/ButtonBlack";
 import InputLabel from "../fields/InputLabel";
 import InputLabelPassword from "../fields/InputLabelPassword";
+import InputCheckbox from "../fields/InputCheckbox";
 
 import { Information } from "../../controllers/Register.controller";
 
@@ -30,7 +31,7 @@ const RegisterEtape2: React.FC<RegisterEtape2Props> = ({information, handleChang
             </div>
             <InputLabelPassword required name="confirmationMotDePasse" style='w-full mt-5' label="Confirmation du mot de passe" placeholder="Entrez le mot de passe à nouveau" value={information.confirmationMotDePasse} onChange={handleChange}/>
             <div className="flex flex-row items-center mt-5 pl-2 mb-10">
-                <input type="checkbox" className="w-5 h-5 accent-lilas" />
+                <InputCheckbox />
                 <p className="font-Jakarta-medium text-[15px] ml-2">
                     En vous inscrivant vous acceptez les 
                     <a href='#' className="text-lilas underline underline-offset-2"> conditions générales </a> 
