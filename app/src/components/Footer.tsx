@@ -3,7 +3,7 @@ import Icon from "../Icon";
 
 const Footer: React.FC = () => {
     return (
-        <footer className="bg-custom-black text-white px-24 py-8">
+        <footer className="bg-custom-black text-white px-40 py-8">
             <nav className='flex flex-row mb-10'>
                 <Icon name="logoFooter" />
                 <ul className="mt-12 font-Jakarta-bold text-body ml-20">
