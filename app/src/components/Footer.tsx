@@ -6,12 +6,12 @@ const Footer: React.FC = () => {
         <footer className="bg-custom-black text-white px-24 py-8">
             <nav className='flex flex-row mb-10'>
                 <Icon name="logoFooter" />
-                <ul className="mt-12 font-Jakarta-bold text-subtitle ml-20">
+                <ul className="mt-12 font-Jakarta-bold text-body ml-20">
                     <li><a href="#">Notre mission</a></li>
                     <li><a href="#">FAQ</a></li>
                     <li><a href="#">Offres d’alternance</a></li>
                 </ul>
-                <ul className="mt-12 font-Jakarta-bold text-subtitle ml-30">
+                <ul className="mt-12 font-Jakarta-bold text-body ml-30">
                     <li><a href="#">Nous contacter</a></li>
                     <li><a href="#">Mentions légales</a></li>
                     <li><a href="#">Politique de confidentialité</a></li>
