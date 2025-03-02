@@ -5,6 +5,7 @@ import InputLabelPassword from "../fields/InputLabelPassword";
 import InputCheckbox from "../fields/InputCheckbox";
 
 import { Information } from "../../controllers/Register.controller";
+import { Link } from "react-router-dom";
 
 interface RegisterEtape2Props {
     information: Information;
@@ -39,9 +40,9 @@ const RegisterEtape2: React.FC<RegisterEtape2Props> = ({information, handleChang
                 <InputCheckbox checked={termsAccepted} onChange={handleChange} error={error} />
                 <p className="font-Jakarta-medium text-[15px] ml-2">
                     En vous inscrivant vous acceptez les     
-                    <a href='#' className="text-lilas underline underline-offset-2"> conditions générales </a> 
+                    <Link to='#' className="text-lilas underline underline-offset-2"> conditions générales </Link> 
                     et la 
-                    <a href='#' className="text-lilas underline underline-offset-2"> politique de confidentialité </a>
+                    <Link to='#' className="text-lilas underline underline-offset-2"> politique de confidentialité </Link>
                 </p>
             </div>
             {error.termsAccepted &&
@@ -51,7 +52,7 @@ const RegisterEtape2: React.FC<RegisterEtape2Props> = ({information, handleChang
                 </div>
             }
             <ButtonBlack text="Je m'inscris" style="py-5 mt-10" handleClick={(e) => validateForm(e, 'pas etudiant')} />
-            <p className="text-center mt-7">Vous avez déjà un compte ? <a href='/login' className="text-lilas">Se connecter</a></p>
+            <p className="text-center mt-7">Vous avez déjà un compte ? <Link to='/login' className="text-lilas">Se connecter</Link></p>
         </form>
     )
 }

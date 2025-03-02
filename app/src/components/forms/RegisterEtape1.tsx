@@ -2,6 +2,7 @@ import ButtonBlack from "../buttons/ButtonBlack";
 import InputLabel from "../fields/InputLabel";
 
 import { Information } from "../../controllers/Register.controller";
+import { Link } from "react-router-dom";
 
 interface RegisterEtape1Props {
     select: string;
@@ -64,7 +65,7 @@ const RegisterEtape1: React.FC<RegisterEtape1Props> = ({select, information, han
                 error={validFormEtapeSuivante ? '' : error.siret}
             />
             <ButtonBlack text="Suivant" style="py-5" handleClick={e => validateFormEtape1(e, 'entreprise')} />
-            <p className="text-center mt-7">Vous avez déjà un compte ? <a href='/login' className="text-lilas">Se connecter</a></p>
+            <p className="text-center mt-7">Vous avez déjà un compte ? <Link to='/login' className="text-lilas">Se connecter</Link></p>
         </form>
     )
 }
