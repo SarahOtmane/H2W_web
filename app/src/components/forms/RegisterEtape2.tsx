@@ -51,7 +51,7 @@ const RegisterEtape2: React.FC<RegisterEtape2Props> = ({information, handleChang
                 </div>
             }
             <ButtonBlack text="Je m'inscris" style="py-5 mt-10" handleClick={(e) => validateForm(e, 'pas etudiant')} />
-            <p className="text-center mt-7">Vous avez déjà un compte ? <a href='#' className="text-lilas">Se connecter</a></p>
+            <p className="text-center mt-7">Vous avez déjà un compte ? <a href='/login' className="text-lilas">Se connecter</a></p>
         </form>
     )
 }

@@ -64,7 +64,7 @@ const RegisterEtape1: React.FC<RegisterEtape1Props> = ({select, information, han
                 error={validFormEtapeSuivante ? '' : error.siret}
             />
             <ButtonBlack text="Suivant" style="py-5" handleClick={e => validateFormEtape1(e, 'entreprise')} />
-            <p className="text-center mt-7">Vous avez déjà un compte ? <a href='#' className="text-lilas">Se connecter</a></p>
+            <p className="text-center mt-7">Vous avez déjà un compte ? <a href='/login' className="text-lilas">Se connecter</a></p>
         </form>
     )
 }
