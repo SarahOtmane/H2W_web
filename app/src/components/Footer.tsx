@@ -26,7 +26,7 @@ const Footer: React.FC = () => {
                 <li className="mr-2"><Link className="ml-8" to='#'><Icon name="fbIcon" /></Link></li>
                 <li className="mr-2"><Link className="ml-10" to='#'><Icon name="linkedinIcon" /></Link></li>
 
-            <li className="absolute left-[45%]"><Link to='#' className='underline'>Conditions générales d’utilisation</Link></li>
+            <li className="absolute left-[45%]"><Link to='/conditions-generales' className='underline'>Conditions générales d’utilisation</Link></li>
             </ul>
         </footer>
     );
