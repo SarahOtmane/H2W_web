@@ -11,7 +11,7 @@ import Icon from "../../Icon";
 
 
 
-const Section1 = () => {
+const Section1: React.FC = () => {
     return(
         <section 
             className="w-full bg-lilas rounded-[2rem] flex flex-row justify-between p-12 mb-30 pl-25" 
