@@ -54,6 +54,12 @@ const icons = {
         </svg>
     ),
 
+    flecheVersLeBas: (
+        <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16.2705 7.08545L11.1088 12.2471C10.4992 12.8567 9.50172 12.8567 8.89214 12.2471L3.73047 7.08545" stroke="#1D1D1B" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    ),
+
     flecheButton: (
         <svg width="30" height="31" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect y="0.5" width="30" height="30" rx="15" fill="#FF9B3E"/>
