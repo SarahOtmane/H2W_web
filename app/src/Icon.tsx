@@ -16,6 +16,26 @@ const icons = {
         </svg>
     ),
 
+    flecheButton: (
+        <svg width="30" height="31" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect y="0.5" width="30" height="30" rx="15" fill="#FF9B3E"/>
+            <g clip-path="url(#clip0_948_769)">
+            <g clip-path="url(#clip1_948_769)">
+            <path d="M10.9512 19.3565L18.2881 12.0195" stroke="white" stroke-width="1.22283" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M12.3281 12.0195H18.2894V17.9808" stroke="white" stroke-width="1.22283" stroke-linecap="round" stroke-linejoin="round"/>
+            </g>
+            </g>
+            <defs>
+            <clipPath id="clip0_948_769">
+            <rect width="14.6739" height="15.2853" fill="white" transform="translate(7.2832 7.8573)"/>
+            </clipPath>
+            <clipPath id="clip1_948_769">
+            <rect width="14.6739" height="15.2853" fill="white" transform="translate(7.2832 7.8573)"/>
+            </clipPath>
+            </defs>
+        </svg>
+    ),
+
     avatar: (
         <svg width="30" height="31" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect y="0.5" width="30" height="30" rx="15" fill="#B6A7FC"/>
