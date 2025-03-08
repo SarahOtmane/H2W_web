@@ -16,6 +16,59 @@ const icons = {
         </svg>
     ),
 
+    abonnementGratuit: (
+        <svg width="78" height="78" viewBox="0 0 78 78" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="78" height="78" rx="20" fill="#1D1D1B"/>
+            <path d="M38.9987 39C44.7517 39 49.4154 34.3363 49.4154 28.5833C49.4154 22.8303 44.7517 18.1666 38.9987 18.1666C33.2457 18.1666 28.582 22.8303 28.582 28.5833C28.582 34.3363 33.2457 39 38.9987 39Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M56.8952 59.8333C56.8952 51.7708 48.8743 45.25 38.9993 45.25C29.1243 45.25 21.1035 51.7708 21.1035 59.8333" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    ),
+
+    abonnementEtudiant: (
+        <svg width="78" height="78" viewBox="0 0 78 78" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="78" height="78" rx="20" fill="#B6A7FC"/>
+            <g clip-path="url(#clip0_0_1)">
+            <path d="M35.5743 46.2067C37.2592 47.0453 39.2399 47.0447 40.9243 46.2052L59.5885 36.9025C61.0754 36.1614 61.0628 34.0356 59.5672 33.3121L40.8606 24.263C39.2113 23.4652 37.2878 23.4646 35.638 24.2616L16.903 33.3116C15.4061 34.0347 15.3936 36.1623 16.8818 36.903L35.5743 46.2067Z" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"/>
+            <path d="M53.8751 39.7518V48.3717C37.5223 64.8315 22.3789 48.6781 22.3789 48.6781V39.6414" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"/>
+            <path d="M59.6074 33.4844L60.6737 36.4508V46.3209" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"/>
+            <path d="M62.8467 48.9669C63.0625 47.7429 62.2553 46.5739 61.0437 46.3559C59.8321 46.1378 58.6749 46.9533 58.4591 48.1774C58.2433 49.4014 59.0506 50.5704 60.2621 50.7884C61.4737 51.0064 62.6309 50.1909 62.8467 48.9669Z" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"/>
+            <path d="M61.6501 50.7271L63.1579 56.1156C63.2471 56.4344 63.0074 56.7503 62.6763 56.7503H58.5191C58.1786 56.7503 57.9377 56.4174 58.0442 56.094L59.792 50.784" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"/>
+            </g>
+            <defs>
+            <clipPath id="clip0_0_1">
+            <rect width="49.8438" height="55" fill="white" transform="translate(14 12)"/>
+            </clipPath>
+            </defs>
+        </svg>
+    ),
+
+    abonnementPack: (
+        <svg width="78" height="78" viewBox="0 0 78 78" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="78" height="78" rx="20" fill="#FF9B3E"/>
+            <path d="M41.0827 59.8333H24.416C20.2493 59.8333 18.166 57.75 18.166 53.5833V36.9166C18.166 32.75 20.2493 30.6666 24.416 30.6666H34.8327V53.5833C34.8327 57.75 36.916 59.8333 41.0827 59.8333Z" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M35.0638 22.3333C34.8971 22.9583 34.8346 23.6458 34.8346 24.4166V30.6666H24.418V26.5C24.418 24.2083 26.293 22.3333 28.5846 22.3333H35.0638Z" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M43.168 30.6666V41.0833" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M51.5 30.6666V41.0833" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M49.418 49.4166H45.2513C44.1055 49.4166 43.168 50.3541 43.168 51.5V59.8333H51.5013V51.5C51.5013 50.3541 50.5638 49.4166 49.418 49.4166Z" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M26.502 41.0833V49.4166" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M34.834 53.5834V24.4167C34.834 20.25 36.9173 18.1667 41.084 18.1667H53.584C57.7507 18.1667 59.834 20.25 59.834 24.4167V53.5834C59.834 57.75 57.7507 59.8334 53.584 59.8334H41.084C36.9173 59.8334 34.834 57.75 34.834 53.5834Z" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    ),
+
+    done: (
+        <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path opacity="0.3" fill-rule="evenodd" clip-rule="evenodd" d="M17.0026 31.1663C24.8266 31.1663 31.1693 24.8237 31.1693 16.9997C31.1693 9.17564 24.8266 2.83301 17.0026 2.83301C9.17857 2.83301 2.83594 9.17564 2.83594 16.9997C2.83594 24.8237 9.17857 31.1663 17.0026 31.1663Z" fill="#B6A7FC"/>
+            <path d="M23.756 11.0751C24.2899 10.5031 25.1863 10.4722 25.7583 11.006C26.3303 11.5399 26.3612 12.4363 25.8274 13.0083L15.9107 23.6333C15.3927 24.1882 14.5294 24.2363 13.9531 23.7423L8.99474 19.4923C8.40069 18.9831 8.3319 18.0888 8.84108 17.4947C9.35026 16.9007 10.2446 16.8319 10.8386 17.3411L14.7659 20.7073L23.756 11.0751Z" fill="#B6A7FC"/>
+        </svg>
+    ),
+
+    error: (
+        <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path opacity="0.3" fill-rule="evenodd" clip-rule="evenodd" d="M17.0007 31.1667C24.8247 31.1667 31.1673 24.8241 31.1673 17C31.1673 9.17601 24.8247 2.83337 17.0007 2.83337C9.17662 2.83337 2.83398 9.17601 2.83398 17C2.83398 24.8241 9.17662 31.1667 17.0007 31.1667Z" fill="#FF9B3E"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M10.746 11.3345C10.3555 11.7251 10.3555 12.3582 10.746 12.7488L15.048 17.0507L10.7468 21.3519C10.3563 21.7424 10.3563 22.3756 10.7468 22.7661L11.3361 23.3554C11.7266 23.7459 12.3597 23.7459 12.7503 23.3554L17.0515 19.0542L21.3526 23.3554C21.7431 23.7459 22.3763 23.7459 22.7668 23.3554L23.3561 22.7661C23.7466 22.3756 23.7466 21.7424 23.3561 21.3519L19.0549 17.0507L23.3569 12.7488C23.7474 12.3583 23.7474 11.7251 23.3569 11.3346L22.7676 10.7453C22.3771 10.3548 21.7439 10.3548 21.3534 10.7453L17.0515 15.0473L12.7495 10.7453C12.359 10.3548 11.7258 10.3548 11.3353 10.7453L10.746 11.3345Z" fill="#FF9B3E"/>
+        </svg>
+    ),
+
     HomeEtoile: (
         <svg width="69" height="69" viewBox="0 0 69 69" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect width="69" height="69" rx="34.5" fill="#FF9B3E"/>
