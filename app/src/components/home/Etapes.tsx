@@ -7,8 +7,8 @@ import PageTitle from "../titles/PageTitle";
 const Etapes: React.FC = () => {
     return (
        <>
-        <div className="bg-white text-black w-full flex rounded-[2rem] relative py-12 items-center mb-6">
-            <p className="ml-12 px-10 py-3 border-1 border-gray-dark rounded-[2rem]">Étapes</p>
+        <div className="bg-white text-black w-full flex rounded-[2rem] relative py-12 items-center mb-4">
+            <p className="ml-12 px-10 py-3 border-1 border-gray-dark rounded-[2rem] absolute">Étapes</p>
             <PageTitle text="Comment ca fonctionne ?" style="text-center w-full" />
         </div>
         <div className="bg-white px-16 py-12 rounded-[2rem] mb-18">
