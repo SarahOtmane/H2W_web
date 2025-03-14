@@ -1,5 +1,7 @@
 import { useState } from "react";
 
+import instance, { addToken } from "../axiosConfig";
+
 export interface Information {
     email: string;
     motDePasse: string;
@@ -29,8 +31,9 @@ const LoginController = () => {
         }));
     };
 
-    const login = (e: React.MouseEvent<HTMLButtonElement>) => {
+    const login = async(e: React.MouseEvent<HTMLButtonElement>) => {
         e.preventDefault();
+
         let valid = true;
         if(information.email === ''){
             setError(prevState => ({
@@ -48,6 +51,16 @@ const LoginController = () => {
         }
         if(valid){
             setValidForm(true);
+            try {
+                const response = await instance.post('/auth/login', {
+                    email: information.email,
+                    password: information.motDePasse
+                });
+                const token = response.data.token;
+                addToken(token);
+            } catch (error) {
+                console.error(error); 
+            }
         }
     }
 
