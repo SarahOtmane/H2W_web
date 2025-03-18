@@ -1,6 +1,6 @@
 import Abonnements from "../components/home/Abonnements";
 import Etapes from "../components/home/Etapes";
-import Section1 from "../components/home/section1";
+import Section1 from "../components/home/Section1";
 import Section2 from "../components/home/Section2";
 import Newsletter from "../components/Newsletter";
 
