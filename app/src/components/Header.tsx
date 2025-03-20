@@ -1,21 +1,21 @@
 import { Link, useNavigate } from 'react-router-dom';
-import Icon from '../Icon';
+import Icon from '../utils/Icon';
 
 import ButtonBlack from './buttons/ButtonBlack';
 
 const Header = () => {
     const navigate = useNavigate();
     return (
-        <header className='flex flex-row justify-between items-center bg-gray-background px-38 py-8'>
+        <header className='flex flex-row justify-between items-center bg-gray-background px-4 py-1 md:px-16 md:py-3 lg:px-38 lg:py-8'>
             <Icon name='logoHeader' />
-            <ul className='flex flex-row font-Jakarta-semi-bold'>
+            <ul className='md:flex md:flex-row font-Jakarta-semi-bold hidden'>
                 <li className='mr-8'><Link to='#'>Nos services</Link></li>
                 <li className='mr-8'><Link to='#'>Étudiant</Link></li>
                 <li className='mr-8'><Link to='#'>Entreprise</Link></li>
                 <li className='mr-8'><Link to='#'>École</Link></li>
                 <li className='mr-8'><Link to='#'>À propos</Link></li>
             </ul>
-            <ButtonBlack text='  Se connecter' icon={<Icon name='avatar' />} handleClick={()=>navigate('/login')} />
+            <ButtonBlack text='Se connecter' icon={<Icon name='avatar' />} handleClick={()=>navigate('/login')} mobile={true} />
         </header>
     );
 }

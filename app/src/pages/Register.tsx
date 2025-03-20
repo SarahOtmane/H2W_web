@@ -4,7 +4,7 @@ import RegisterStudent from "../components/forms/RegisterStudent";
 import RegisterLeftSection from "../components/forms/RegisterLeftSection";
 import RegisterCardSection from "../components/cards/RegisterCardSection";
 import ButtonWhite from "../components/buttons/ButtonWhite";
-import Icon from "../Icon";
+import Icon from "../utils/Icon";
 import RegisterEtape from "../components/RegisterEtape";
 import RegisterSchoolCompany from "../components/forms/RegisterSchoolCompany";
 import RegisterController from "../controllers/Register.controller";
@@ -29,10 +29,10 @@ const Register: React.FC = () => {
 
 
     return(
-        <main className="flex flex-row justify-center bg-gray-background w-full px-34 pt-10 pb-20">
+        <main className="flex flex-row justify-center bg-gray-background w-full px-4 md:px-16 lg:px-38 pt-10 pb-20">
             <RegisterLeftSection etape={registerEtape} />
 
-            <div className="flex flex-col h-max items-center w-3/5 bg-white px-10 py-12 rounded-[2rem] ml-[-2rem] z-30">
+            <div className="flex flex-col h-max items-center md:w-3/5 w-full m-auto bg-white px-10 py-12 rounded-[2rem] ml-[-2rem] z-30">
                 <PageTitle text='Créer un compte'/>
                 <Pg text='Trouvez le professionnel parfait pour répondre à vos besoins quotidiens.'/>
                 <RegisterCardSection selected={selected} setSelected={setSelected} setRegisterEtape={setRegisterEtape} />

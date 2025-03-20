@@ -1,6 +1,6 @@
 import back from '../assets/images/login_back.png';
 
-import Icon from "../Icon";
+import Icon from "../utils/Icon";
 
 import SectionTitle from "../components/titles/SectionTitle";
 import PageTitle from "../components/titles/PageTitle";

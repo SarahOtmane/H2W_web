@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import Icon from '../../Icon'
+import Icon from '../../utils/Icon'
 
 interface InputLabelPasswordProps {
     label: string;

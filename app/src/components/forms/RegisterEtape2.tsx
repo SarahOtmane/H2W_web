@@ -1,4 +1,4 @@
-import Icon from "../../Icon";
+import Icon from "../../utils/Icon";
 import ButtonBlack from "../buttons/ButtonBlack";
 import InputLabel from "../fields/InputLabel";
 import InputLabelPassword from "../fields/InputLabelPassword";

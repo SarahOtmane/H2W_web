@@ -11,7 +11,7 @@ interface RegisterLeftSectionProps {
 const RegisterLeftSection: React.FC<RegisterLeftSectionProps> = ({etape}) => {
     return(
         <div 
-            className={`w-2/5 rounded-l-[2rem] bg-cover bg-no-repeat relative flex flex-col justify-center items-center pb-50`}
+            className={`w-2/5 rounded-l-[2rem] bg-cover bg-no-repeat relative md:flex md:flex-col justify-center items-center pb-50 hidden`}
             style={{backgroundImage: etape===3 ? `url(${back2})` : `url(${back})`}}
         >
             <div className="w-9/12 m-auto mt-14">

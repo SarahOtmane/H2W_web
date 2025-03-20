@@ -1,4 +1,4 @@
-import Icon from "../Icon";
+import Icon from "../utils/Icon";
 
 interface SearchBarProps {
     metier: string;

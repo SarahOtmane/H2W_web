@@ -6,7 +6,7 @@ import back from '../../assets/images/home_back.png';
 import Subtitle from "../titles/Subtitle";
 import ButtonBlack from "../buttons/ButtonBlack";
 import ButtonWhite from "../buttons/ButtonWhite";
-import Icon from "../../Icon";
+import Icon from "../../utils/Icon";
 
 
 

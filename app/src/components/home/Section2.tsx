@@ -1,4 +1,4 @@
-import Icon from "../../Icon";
+import Icon from "../../utils/Icon";
 import Pg from "../Pg";
 import PageTitle from "../titles/PageTitle";
 import HomeCard from "./HomeCard";

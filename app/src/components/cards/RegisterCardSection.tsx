@@ -1,5 +1,5 @@
 import RegisterCard from "./RegisterCard";
-import Icon from "../../Icon";
+import Icon from "../../utils/Icon";
 
 interface RegisterCardSectionProps {
     selected: string;
