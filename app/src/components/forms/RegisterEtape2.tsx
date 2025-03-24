@@ -19,14 +19,14 @@ interface RegisterEtape2Props {
 const RegisterEtape2: React.FC<RegisterEtape2Props> = ({information, handleChange, error, validateForm, validForm, termsAccepted}) => {
 
     return(
-        <form className="flex flex-col w-full">
-            <div className="flex flex-row justify-between w-full mt-10">
-                <InputLabel name="prenom" type='text' style='w-1/2 mr-4' label="Prénom" placeholder="ex: Thomas" value={information.prenom} onChange={handleChange} error={validForm ? '' : error.prenom}/>
-                <InputLabel name="nom" type='text' style='w-1/2 ml-4' label="Nom" placeholder="ex: Durant" value={information.nom} onChange={handleChange} error={validForm ? '' : error.nom}/>
+        <form className="flex flex-col w-full px-4 md:px-0">
+            <div className="flex flex-col md:flex-row md:justify-between w-full mt-10">
+                <InputLabel name="prenom" type='text' style='md:w-1/2 w-full md:mr-4' label="Prénom" placeholder="ex: Thomas" value={information.prenom} onChange={handleChange} error={validForm ? '' : error.prenom}/>
+                <InputLabel name="nom" type='text' style='md:w-1/2 w-full md:ml-4' label="Nom" placeholder="ex: Durant" value={information.nom} onChange={handleChange} error={validForm ? '' : error.nom}/>
             </div>
-            <div className="flex flex-row justify-between w-full mt-5">
-                <InputLabel name="email" type='email' style='w-1/2 mr-4' label="E-mail" placeholder="ex: thomas.durant@email.com" value={information.email} onChange={handleChange} error={validForm ? '' : error.email}/>
-                <InputLabel name="numero" type='tel' style='w-1/2 ml-4' label="Numéro de téléphone" placeholder="ex: 0612345678" value={information.numero} onChange={handleChange} error={validForm ? '' : error.numero}/>
+            <div className="flex flex-col md:flex-row md:justify-between w-full mt-5">
+                <InputLabel name="email" type='email' style='md:w-1/2 w-full md:mr-4' label="E-mail" placeholder="ex: thomas.durant@email.com" value={information.email} onChange={handleChange} error={validForm ? '' : error.email}/>
+                <InputLabel name="numero" type='tel' style='md:w-1/2 w-full md:ml-4' label="Numéro de téléphone" placeholder="ex: 0612345678" value={information.numero} onChange={handleChange} error={validForm ? '' : error.numero}/>
             </div>
             <InputLabelPassword name="motDePasse" style='w-full mt-5' label="Mot de passe" placeholder="********" value={information.motDePasse} onChange={handleChange} error={validForm ? '' : error.motDePasse}/>
             {!error.motDePasse &&

@@ -32,7 +32,7 @@ const Register: React.FC = () => {
         <main className="flex flex-row justify-center bg-white md:bg-gray-background w-full md:px-16 lg:px-38 pt-4 md:pt-10 pb-20">
             <RegisterLeftSection etape={registerEtape} />
 
-            <div className="flex flex-col h-max items-center md:w-3/5 w-full m-auto bg-white md:px-10 md:py-12 rounded-[2rem] md:ml-[-2rem] z-30">
+            <div className="flex flex-col h-max items-center lg:w-3/5 w-full m-auto bg-white md:px-10 md:py-12 rounded-[2rem] md:ml-[-2rem] z-30">
                 <PageTitle text='Créer un compte'/>
                 <Pg text='Trouvez le professionnel parfait pour répondre à vos besoins quotidiens.' style="text-center w-[70%] md:w-full"/>
                 <RegisterCardSection selected={selected} setSelected={setSelected} setRegisterEtape={setRegisterEtape} />

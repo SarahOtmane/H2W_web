@@ -16,11 +16,11 @@ interface RegisterEtape1Props {
 const RegisterEtape1: React.FC<RegisterEtape1Props> = ({select, information, handleChange, validFormEtapeSuivante, validateFormEtape1, error}) => {
 
     return(
-        <form className="flex flex-col w-full mt-14">
-            <div className="flex flex-row justify-between w-full">
+        <form className="flex flex-col w-full mt-14 px-4 md:px-0">
+            <div className="flex flex-col md:flex-row md:justify-between w-full">
                 <InputLabel 
                     name={`${select==='entreprise' ? "nomEntreprise" : "nomEcole"}`} 
-                    type='text' style={`w-1/2 ${select==='entreprise' ? "mr-4" : "w-full"}`} 
+                    type='text' style={`md:w-1/2 w-full ${select==='entreprise' ? "mr-4" : "w-full"}`} 
                     label={`${select==='entreprise' ? "Nom de l'entreprise" : "Nom de l'école"}`} 
                     placeholder="ex : WebTech Solutions" onChange={handleChange}
                     value={select==='entreprise' ? information.nomEntreprise : information.nomEcole}
@@ -28,33 +28,33 @@ const RegisterEtape1: React.FC<RegisterEtape1Props> = ({select, information, han
                 />
                 {select==='entreprise' &&
                     <InputLabel 
-                        name="secteurActivite" type='text' style='w-1/2 ml-4' 
+                        name="secteurActivite" type='text' style=' w-full md:w-1/2 md:ml-4' 
                         label="Secteur d'acitivité" placeholder="ex : Informatique, Marketing, ..." 
                         value={information.secteurActivite} onChange={handleChange}
                         error={validFormEtapeSuivante ? '' : error.secteurActivite}
                     />
                 }
             </div>
-            <div className="flex flex-row justify-between w-full mt-5">
+            <div className="flex flex-col md:flex-row md:justify-between w-full mt-5">
                 <InputLabel 
                     name="adresse" type='text'
-                    style={`w-1/2 ${select==='entreprise' ? "mr-4" : "w-full"}`} 
+                    style={`w-full md:w-1/2 ${select==='entreprise' ? "mr-4" : "w-full"}`} 
                     label={`${select==='entreprise' ? "Adresse de l'entreprise" : "Adresse de l'école"}`} 
                     placeholder="ex : 15 rue des Entrepreneurs" value={information.adresse} onChange={handleChange}
                     error={validFormEtapeSuivante ? '' : error.adresse}
                 />
                 {select==='entreprise' &&
-                    <InputLabel name="complementAdresse" type='text' style='w-1/2 ml-4' label="Complément de l’adresse" placeholder="ex : Bâtiment B, 3e étage (optionnel)" value={information.complementAdresse} onChange={handleChange}/>
+                    <InputLabel name="complementAdresse" type='text' style='w-full md:w-1/2 md:ml-4' label="Complément de l’adresse" placeholder="ex : Bâtiment B, 3e étage (optionnel)" value={information.complementAdresse} onChange={handleChange}/>
                 }
             </div>
-            <div className="flex flex-row justify-between w-full mt-5">
+            <div className="flex flex-col md:flex-row md:justify-between w-full mt-5">
                 <InputLabel 
-                    name="ville" type='text' style='w-1/2 mr-4' label="Ville" 
+                    name="ville" type='text' style='w-full md:w-1/2 md:mr-4' label="Ville" 
                     placeholder="ex : Paris" value={information.ville} onChange={handleChange}
                     error={validFormEtapeSuivante ? '' : error.ville}
                 />
                 <InputLabel 
-                    name="codePostal" type='text' style='w-1/2 ml-4' label="Code postal" 
+                    name="codePostal" type='text' style='w-full md:w-1/2 md:ml-4' label="Code postal" 
                     placeholder="ex : 75002" value={information.codePostal} onChange={handleChange}
                     error={validFormEtapeSuivante ? '' : error.codePostal}
                 />

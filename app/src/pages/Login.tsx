@@ -20,9 +20,9 @@ const Login = () => {
     const { information, handleChange, error, validForm, login } = LoginController();
 
     return (
-        <div className="flex flex-row justify-center bg-gray-background w-full px-34 pt-10 pb-20">
+        <div className="flex flex-row justify-center md:bg-gray-background w-full md:px-34 md:pt-10 md:pb-20">
             <div 
-                className={`w-[45%] rounded-l-[2rem] bg-cover bg-no-repeat relative flex flex-col justify-center items-center pb-50`}
+                className={`hidden lg:w-[45%] rounded-l-[2rem] bg-cover bg-no-repeat relative lg:flex flex-col justify-center items-center pb-50`}
                 style={{ backgroundImage: `url(${back})` }}
             >
                 <div className="w-[55%] m-auto mt-14">
@@ -30,7 +30,7 @@ const Login = () => {
                     <SectionTitle text='connectons les talents de demain !' style="text-center font-Jakarta-extra-bold" />
                 </div>
             </div>
-            <div className="flex flex-col h-max items-center w-3/5 bg-white px-10 py-12 rounded-[2rem] ml-[-2rem] z-30">
+            <div className="flex flex-col h-max items-center w-full lg:w-3/5 bg-white px-10 py-12 rounded-[2rem] lg:ml-[-2rem] z-30">
                 <PageTitle text='Connexion'/>
                 <Pg text='Reprenez vos recherches !'/>
 

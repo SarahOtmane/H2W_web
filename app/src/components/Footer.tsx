@@ -33,7 +33,7 @@ const Footer: React.FC = () => {
                 <li className="absolute left-[45%] hidden md:block"><Link to='/conditions-generales' className='underline'>Conditions générales d’utilisation</Link></li>
             </ul>
 
-            <Link to='/conditions-generales' className='underline block md:hidden text-center mt-2'>Conditions générales d’utilisation</Link>
+            <Link to='/conditions-generales' className='underline block md:hidden text-center mt-6'>Conditions générales d’utilisation</Link>
         </footer>
     );
 }
