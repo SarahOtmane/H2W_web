@@ -29,16 +29,16 @@ const Register: React.FC = () => {
 
 
     return(
-        <main className="flex flex-row justify-center bg-gray-background w-full px-4 md:px-16 lg:px-38 pt-10 pb-20">
+        <main className="flex flex-row justify-center bg-white md:bg-gray-background w-full md:px-16 lg:px-38 pt-4 md:pt-10 pb-20">
             <RegisterLeftSection etape={registerEtape} />
 
-            <div className="flex flex-col h-max items-center md:w-3/5 w-full m-auto bg-white px-10 py-12 rounded-[2rem] ml-[-2rem] z-30">
+            <div className="flex flex-col h-max items-center md:w-3/5 w-full m-auto bg-white md:px-10 md:py-12 rounded-[2rem] md:ml-[-2rem] z-30">
                 <PageTitle text='Créer un compte'/>
-                <Pg text='Trouvez le professionnel parfait pour répondre à vos besoins quotidiens.'/>
+                <Pg text='Trouvez le professionnel parfait pour répondre à vos besoins quotidiens.' style="text-center w-[70%] md:w-full"/>
                 <RegisterCardSection selected={selected} setSelected={setSelected} setRegisterEtape={setRegisterEtape} />
                 {selected === 'etudiant' &&
                     <>
-                    <div className="w-full flex flex-col items-center mt-8">
+                    <div className="w-full flex flex-col items-center mt-8 px-4 md:px-0">
                         <ButtonWhite text="Continuer avec Google" icon={<Icon name="google" />} style="w-full py-5 mt-4" />
                         <div className="flex flex-row items-center w-full px-2 mt-8">
                             <div className="w-1/2 border-t-1 border-gray-dark"></div>
