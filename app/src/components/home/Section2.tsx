@@ -11,24 +11,24 @@ const Section2: React.FC = () =>{
         <div className="w-full bg-custom-black rounded-[2rem] px-14 py-18 mb-30">
             <PageTitle text="Rejoins Hive2Work et créé ton portfolio" style="text-center text-white" />
             <Pg text="Fini les lettres de motivation monotones ! Intègre un portfolio interactif et illustre tes arguments en un clic." style="text-center text-white mt-2" />
-            <div className="flex flex-row justify-center mt-16">
+            <div className="flex flex-col md:flex-row md:justify-center mt-16">
                 <HomeCard 
                     icon={<Icon name="HomeEtoile" />}
                     title="Valorise tes réalisations"
                     text="Une page unique pour mettre en avant ton parcours et tes projets (missions, réalisations...)"
-                    style="mr-10"
+                    style="md:mr-10 mb-12 md:mb-0"
                 />
                 <HomeCard 
                     icon={<Icon name="HomeOeil" />}
                     title="Sois visible"
                     text="Une visibilité optimisée pour attirer les recruteurs et décrocher ton alternance."
-                    style="mr-10"
+                    style="md:mr-10 mb-12 md:mb-0"
                 />
                 <HomeCard 
                     icon={<Icon name="HomeChat" />}
                     title="Contacte directement"
                     text="Prise de contact directe avec les recruteurs via la plateforme, sans exposer ton email"
-                    style="mr-10"
+                    style="md:mr-10 mb-12 md:mb-0"
                 />
                 <HomeCard 
                     icon={<Icon name="HomePinceau" />}

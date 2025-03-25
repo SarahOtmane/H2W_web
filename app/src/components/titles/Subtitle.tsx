@@ -7,7 +7,7 @@ interface SubtitleProps {
 
 const Subtitle: React.FC<SubtitleProps> = ({text, style}) => {
     return (
-        <h4 className={`font-Jakarta-semi-bold text-base sm:text-lg md:text-xl lg:text-subtitle ${style? style : ''}`}>{text}</h4>
+        <h4 className={`font-Jakarta-semi-bold text-[20px] ${style? style : ''}`}>{text}</h4>
     );
 };
 

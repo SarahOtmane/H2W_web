@@ -10,11 +10,11 @@ const Abonnements: React.FC = () => {
     return (
        <>
         <div className="bg-white text-black w-full flex rounded-[2rem] relative py-12 items-center mb-4">
-            <p className="ml-12 px-10 py-3 border-1 border-gray-dark rounded-[2rem] w-max absolute">Nos Abonnements</p>
-            <PageTitle text="Tous les abonnements" style="text-center w-full" />
+            <p className="mt-[-8rem] md:mt-0 ml-[25%] md:ml-12 px-10 py-3 border-1 border-gray-dark rounded-[2rem] w-max absolute">Nos Abonnements</p>
+            <PageTitle text="Tous les abonnements" style="text-center w-full mt-[3rem] md:mt-0" />
         </div>
-        <div className="mb-26 flex">
-            <div className="bg-white text-black w-1/3 rounded-[2rem] mr-8 px-8 py-11">
+        <div className="mb-26 flex flex-col md:flex-row">
+            <div className="bg-white text-black w-full md:w-1/3 rounded-[2rem] mr-8 px-8 py-11 mb-6 md:mb-0">
                 <div className="flex items-center">
                     <Icon name="abonnementGratuit" />
                     <div className="ml-4">
@@ -36,7 +36,7 @@ const Abonnements: React.FC = () => {
                 </ul>
                 <ButtonBlack text="Choisir la formule" icon={<Icon name="flecheButton" />}/>
             </div>
-            <div className="bg-white text-black w-1/3 rounded-[2rem] mr-8 px-8 py-11">
+            <div className="bg-white text-black w-full md:w-1/3 rounded-[2rem] mr-8 px-8 py-11 mb-6 md:mb-0">
                 <div className="flex items-center">
                     <Icon name="abonnementEtudiant" />
                     <div className="ml-4">
@@ -58,7 +58,7 @@ const Abonnements: React.FC = () => {
                 </ul>
                 <ButtonBlack text="Choisir la formule" icon={<Icon name="flecheButton" />}/>
             </div>
-            <div className="bg-white text-black w-1/3 rounded-[2rem] px-8 py-11">
+            <div className="bg-white text-black w-full md:w-1/3 rounded-[2rem] px-8 py-11">
                 <div className="flex items-center">
                     <Icon name="abonnementPack" />
                     <div className="ml-4">
