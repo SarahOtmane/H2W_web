@@ -10,6 +10,7 @@ import Login from './pages/Login';
 import ConditionsGenerales from './pages/ConditionsGenerales';
 import PolitiqueConfidentialite from './pages/PolitiqueConfidentialité';
 import EngagementAccessibilite from './pages/EngagementAccessibilite';
+import LandingPage from './pages/LandingPage';
 
 const App: React.FC = () => {
     return (
@@ -19,6 +20,7 @@ const App: React.FC = () => {
                 <Route path='/' element={<Home />} />
                 <Route path='/register' element={<Register />} />
                 <Route path='/login' element={<Login />} />
+                <Route path='/landing-page' element={<LandingPage />} />
 
                 <Route path='/conditions-generales' element={<ConditionsGenerales />} />
                 <Route path='/politique-confidentialite' element={<PolitiqueConfidentialite />} />
