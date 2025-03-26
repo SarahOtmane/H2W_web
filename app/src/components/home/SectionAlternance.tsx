@@ -18,7 +18,7 @@ const SectionAlternance = () => {
                     <br />
                     vous et décrochez l’alternance <p className='bg-lilas rounded-[4rem] px-8 py-2 w-max m-auto'>idéale</p>
                 </h1>
-                <p className='md:font-Jakarta-semi-bold font-Jakarta-medium text-[20px] text-center md:text-left md:text-[24px] mt-8 text-[#6F6F6F]'>
+                <p className='md:font-Jakarta-semi-bold font-Jakarta-medium text-[20px] text-center md:text-left md:text-[24px] mt-8 text-gray-text'>
                     Créez un portfolio interactif rapidement,  postulez en un clic et attirez les recruteurs qui vous correspondent.
                 </p>
                 <div className="flex flex-col md:flex-row mt-6 md:mt-10 mb-4 md:mb-20">
