@@ -16,7 +16,7 @@ const Newsletter: React.FC = () => {
                 text="Inscris-toi à notre newsletter et reçois directement dans ta boîte mail." 
                 style="text-center mb-12"
             />
-            <div className="hidden w-full bg-white px-8 py-6 rounded-[4rem] border border-gray-border font-Jakarta-medium md:flex flex-col items-center sm:justify-between space-y-3 sm:space-y-0 sm:space-x-6 mb-10 shadow-md">
+            <div className="hidden w-full bg-white px-8 py-6 rounded-[4rem] border border-gray-border font-Jakarta-medium md:flex flex-row items-center sm:justify-between space-y-3 sm:space-y-0 sm:space-x-6 mb-10 shadow-md">
                 <input 
                     type="text"
                     placeholder="Métier, entreprise, compétences..."
