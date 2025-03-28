@@ -1,5 +1,6 @@
 import SectionAlternance from "../components/home/SectionAlternance";
 import CvInteractif from "../components/landing/CvInteractif";
+import FAQ from "../components/landing/FAQ";
 import Fonctionnement from "../components/landing/Fonctionnement";
 
 
@@ -31,6 +32,7 @@ const LandingPage = () => {
                     </div>
                 </div>
             </div>
+            <FAQ />
         </div>
     );
 }

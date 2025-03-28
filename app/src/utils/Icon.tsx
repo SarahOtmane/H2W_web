@@ -180,6 +180,34 @@ const icons = {
         </svg>
     ),
 
+    flecheCoteBas: (
+        <svg width="37" height="38" viewBox="0 0 37 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_1521_6198)">
+            <path d="M9.75 9.71357L27.5701 27.5337" stroke="#1D1D1B" stroke-width="2.97001" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M13.0947 27.5337H27.5735V13.0548" stroke="#1D1D1B" stroke-width="2.97001" stroke-linecap="round" stroke-linejoin="round"/>
+            </g>
+            <defs>
+            <clipPath id="clip0_1521_6198">
+            <rect width="35.6401" height="37.1251" fill="white" transform="matrix(1 0 0 -1 0.841797 37.6431)"/>
+            </clipPath>
+            </defs>
+        </svg>
+    ),
+
+    flecheCoteHaut: (
+        <svg width="37" height="38" viewBox="0 0 37 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_1521_3774)">
+            <path d="M9.75 28.6084L27.5701 10.7883" stroke="#B6A7FC" stroke-width="2.97001" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M13.0947 10.7883H27.5735V25.2672" stroke="#B6A7FC" stroke-width="2.97001" stroke-linecap="round" stroke-linejoin="round"/>
+            </g>
+            <defs>
+            <clipPath id="clip0_1521_3774">
+            <rect width="35.6401" height="37.1251" fill="white" transform="translate(0.841797 0.679199)"/>
+            </clipPath>
+            </defs>
+        </svg>
+    ),
+
     flecheButton: (
         <svg width="30" height="31" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect y="0.5" width="30" height="30" rx="15" fill="#FF9B3E"/>
