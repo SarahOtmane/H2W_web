@@ -39,7 +39,6 @@ const Section2: React.FC = () =>{
             <button className={`flex items-center justify-center font-Jakarta-semi-bold px-5 py-3 m-auto mt-15 cursor-pointer bg-white border-gray-border border-1  text-black rounded-[2rem] hover:text-white hover:bg-black hover:border-black`}>
                 <Icon name="flecheButton" />
                 <p className='ml-2 mr-3'>Je m'inscris</p>
-                <Icon name="flecheVersLeBas" />
             </button>
         </div>
     )

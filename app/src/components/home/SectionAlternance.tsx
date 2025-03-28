@@ -16,7 +16,7 @@ const SectionAlternance = () => {
                         </svg>
                     </span>
                     <br />
-                    vous et décrochez l’alternance <p className='bg-lilas rounded-[4rem] px-8 py-2 w-max m-auto'>idéale</p>
+                    vous et décrochez l’alternance <p className='bg-lilas rounded-[4rem] px-8 py-2 w-max m-auto md:ml-0'>idéale</p>
                 </h1>
                 <p className='md:font-Jakarta-semi-bold font-Jakarta-medium text-[20px] text-center md:text-left md:text-[24px] mt-8 text-gray-text'>
                     Créez un portfolio interactif rapidement,  postulez en un clic et attirez les recruteurs qui vous correspondent.
