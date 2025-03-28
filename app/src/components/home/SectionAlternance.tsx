@@ -6,7 +6,7 @@ import ButtonWhite from '../buttons/ButtonWhite';
 
 const SectionAlternance = () => {
     return(
-        <section className='flex flex-col md:flex-row mb-20'>
+        <section className='flex flex-col md:flex-row mb-20' id='services'>
             <div className='w-full md:w-1/2 md:mr-4 md:pr-20'>
                 <h1 className='font-Jakarta-extra-bold text-[44px] md:text-[56px] mt-15 leading-tight text-center md:text-left'>
                     <span className="relative inline-block">

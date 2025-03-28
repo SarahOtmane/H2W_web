@@ -4,7 +4,7 @@ import Back from '../../assets/images/landing_fonctionnement_back.png'
 
 const Fonctionnement = () => {
     return(
-        <div>
+        <div id='fonctionnement'>
             <div className="bg-white text-black w-full flex rounded-[2rem] relative pt-12 pb-8 md:py-12 items-center mb-4">
                 <p className=" mt-[-8rem] ml-[40%] px-10 py-3 border-1 border-gray-dark rounded-[2rem] absolute">Comment ça fonctionne ?</p>
                 <h2 className='font-Jakarta-extra-bold text-[48px] w-[90%] m-auto mt-[5rem] text-center'>Créez un <span className='bg-gradient-to-r from-custom-orange to-lilas text-transparent bg-clip-text'>CV interactif</span> au format portfolio pour valoriser vos compétences</h2>

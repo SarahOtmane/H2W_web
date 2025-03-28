@@ -36,7 +36,7 @@ const faqData: FAQItem[] = [
 const FAQ = () => {
 
     return (
-        <div className="px-4 md:px-20">
+        <div id="faq">
             <div className="bg-white text-black w-full flex rounded-[2rem] relative pt-12 pb-4 md:py-12 items-center mb-4 mt-24">
                 <p className=" mt-[-10rem] ml-[40%] px-10 py-3 border border-gray-dark rounded-[2rem] absolute">
                     Questions fréquentes
