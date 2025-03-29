@@ -2,19 +2,23 @@
 
 @theme {
   --color-lilas: #b6a7fc;
+  --color-lilas-light: #F4F2FF;
   --color-custom-orange: #ff9b3e;
   --color-gray-background: #f6f6f6;
+  --color-gray-text: #6F6F6F;
   --color-gray-border: #dbdeef;
   --color-gray-dark: #c9c9c9;
   --color-input-text: #9FA6B2;
   --color-search-text: #9d9d9d;
+  --color-custom-red : #C30000;
+  --color-red-background : #F7DEDE;
+  --color-custom-black: #1D1D1B;
 
   --font-Jakarta-extra-bold: 'Plus Jakarta Sans ExtraBold', sans-serif;
   --font-Jakarta-bold: 'Plus Jakarta Sans Bold', sans-serif;
   --font-Jakarta-semi-bold: 'Plus Jakarta Sans SemiBold', sans-serif;
   --font-Jakarta-medium: 'Plus Jakarta Sans Medium', sans-serif;
   --font-Jakarta-regular: 'Plus Jakarta Sans Regular', sans-serif;
-  
 
   --text-page-title: 3rem;
   --text-section-title: 2.25rem;
