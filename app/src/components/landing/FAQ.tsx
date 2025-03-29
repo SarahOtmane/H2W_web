@@ -38,7 +38,7 @@ const FAQ = () => {
     return (
         <div id="faq">
             <div className="bg-white text-black w-full flex rounded-[2rem] relative pt-12 pb-4 md:py-12 items-center mb-4 mt-24">
-                <p className="top-[10%] left-[24%] md:ml-[40%] px-10 py-3 border border-gray-dark rounded-[2rem] absolute">
+                <p className="top-[10%] left-[24%] md:ml-[19%] px-10 py-3 border border-gray-dark rounded-[2rem] absolute">
                     Questions fréquentes
                 </p>
                 <h2 className="font-Jakarta-extra-bold text-[48px] w-[80%] md:w-[55%] m-auto mt-[2rem] text-center">
