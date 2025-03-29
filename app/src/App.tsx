@@ -11,6 +11,7 @@ import ConditionsGenerales from './pages/ConditionsGenerales';
 import PolitiqueConfidentialite from './pages/PolitiqueConfidentialité';
 import EngagementAccessibilite from './pages/EngagementAccessibilite';
 import LandingPage from './pages/LandingPage';
+import TableauBord from './pages/student/TableauBord';
 
 const AppContent: React.FC = () => {
     const location = useLocation();
@@ -33,6 +34,10 @@ const AppContent: React.FC = () => {
                 <Route path='/conditions-generales' element={<ConditionsGenerales />} />
                 <Route path='/politique-confidentialite' element={<PolitiqueConfidentialite />} />
                 <Route path='/engagement-accessibilite' element={<EngagementAccessibilite />} />
+
+                <Route path='etudiant'>
+                    <Route path='tableau-de-bord' element={<TableauBord />} />
+                </Route>
             </Routes>
             <Footer />
         </>
