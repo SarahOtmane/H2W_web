@@ -1,42 +1,88 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+@import "tailwindcss";
+
+@theme {
+  --color-lilas: #b6a7fc;
+  --color-lilas-light: #F4F2FF;
+  --color-custom-orange: #ff9b3e;
+  --color-gray-background: #f6f6f6;
+  --color-gray-text: #6F6F6F;
+  --color-gray-border: #dbdeef;
+  --color-gray-dark: #c9c9c9;
+  --color-input-text: #9FA6B2;
+  --color-search-text: #9d9d9d;
+  --color-custom-red : #C30000;
+  --color-red-background : #F7DEDE;
+  --color-custom-black: #1D1D1B;
+
+  --font-Jakarta-extra-bold: 'Plus Jakarta Sans ExtraBold', sans-serif;
+  --font-Jakarta-bold: 'Plus Jakarta Sans Bold', sans-serif;
+  --font-Jakarta-semi-bold: 'Plus Jakarta Sans SemiBold', sans-serif;
+  --font-Jakarta-medium: 'Plus Jakarta Sans Medium', sans-serif;
+  --font-Jakarta-regular: 'Plus Jakarta Sans Regular', sans-serif;
+
+  --text-page-title: 3rem;
+  --text-section-title: 2.25rem;
+  --text-subtitle: 1.25rem;
+  --text-body: 1rem;
+} 
+
+
+@font-face {
+  font-family: 'Plus Jakarta Sans Bold';
+  src: url('./assets/fonts/PlusJakartaSans-Bold/PlusJakartaSans-Bold.eot');
+  src: url('./assets/fonts/PlusJakartaSans-Bold/PlusJakartaSans-Bold.eot?#iefix') format('embedded-opentype'),
+      url('./assets/fonts/PlusJakartaSans-Bold/PlusJakartaSans-Bold.woff2') format('woff2'),
+      url('./assets/fonts/PlusJakartaSans-Bold/PlusJakartaSans-Bold.woff') format('woff'),
+      url('./assets/fonts/PlusJakartaSans-Bold/PlusJakartaSans-Bold.svg#PlusJakartaSans-Bold') format('svg');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@font-face {
+  font-family: 'Plus Jakarta Sans ExtraBold';
+  src: url('./assets/fonts/PlusJakartaSans-ExtraBold/PlusJakartaSans-ExtraBold.eot');
+  src: url('./assets/fonts/PlusJakartaSans-ExtraBold/PlusJakartaSans-ExtraBold.eot?#iefix') format('embedded-opentype'),
+       url('./assets/fonts/PlusJakartaSans-ExtraBold/PlusJakartaSans-ExtraBold.woff2') format('woff2'),
+       url('./assets/fonts/PlusJakartaSans-ExtraBold/PlusJakartaSans-ExtraBold.woff') format('woff'),
+       url('./assets/fonts/PlusJakartaSans-ExtraBold/PlusJakartaSans-ExtraBold.svg#PlusJakartaSans-ExtraBold') format('svg');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+@font-face {
+  font-family: 'Plus Jakarta Sans Medium';
+  src: url('./assets/fonts/PlusJakartaSans-Medium/PlusJakartaSans-Medium.eot');
+  src: url('./assets/fonts/PlusJakartaSans-Medium/PlusJakartaSans-Medium.eot?#iefix') format('embedded-opentype'),
+       url('./assets/fonts/PlusJakartaSans-Medium/PlusJakartaSans-Medium.woff2') format('woff2'),
+       url('./assets/fonts/PlusJakartaSans-Medium/PlusJakartaSans-Medium.woff') format('woff'),
+       url('./assets/fonts/PlusJakartaSans-Medium/PlusJakartaSans-Medium.svg#PlusJakartaSans-Medium') format('svg');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
 }
 
-.card {
-  padding: 2em;
+@font-face {
+  font-family: 'Plus Jakarta Sans SemiBold';
+  src: url('./assets/fonts/PlusJakartaSans-SemiBold/PlusJakartaSans-SemiBold.eot');
+  src: url('./assets/fonts/PlusJakartaSans-SemiBold/PlusJakartaSans-SemiBold.eot?#iefix') format('embedded-opentype'),
+       url('./assets/fonts/PlusJakartaSans-SemiBold/PlusJakartaSans-SemiBold.woff2') format('woff2'),
+       url('./assets/fonts/PlusJakartaSans-SemiBold/PlusJakartaSans-SemiBold.woff') format('woff'),
+       url('./assets/fonts/PlusJakartaSans-SemiBold/PlusJakartaSans-SemiBold.svg#PlusJakartaSans-SemiBold') format('svg');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
 }
 
-.read-the-docs {
-  color: #888;
+@font-face {
+  font-family: 'Plus Jakarta Sans Regular';
+  src: url('./assets/fonts/PlusJakartaSans-Regular/PlusJakartaSans-Regular.eot');
+  src: url('./assets/fonts/PlusJakartaSans-Regular/PlusJakartaSans-Regular.eot?#iefix') format('embedded-opentype'),
+       url('./assets/fonts/PlusJakartaSans-Regular/PlusJakartaSans-Regular.woff2') format('woff2'),
+       url('./assets/fonts/PlusJakartaSans-Regular/PlusJakartaSans-Regular.woff') format('woff'),
+       url('./assets/fonts/PlusJakartaSans-Regular/PlusJakartaSans-Regular.svg#PlusJakartaSans-Regular') format('svg');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }
