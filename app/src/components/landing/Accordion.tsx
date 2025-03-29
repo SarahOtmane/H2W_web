@@ -18,7 +18,7 @@ const Accordion : React.FC<AccordionProps> = ({ faqData }) => {
   };
 
   return (
-    <div className="w-full bg-white rounded-[2rem] p-12">
+    <div className="w-full bg-white rounded-[2rem] md:p-12">
       {faqData.map((item, index) => {
         const isOpen = openIndex === index;
 

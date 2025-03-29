@@ -3,8 +3,12 @@ import Icon from '../../utils/Icon';
 import ButtonBlack from '../buttons/ButtonBlack';
 import ButtonWhite from '../buttons/ButtonWhite';
 
+interface SectionAlternanceProps {
+    isLanding?: boolean;
+}
 
-const SectionAlternance = () => {
+
+const SectionAlternance: React.FC<SectionAlternanceProps> = ({isLanding}) => {
     return(
         <section className='flex flex-col md:flex-row mb-20' id='services'>
             <div className='w-full md:w-1/2 md:mr-4 md:pr-20'>
@@ -21,10 +25,15 @@ const SectionAlternance = () => {
                 <p className='md:font-Jakarta-semi-bold font-Jakarta-medium text-[20px] text-center md:text-left md:text-[24px] mt-8 text-gray-text'>
                     Créez un portfolio interactif rapidement,  postulez en un clic et attirez les recruteurs qui vous correspondent.
                 </p>
-                <div className="flex flex-col md:flex-row mt-6 md:mt-10 mb-4 md:mb-20">
+                {isLanding && (
+                    <ButtonBlack text='Découvrir le service' icon={<Icon name="flecheButton" />} style='mt-6 m-auto mb-10 md:mb-0 md:ml-0' />
+                )}
+                {!isLanding && (
+                    <div className="flex flex-col md:flex-row mt-6 md:mt-10 mb-4 md:mb-20">
                     <ButtonBlack text="Créer mon portfolio" icon={<Icon name="flecheButton" />} style=" w-max m-auto md:m-0 md:mr-4 " />
                     <ButtonWhite text="Publier une offre" icon={<Icon name="flecheButton" />} style="w-max m-auto mt-4 md:m-0 " />
-                </div>
+                    </div>
+                )}
             </div>
             <div className='w-full md:w-1/2 md:mr-4'>
                 <img src={back} alt=""  />

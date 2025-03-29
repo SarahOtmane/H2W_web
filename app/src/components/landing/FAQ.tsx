@@ -38,10 +38,10 @@ const FAQ = () => {
     return (
         <div id="faq">
             <div className="bg-white text-black w-full flex rounded-[2rem] relative pt-12 pb-4 md:py-12 items-center mb-4 mt-24">
-                <p className=" mt-[-10rem] ml-[40%] px-10 py-3 border border-gray-dark rounded-[2rem] absolute">
+                <p className="top-[10%] left-[24%] md:ml-[40%] px-10 py-3 border border-gray-dark rounded-[2rem] absolute">
                     Questions fréquentes
                 </p>
-                <h2 className="font-Jakarta-extra-bold text-[48px] w-[55%] m-auto mt-[2rem] text-center">
+                <h2 className="font-Jakarta-extra-bold text-[48px] w-[80%] md:w-[55%] m-auto mt-[2rem] text-center">
                     Vous vous posez sûrement une de ces{" "}
                     <span className="bg-gradient-to-r from-custom-orange to-lilas text-transparent bg-clip-text">
                         questions
