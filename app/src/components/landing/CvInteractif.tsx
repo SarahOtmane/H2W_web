@@ -33,7 +33,7 @@ const CvInteractif = () => {
                         <p className='text-[16px] font-Jakarta-medium text-gray-text'>Explorez des offres adaptées et postulez facilement.</p>
                     </article>
                 </div>
-                <div className="fflex flex-col md:flex-row items-center text-center md:text-left mb-10 md:mb-0">
+                <div className="flex flex-col md:flex-row items-center text-center md:text-left mb-10 md:mb-0">
                     <div className='w-full md:w-1/2 mb-4 md:mb-0'><img src={etape3} /></div>
                     <div className='h-[1rem] w-[1rem] bg-white rounded-[50%] hidden md:block z-99'></div>
                     <article className='w-full md:w-1/2 md:px-[3.5rem]'>
@@ -41,7 +41,7 @@ const CvInteractif = () => {
                         <p className='text-[16px] font-Jakarta-medium text-gray-text'>Discutez en temps réel et montrez votre motivation via notre messagerie intégrée.</p>
                     </article>
                 </div>
-                <div className="fflex flex-col md:flex-row items-center text-center md:text-left">
+                <div className="flex flex-col md:flex-row items-center text-center md:text-left">
                     <article className='hidden md:block w-1/2 pr-[9rem]'>
                         <h4 className='text-[24px] font-Jakarta-extra-bold'>Suivez vos candidatures facilement</h4>
                         <p className='text-[16px] font-Jakarta-medium text-gray-text'>Gardez un œil sur vos candidatures, recevez des notifications et relancez facilement.</p>
