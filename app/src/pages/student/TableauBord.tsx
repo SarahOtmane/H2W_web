@@ -11,7 +11,7 @@ import Icon from "../../utils/Icon";
 const TableauBord = () => {
     return(
         <main className="px-4 md:px-38 md:pt-10 md:pb-20 bg-gray-background">
-            <MenuItem linkSelected="TBord" style="bg-custom-black text-white" iconStyle="ml-[5%]" fillIcon="#1D1D1B" />
+            <MenuItem linkSelected="TBord" style="bg-custom-black text-white" iconStyle="ml-[5%]" fillIcon="#1D1D1B" textColor="white" />
             <TitrePage title="Tableau de bord" />
 
             <section className="flex flex-col md:flex-row justify-between mt-18">
