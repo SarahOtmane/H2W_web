@@ -101,7 +101,7 @@ const LandingPage = () => {
                         <p className="font-Jakarta-medium text-[16px]">Soyez les premiers informés de l’avancement, des mises à jour, de la sortie officielle et des nouveautés excitantes directement dans votre boîte e-mail.</p>
                         <div className="flex flex-col md:flex-row items-center mt-8">
                             <input type="email" placeholder="Votre adresse e-mail" className="w-full md:w-[70%] px-4 font-Jakarta-regular italic text-sm sm:text-base md:text-lg lg:text-body  py-4 pl-4 rounded-[2rem] border-1 text-input-text bg-gray-background border-gray-background focus:outline-lilas"/>
-                            <ButtonBlack style="ml-4 mt-4 md:mt-0" text="Je m'abonne" icon={<Icon name="flecheButton" />} />
+                            <ButtonBlack style="ml-4 mt-4 md:mt-0 hover:border-white" text="Je m'abonne" icon={<Icon name="flecheButton" />} />
                         </div>
                     </div>
                     <img src={back} alt='image' className='hidden md:block'/>
