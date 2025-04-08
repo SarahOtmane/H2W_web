@@ -16,13 +16,20 @@ const AppContent: React.FC = () => {
         return <Header />; 
     };
 
+    const renderFooter = () => {
+        if (location.pathname === '/') {
+            return null; 
+        }
+        return <Footer />; 
+    };
+
     return (
         <>
             {renderHeader()}
             <Routes>
                 <Route path='/' element={<LandingPage />} />
             </Routes>
-            <Footer />
+            {renderFooter()}
         </>
     );
 };
