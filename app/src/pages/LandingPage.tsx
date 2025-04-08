@@ -55,14 +55,14 @@ const LandingPage = () => {
             </header>
             <main className=" bg-gray-background w-full px-4 md:px-38 md:pt-50 pt-10 md:pb-20 relative">
                 <SectionAlternance isLanding={true} />
-                <a href="#services" className='top-[75%] right-[6.5%] fixed z-9998 hidden md:block'>
+                <a href="#plateforme" className='top-[75%] right-[6.5%] fixed z-9998 hidden md:block'>
                     <svg width="84" height="82" viewBox="0 0 84 82" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M41.5885 74.7789C60.729 74.7789 76.2454 59.5609 76.2454 40.7885C76.2454 22.0161 60.729 6.7981 41.5885 6.7981C22.448 6.7981 6.93164 22.0161 6.93164 40.7885C6.93164 59.5609 22.448 74.7789 41.5885 74.7789Z" fill="#1D1D1B" stroke="white" stroke-width="2.71923" stroke-linecap="round" stroke-linejoin="round"/>
                         <path d="M41.5884 52.685V32.2908" stroke="white" stroke-width="4.49873" stroke-linecap="round" stroke-linejoin="round"/>
                         <path d="M31.1914 39.089L41.5885 28.8918L51.9855 39.089" stroke="white" stroke-width="4.49873" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                 </a>
-                <a href="#services" className='top-[75%] right-[5%] fixed z-9998 md:hidden'>
+                <a href="#plateforme" className='top-[75%] right-[5%] fixed z-9998 md:hidden'>
                     <svg width="62" height="60" viewBox="0 0 62 60" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M30.5879 55C44.6657 55 56.078 43.8071 56.078 30C56.078 16.1929 44.6657 5 30.5879 5C16.51 5 5.09766 16.1929 5.09766 30C5.09766 43.8071 16.51 55 30.5879 55Z" fill="#1D1D1B" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         <path d="M30.5879 38.75V23.75" stroke="white" stroke-width="3.30882" stroke-linecap="round" stroke-linejoin="round"/>
@@ -72,7 +72,7 @@ const LandingPage = () => {
 
                 <Fonctionnement />
                 <CvInteractif />
-                <div className="flex flex-col md:flex-row items-center mt-20 bg-custom-black px-10 md:px-20 py-15 md:py-30 rounded-[2rem]">
+                <div className="flex flex-col md:flex-row items-center mt-20 bg-custom-black px-10 md:px-20 py-15 md:py-30 rounded-[2rem]" id="plateforme">
                     <div className="w-full md:w-1/2 md:pr-16 text-center md:text-left">
                         <h2 className="text-[40px] font-Jakarta-extra-bold text-white">La plateforme pour les alternants que vous attendiez !</h2>
                         <p className="text-[#969696] text-[20px] font-Jakarta-medium">La plateforme qui permet de mettre en relation les entreprise et les étudiants facilement.</p>
@@ -107,6 +107,24 @@ const LandingPage = () => {
                     <img src={back} alt='image' className='hidden md:block'/>
                 </div>
             </main>
+            <footer className='bg-custom-black text-white md:px-40 md:py-8 py-4 pb-6'>
+                <div className='flex flex-row items-center justify-between'>
+                    <Icon name={isMobile ? 'logoFooterMobile' : 'logoFooter'} />
+                    <div>
+                        <p className='text-center'>Nous suivre</p>
+                        <ul className='flex flex-row relative justify-center md:justify-start md:ml-9 items-center'>
+                            <li className="mr-2"><Link className="ml-10" to='#'><Icon name="instaIcon" /></Link></li>
+                            <li className="mr-2"><Link className="ml-8" to='#'><Icon name="fbIcon" /></Link></li>
+                            <li className="mr-2"><Link className="ml-10" to='#'><Icon name="linkedinIcon" /></Link></li>
+                        </ul>
+                    </div>
+                </div>
+                <div className="border-1 border-gray-dark opacity-[0.4] mb-[1rem] md:mb-[4rem] w-2/3 md:w-full m-auto"></div>
+                <div className='flex flex-row items-center justify-between'>
+                    <span className='font-Jakarta-medium text-[16px] text-[#969696] '>©Hive2Work - Tous droits réservés 2025</span>
+                    <p className='underline'><Link to='#'>Mentions légales</Link></p>
+                </div>
+            </footer>
         </>
     );
 }
