@@ -3,8 +3,6 @@ import React from "react";
 interface MenuItemProps {
     linkSelected: string;
     style: string;
-    iconStyle: string;
-    fillIcon : string;
     textColor : string
 }
 
@@ -26,7 +24,7 @@ type MenuItemType = {
     // abonnement : abonnement
 
 
-const MenuItem : React.FC<MenuItemProps> = ({linkSelected, style, iconStyle, fillIcon, textColor}) => {
+const MenuItem : React.FC<MenuItemProps> = ({linkSelected, style, textColor}) => {
 
     const data : MenuItemType[] = [{
         id: 1,
@@ -106,7 +104,7 @@ const MenuItem : React.FC<MenuItemProps> = ({linkSelected, style, iconStyle, fil
     ];
 
     return(
-        <div className="">
+        <div className="mx-4 md:px-36 mt-[-2.5rem] ">
             <div className={`flex flex-row justify-between items-center w-full py-12 px-10 rounded-[1rem] ${style}`}>
                 {data.map((item) => (
                     <div key={item.id} className="flex flex-row items-center mr-4">
@@ -114,11 +112,6 @@ const MenuItem : React.FC<MenuItemProps> = ({linkSelected, style, iconStyle, fil
                         <a href={item.link} className={`ml-2 ${linkSelected===item.select ? 'text-custom-orange' : ''}`}>{item.title}</a>
                     </div>
                 ))}
-            </div>
-            <div className={`mt-[-.8rem] ${iconStyle}`}>
-                <svg width="77" height="37" viewBox="0 0 77 37" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M41.0742 35.8356C39.5861 37.0868 37.4139 37.0868 35.9258 35.8356L2.29836 7.56161C-0.558476 5.15958 1.14011 0.5 4.87257 0.5L72.1274 0.500006C75.8599 0.500006 77.5585 5.15959 74.7016 7.56162L41.0742 35.8356Z" fill={fillIcon}/>
-                </svg>
             </div>
         </div>
     )
