@@ -13,13 +13,13 @@ import HistoriqueCandidature from "../../components/student/HistoriqueCandidatur
 
 const TableauBord = () => {
     return(
-        <main className="px-4 md:px-38 md:pt-10 md:pb-20 bg-gray-background">
-            <MenuItem linkSelected="TBord" style="bg-custom-black text-white" iconStyle="ml-[5%]" fillIcon="#1D1D1B" textColor="white" />
+        <main className=" bg-gray-background md:pt-10 md:pb-20">
             <TitrePage title="Tableau de bord" />
+            <MenuItem linkSelected="TBord" style="bg-white text-custom-black" textColor="black" />
             <HistoriqueCandidature />
             <Offres />
 
-            <section className="flex flex-col md:flex-row justify-between mt-18">
+            <section className="flex flex-col md:flex-row justify-between mt-18 mx-4 md:px-38">
                 <div className="w-1/2 mr-0 md:mr-[.7rem] bg-custom-black text-white rounded-[1rem] pl-12 py-10"
                     style={{ backgroundImage: `url(${backN})`, backgroundRepeat: 'no-repeat',backgroundPosition: 'right top',}}>
                     <h2 className="font-Jakarta-extra-bold text-[36px] w-[80%] ">Newsletter Hive2Work</h2>
