@@ -74,12 +74,12 @@ const Offres = () => {
 
         return () => {
             el.removeEventListener('scroll', checkScroll);
-            window.removeEventListener('resize', checkScroll);
+            window.removeEventListener('resize', checkScroll); 
         };
     }, []);
 
     return (
-        <div className="bg-white rounded-[1rem] w-full py-8 pl-8 mb-10 mt-10">
+        <div className="bg-white rounded-[1rem] py-8 pl-8 mb-10 mt-10   mx-4 md:mx-38">
             <div className="flex justify-between items-center mb-4 pr-8">
                 <h1 className="font-Jakarta-extra-bold text-[36px]">Offres recommandées</h1>
                 <div className="flex items-center space-x-4">
