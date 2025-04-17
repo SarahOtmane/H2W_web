@@ -1,12 +1,16 @@
 import { Link, useNavigate } from 'react-router-dom';
-import { useState } from 'react';
+import React, { useState } from 'react';
 
 import Icon from '../utils/Icon';
 import ButtonBlack from './buttons/ButtonBlack';
 import WindowSize from '../utils/WindowSize';
 import MenuBurger from './MenuBurger';
 
-const Header = () => {
+interface HeaderProps {
+    style?: string;
+}
+
+const Header : React.FC<HeaderProps> = ({style}) => {
     const navigate = useNavigate();
 
     const size = WindowSize();
@@ -16,7 +20,7 @@ const Header = () => {
     const toggleMenu = () => setIsMenuOpen(prev => !prev);
 
     return (
-        <header className='flex flex-row justify-between items-center bg-white md:bg-gray-background px-4 py-4 md:px-16 md:py-3 lg:px-38 lg:py-8'>
+        <header className={`flex flex-row justify-between items-center bg-white ${style==='white' ? 'md:bg-white' : 'md:bg-gray-background'} px-4 py-4 md:px-16 md:py-3 lg:px-38 lg:py-8`}>
             <Link to='/' className='z-99'><Icon name={isMobile ? 'logoHeaderMobile' : 'logoHeader'} /></Link>
             <ul className='md:flex md:flex-row font-Jakarta-semi-bold hidden'>
                 <li className='mr-8 md:text-[.7rem] lg:text-[1rem]'><Link to='#'>Nos services</Link></li>
