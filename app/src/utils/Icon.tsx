@@ -235,6 +235,26 @@ const icons = {
         </svg>
     ),
 
+    flecheButtonGray: (
+        <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0.5" y="0.5" width="30" height="30" rx="15" fill="#6F6F6F"/>
+            <g clip-path="url(#clip0_2137_3651)">
+            <g clip-path="url(#clip1_2137_3651)">
+            <path d="M11.4512 19.3568L18.7881 12.0198" stroke="white" stroke-width="1.22283" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M12.8281 12.0198H18.7894V17.9811" stroke="white" stroke-width="1.22283" stroke-linecap="round" stroke-linejoin="round"/>
+            </g>
+            </g>
+            <defs>
+            <clipPath id="clip0_2137_3651">
+            <rect width="14.6739" height="15.2853" fill="white" transform="translate(7.7832 7.85742)"/>
+            </clipPath>
+            <clipPath id="clip1_2137_3651">
+            <rect width="14.6739" height="15.2853" fill="white" transform="translate(7.7832 7.85742)"/>
+            </clipPath>
+            </defs>
+        </svg>
+    ),
+
     flecheButton: (
         <svg width="30" height="31" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect y="0.5" width="30" height="30" rx="15" fill="#FF9B3E"/>
