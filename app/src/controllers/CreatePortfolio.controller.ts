@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-
+import { Portfolio } from "../types/Portfolio.types";
 
 
 const CreatePortfolioController = () =>{
@@ -27,15 +27,7 @@ const CreatePortfolioController = () =>{
 
     const [etape, setEtape] = useState(1);
 
-    const [portfolio, setPortfolio] = useState<{
-        title: string;
-        description: string;
-        hardSkills: string[];
-        softSkills: string[];
-        metier: string;
-        softwares: string[];
-        // projects: any[];
-    }>({
+    const [portfolio, setPortfolio] = useState<Portfolio>({
         title: "",
         description: "",
         metier: "",
