@@ -15,6 +15,7 @@ import TableauBord from './pages/student/TableauBord';
 import Portfolio from './pages/student/Portfolio';
 import Error404 from './pages/Error404';
 import Error500 from './pages/Error500';
+import Error403 from './pages/Error403';
 
 const AppContent: React.FC = () => {
     const location = useLocation();
@@ -40,6 +41,7 @@ const AppContent: React.FC = () => {
                 <Route path='/politique-confidentialite' element={<PolitiqueConfidentialite />} />
                 <Route path='/engagement-accessibilite' element={<EngagementAccessibilite />} />
 
+                <Route path="error-403" element={<Error403 />} />
                 <Route path="error-404" element={<Error404 />} />
                 <Route path="error-500" element={<Error500 />} />
 

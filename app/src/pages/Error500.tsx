@@ -24,7 +24,10 @@ const Error500 = () => {
                     OOOps! <br></br>
                     Un bug s’est glissé ici
                 </h2>
-                <p className='font-Jakarta-medium text-[20px] text-[#B0B0B0] px-6 mt-6 md:mt-0 md:px-0 md:pr-18 md:my-6 text-center md:text-left'>Notre ruche a un petit souci technique… Nos abeilles travaillent déjà à tout réparer ! En attendant, tu peux toujours butiner ailleurs.</p>
+                <p className='font-Jakarta-medium text-[20px] text-[#B0B0B0] px-6 mt-6 md:mt-0 md:px-0 md:pr-18 md:my-6 text-center md:text-left'>
+                    Notre ruche a un petit souci technique… 
+                    <br></br>Nos abeilles travaillent déjà à tout réparer ! 
+                    <br></br>En attendant, tu peux toujours butiner ailleurs.</p>
                 <div className='flex flex-col md:flex-row mt-12'>
                     <ButtonBlack text="Retour à l’accueil" icon={<Icon name='flecheButton' />} style='mb-4 md:mb-0 mr-0 md:mr-6' />
                     <ButtonWhite text="Créer mon portfolio" icon={<Icon name='flecheButton' />} />
