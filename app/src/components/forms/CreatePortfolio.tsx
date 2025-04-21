@@ -5,8 +5,8 @@ import CreatePortfolioController from "../../controllers/CreatePortfolio.control
 
 const CreatePortfolio = () => {
     const {
-        etapes, etape, setEtape, portfolio, maxChars, hardSkills,handleChangePortfolio,
-        softSkills, updateHardSkills, updateSoftSkills, 
+        etapes, etape, setEtape, portfolio, maxChars, hardSkills, handleChangePortfolio, updateSoftwares,
+        metiers, softSkills, softwares, updateHardSkills, updateSoftSkills, updateMetiers
     } = CreatePortfolioController()
 
     return(
@@ -22,6 +22,17 @@ const CreatePortfolio = () => {
             {etape === 1 && (
                 <div className="bg-white rounded-[1rem] py-12 px-10 mt-4 flex flex-col">
                     <h2 className="text-[24px] font-Jakarta-bold">Présentez-vous aux recruteurs.</h2>
+
+                    <SelectCompetences
+                        label="Quel est votre métier ?"
+                        maxSkills={1}
+                        skillsList={metiers}
+                        selectedSkill={portfolio.metier}
+                        setSelectedSkill={updateMetiers}
+                        isSingleSelect={true}
+                        placeholder="Développeur web, Designer UI/UX, etc."
+                    />
+
                     <label className="text-[16px] font-Jakarta-bold mt-8">Biographie</label>
                     <div className="flex flex-col mt-4 relative">
                         <textarea
@@ -36,7 +47,7 @@ const CreatePortfolio = () => {
                         </span>
                     </div>
 
-                    <CreatePortfolioButton suivantSelected={portfolio.description ? true : false} setEtape={setEtape} etape={etape} />
+                    <CreatePortfolioButton suivantSelected={(portfolio.description && portfolio.metier) ? true : false} setEtape={setEtape} etape={etape} />
                 </div>
             )}
 
@@ -44,21 +55,36 @@ const CreatePortfolio = () => {
                 <div className="bg-white rounded-[1rem] py-12 px-10 mt-4 flex flex-col">
                     <h2 className="text-[24px] font-Jakarta-bold">Listez vos compétences</h2>
                     <SelectCompetences
-                        label="Chercher une compétence technique (15 maximum)"
-                        maxSkills={15}
+                        label="Chercher une compétence technique (20 maximum)"
+                        maxSkills={20}
                         skillsList={hardSkills}
                         selectedSkills={portfolio.hardSkills}
                         setSelectedSkills={updateHardSkills}
+                        isSingleSelect={false}
+                        placeholder="HTML, CSS, JavaScript, etc."
                     />
 
                     <SelectCompetences
-                        label="Chercher un softskill (15 maximum)"
-                        maxSkills={15}
+                        label="Chercher un softskill (20 maximum)"
+                        maxSkills={20}
                         skillsList={softSkills}
                         selectedSkills={portfolio.softSkills}
                         setSelectedSkills={updateSoftSkills}
+                        isSingleSelect={false}
+                        placeholder="Travail en équipe, Autonomie, etc."
                     />
-                    <CreatePortfolioButton suivantSelected={(portfolio.softSkills.length > 0 && portfolio.hardSkills.length > 0) ? true : false} setEtape={setEtape} etape={etape} />
+
+                    <SelectCompetences
+                        label="Chercher un logiciel (20 maximum)"
+                        maxSkills={20}
+                        skillsList={softwares}
+                        selectedSkills={portfolio.softwares}
+                        setSelectedSkills={updateSoftwares}
+                        isSingleSelect={false}
+                        placeholder="Figma, Photoshop, Visual studio code etc."
+                    />
+
+                    <CreatePortfolioButton suivantSelected={(portfolio.softSkills.length > 0 && portfolio.hardSkills.length > 0 && portfolio.softwares.length > 0) ? true : false} setEtape={setEtape} etape={etape} />
                 </div>
             )}
 
