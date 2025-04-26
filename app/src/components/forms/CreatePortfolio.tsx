@@ -3,8 +3,6 @@ import SelectCompetences from "../student/SelectCompetences";
 
 import CreatePortfolioController from "../../controllers/CreatePortfolio.controller";
 import ExperienceForm from "./ExperienceForm";
-import ButtonBlack from "../buttons/ButtonBlack";
-import Icon from "../../utils/Icon";
 
 const CreatePortfolio = () => {
     const {
@@ -92,25 +90,7 @@ const CreatePortfolio = () => {
             )}
 
             {etape === 3 && (
-                <div className="bg-white rounded-[1rem] py-12 px-10 mt-4 flex flex-col">
-                    <h2 className="text-[24px] font-Jakarta-bold">Parlez-nous de vos expériences passées et actuelles.</h2>
-                    {portfolio.experiences.length > 0 ? (
-                        <div >
-                            <ButtonBlack style="ml-auto" text="Ajouter une expérience" icon={<Icon name="addButton" />} />
-                            {portfolio.experiences.map((experience, index) => (
-                                <div key={index} className="border-lilas rouneded-[1rem] ">
-                                    <p>{experience.description}</p>
-                                </div>
-                            ))}
-                        </div>
-                    ) : (
-                        <ExperienceForm />
-                    )}
-                    <CreatePortfolioButton 
-                        suivantSelected={(portfolio.experiences.length > 0) ? true : false} 
-                        setEtape={setEtape} etape={etape} 
-                    />
-                </div>
+                <ExperienceForm />
             )}
         </div>
     )

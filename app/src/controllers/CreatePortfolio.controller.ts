@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import { Experience, Portfolio } from "../types/Portfolio.types";
 
@@ -143,11 +143,13 @@ const CreatePortfolioController = () =>{
         }
     }
 
-    const handleAddExperienceInPortfolio = () => {
-        setPortfolio({
+    const handleAddExperienceInPortfolio = async() => {
+        const updatedPortfolio : Portfolio = {
             ...portfolio,
-            experiences: [...portfolio.experiences, experience]
-        });
+            experiences: [...portfolio.experiences, experience],
+        };
+        setPortfolio(updatedPortfolio);
+        
         setExperience({
             title: "",
             companyName: "",
@@ -160,6 +162,23 @@ const CreatePortfolioController = () =>{
             missions: [],
         })
     }
+
+    useEffect(() => {
+        const savedPortfolio = localStorage.getItem("portfolio");
+        if (savedPortfolio) {
+            try {
+                const parsedPortfolio = JSON.parse(savedPortfolio);
+                setPortfolio(parsedPortfolio);
+            } catch (error) {
+                console.error("Erreur lors du chargement du portfolio depuis le localStorage :", error);
+            }
+        }
+    }, []);
+
+    useEffect(() => {
+        localStorage.setItem("portfolio", JSON.stringify(portfolio));
+    }, [portfolio]);
+
 
     return({
         etapes,
