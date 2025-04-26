@@ -99,16 +99,16 @@ const SelectCompetences: React.FC<SelectCompetencesProps> = ({
                                 <path
                                     d="M13.375 21.6272L21.6292 13.373"
                                     stroke="white"
-                                    stroke-width="2.1875"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
+                                    strokeWidth="2.1875"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
                                 />
                                 <path
                                     d="M21.6292 21.6272L13.375 13.373"
                                     stroke="white"
-                                    stroke-width="2.1875"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
+                                    strokeWidth="2.1875"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
                                 />
                             </svg>
                         </button>
@@ -140,16 +140,16 @@ const SelectCompetences: React.FC<SelectCompetencesProps> = ({
                                     <path
                                         d="M13.375 21.6272L21.6292 13.373"
                                         stroke="white"
-                                        stroke-width="2.1875"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
+                                        strokeWidth="2.1875"
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
                                     />
                                     <path
                                         d="M21.6292 21.6272L13.375 13.373"
                                         stroke="white"
-                                        stroke-width="2.1875"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
+                                        strokeWidth="2.1875"
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
                                     />
                                 </svg>
                             </button>

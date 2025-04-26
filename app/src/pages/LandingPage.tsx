@@ -57,16 +57,16 @@ const LandingPage = () => {
                 <SectionAlternance isLanding={true} />
                 <a href="#services" className='top-[75%] right-[6.5%] fixed z-9998 hidden md:block'>
                     <svg width="84" height="82" viewBox="0 0 84 82" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M41.5885 74.7789C60.729 74.7789 76.2454 59.5609 76.2454 40.7885C76.2454 22.0161 60.729 6.7981 41.5885 6.7981C22.448 6.7981 6.93164 22.0161 6.93164 40.7885C6.93164 59.5609 22.448 74.7789 41.5885 74.7789Z" fill="#1D1D1B" stroke="white" stroke-width="2.71923" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M41.5884 52.685V32.2908" stroke="white" stroke-width="4.49873" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M31.1914 39.089L41.5885 28.8918L51.9855 39.089" stroke="white" stroke-width="4.49873" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M41.5885 74.7789C60.729 74.7789 76.2454 59.5609 76.2454 40.7885C76.2454 22.0161 60.729 6.7981 41.5885 6.7981C22.448 6.7981 6.93164 22.0161 6.93164 40.7885C6.93164 59.5609 22.448 74.7789 41.5885 74.7789Z" fill="#1D1D1B" stroke="white" strokeWidth="2.71923" strokeLinecap="round" strokeLinejoin="round"/>
+                        <path d="M41.5884 52.685V32.2908" stroke="white" strokeWidth="4.49873" strokeLinecap="round" strokeLinejoin="round"/>
+                        <path d="M31.1914 39.089L41.5885 28.8918L51.9855 39.089" stroke="white" strokeWidth="4.49873" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>
                 </a>
                 <a href="#services" className='top-[75%] right-[5%] fixed z-9998 md:hidden'>
                     <svg width="62" height="60" viewBox="0 0 62 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M30.5879 55C44.6657 55 56.078 43.8071 56.078 30C56.078 16.1929 44.6657 5 30.5879 5C16.51 5 5.09766 16.1929 5.09766 30C5.09766 43.8071 16.51 55 30.5879 55Z" fill="#1D1D1B" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M30.5879 38.75V23.75" stroke="white" stroke-width="3.30882" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M22.9414 28.75L30.5885 21.25L38.2355 28.75" stroke="white" stroke-width="3.30882" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M30.5879 55C44.6657 55 56.078 43.8071 56.078 30C56.078 16.1929 44.6657 5 30.5879 5C16.51 5 5.09766 16.1929 5.09766 30C5.09766 43.8071 16.51 55 30.5879 55Z" fill="#1D1D1B" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                        <path d="M30.5879 38.75V23.75" stroke="white" strokeWidth="3.30882" strokeLinecap="round" strokeLinejoin="round"/>
+                        <path d="M22.9414 28.75L30.5885 21.25L38.2355 28.75" stroke="white" strokeWidth="3.30882" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>
                 </a>
 

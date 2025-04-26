@@ -4,22 +4,22 @@ const icons = {
     addButton : (
         <svg width="30" height="31" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect y="0.5" width="30" height="30" rx="15" fill="#FF9B3E"/>
-            <path d="M9 15.5H21" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M15 21.5V9.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M9 15.5H21" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+            <path d="M15 21.5V9.5" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
         </svg>
     ),
 
     send : (
         <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M5.55172 4.74012L11.9192 2.61762C14.7767 1.66512 16.3292 3.22512 15.3842 6.08262L13.2617 12.4501C11.8367 16.7326 9.49672 16.7326 8.07172 12.4501L7.44172 10.5601L5.55172 9.93012C1.26922 8.50512 1.26922 6.17262 5.55172 4.74012Z" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M7.58203 10.2374L10.267 7.54492" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M5.55172 4.74012L11.9192 2.61762C14.7767 1.66512 16.3292 3.22512 15.3842 6.08262L13.2617 12.4501C11.8367 16.7326 9.49672 16.7326 8.07172 12.4501L7.44172 10.5601L5.55172 9.93012C1.26922 8.50512 1.26922 6.17262 5.55172 4.74012Z" stroke="#292D32" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+            <path d="M7.58203 10.2374L10.267 7.54492" stroke="#292D32" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
         </svg>
     ),
 
     wait : (
         <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M17.166 9C17.166 13.14 13.806 16.5 9.66602 16.5C5.52602 16.5 2.16602 13.14 2.16602 9C2.16602 4.86 5.52602 1.5 9.66602 1.5C13.806 1.5 17.166 4.86 17.166 9Z" stroke="#1D1D1B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M12.4487 11.3848L10.1237 9.99732C9.71867 9.75732 9.38867 9.17982 9.38867 8.70732V5.63232" stroke="#1D1D1B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M17.166 9C17.166 13.14 13.806 16.5 9.66602 16.5C5.52602 16.5 2.16602 13.14 2.16602 9C2.16602 4.86 5.52602 1.5 9.66602 1.5C13.806 1.5 17.166 4.86 17.166 9Z" stroke="#1D1D1B" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+            <path d="M12.4487 11.3848L10.1237 9.99732C9.71867 9.75732 9.38867 9.17982 9.38867 8.70732V5.63232" stroke="#1D1D1B" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
         </svg>
     ),
 
@@ -218,8 +218,8 @@ const icons = {
     flecheCoteBas: (
         <svg width="37" height="38" viewBox="0 0 37 38" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clip-path="url(#clip0_1521_6198)">
-            <path d="M9.75 9.71357L27.5701 27.5337" stroke="#1D1D1B" stroke-width="2.97001" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M13.0947 27.5337H27.5735V13.0548" stroke="#1D1D1B" stroke-width="2.97001" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M9.75 9.71357L27.5701 27.5337" stroke="#1D1D1B" strokeWidth="2.97001" strokeLinecap="round" strokeLinejoin="round"/>
+            <path d="M13.0947 27.5337H27.5735V13.0548" stroke="#1D1D1B" strokeWidth="2.97001" strokeLinecap="round" strokeLinejoin="round"/>
             </g>
             <defs>
             <clipPath id="clip0_1521_6198">
@@ -232,8 +232,8 @@ const icons = {
     flecheCoteHaut: (
         <svg width="37" height="38" viewBox="0 0 37 38" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clip-path="url(#clip0_1521_3774)">
-            <path d="M9.75 28.6084L27.5701 10.7883" stroke="#B6A7FC" stroke-width="2.97001" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M13.0947 10.7883H27.5735V25.2672" stroke="#B6A7FC" stroke-width="2.97001" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M9.75 28.6084L27.5701 10.7883" stroke="#B6A7FC" strokeWidth="2.97001" strokeLinecap="round" strokeLinejoin="round"/>
+            <path d="M13.0947 10.7883H27.5735V25.2672" stroke="#B6A7FC" strokeWidth="2.97001" strokeLinecap="round" strokeLinejoin="round"/>
             </g>
             <defs>
             <clipPath id="clip0_1521_3774">
@@ -248,8 +248,8 @@ const icons = {
             <rect x="0.5" y="0.5" width="30" height="30" rx="15" fill="#6F6F6F"/>
             <g clip-path="url(#clip0_2137_3651)">
             <g clip-path="url(#clip1_2137_3651)">
-            <path d="M11.4512 19.3568L18.7881 12.0198" stroke="white" stroke-width="1.22283" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M12.8281 12.0198H18.7894V17.9811" stroke="white" stroke-width="1.22283" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M11.4512 19.3568L18.7881 12.0198" stroke="white" strokeWidth="1.22283" strokeLinecap="round" strokeLinejoin="round"/>
+            <path d="M12.8281 12.0198H18.7894V17.9811" stroke="white" strokeWidth="1.22283" strokeLinecap="round" strokeLinejoin="round"/>
             </g>
             </g>
             <defs>
