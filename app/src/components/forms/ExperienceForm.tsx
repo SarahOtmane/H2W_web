@@ -8,18 +8,22 @@ import InputLabel from "../fields/InputLabel"
 import MissionsInput from "../student/MissionsInput"
 
 import Icon from "../../utils/Icon";
+import { Experience } from "../../types/Portfolio.types";
 
 
 const ExperienceForm = () => {
 
     const {
-        etape, setEtape, portfolio, experience, setExperience, handleChangeExperienceCheckbox, handleAddExperienceInPortfolio
+        etape, setEtape, portfolio, experience, setExperience, handleChangeExperienceCheckbox, handleAddExperienceInPortfolio, handleDeleteExperience
     } = CreatePortfolioController()
 
     let experiences = portfolio.experiences;
 
     const [expeAdded, setExpeAdded] = useState(false);
     const [missionHiden, setMissionHidden] = useState(true);
+    const [showPopup, setShowPopup] = useState(false); 
+    const [experienceToDelete, setExperienceToDelete] = useState<Experience>(); 
+
     
     const addExpe = async(e: React.MouseEvent<HTMLButtonElement>) => {
         e.preventDefault()
@@ -27,6 +31,14 @@ const ExperienceForm = () => {
         experiences = [...experiences, experience]
         setExpeAdded(true)
     }
+
+    const deleteExperience = () => {
+        if (experienceToDelete) {
+            experiences = experiences.filter((exp) => exp !== experienceToDelete);
+            handleDeleteExperience(experienceToDelete);
+            setShowPopup(false);
+        }
+    };
 
     return(
         <div className="bg-white rounded-[1rem] py-12 px-10 mt-4 flex flex-col">
@@ -40,7 +52,13 @@ const ExperienceForm = () => {
                                 <p className="w-1/5 text-input-text text-[16px] font-Jakarta-semi-bold ">Intitulé du poste</p>
                                 <p className="capitalize text-custom-black text-[24px] font-Jakarta-bold ">{experience.title}</p>
                                 <div className="flex flex-row items-center justify-center self-end ml-auto">
-                                    <button className="mr-2">
+                                    <button 
+                                        className="mr-2 cursor-pointer"
+                                        onClick={() => {
+                                            setExperienceToDelete(experience);
+                                            setShowPopup(true);
+                                        }}
+                                    >
                                         <svg width="51" height="51" viewBox="0 0 51 51" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <rect width="50.6757" height="50.6757" rx="25.3378" fill="#8C73FF"/>
                                             <path d="M35.4734 18.5582C31.7234 18.1866 27.9509 17.9951 24.1896 17.9951C21.9599 17.9951 19.7302 18.1077 17.5004 18.333L15.2031 18.5582" stroke="white" stroke-width="2.53378" stroke-linecap="round" stroke-linejoin="round"/>
@@ -50,7 +68,7 @@ const ExperienceForm = () => {
                                             <path d="M22.5234 25.9004H28.1541" stroke="white" stroke-width="2.53378" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
                                     </button>
-                                    <button>
+                                    <button className=" cursor-pointer">
                                         <svg width="51" height="51" viewBox="0 0 51 51" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <rect x="0.324219" width="50.6757" height="50.6757" rx="25.3378" fill="#FF9B3E"/>
                                             <path d="M24.5375 14.0762H22.2852C16.6546 14.0762 14.4023 16.3284 14.4023 21.9591V28.7158C14.4023 34.3464 16.6546 36.5987 22.2852 36.5987H29.042C34.6726 36.5987 36.9249 34.3464 36.9249 28.7158V26.4636" stroke="white" stroke-width="2.53378" stroke-linecap="round" stroke-linejoin="round"/>
@@ -81,7 +99,7 @@ const ExperienceForm = () => {
                                             <li>{experience.missions[0]}</li>
                                             {missionHiden && 
                                                 <button 
-                                                     className="flex flex-row items-center rounded-[2rem] px-4 py-2 border-1 border-custom-black mt-3"
+                                                     className="flex flex-row items-center rounded-[2rem] px-4 py-2 border-1 border-custom-black mt-3 cursor-pointer"
                                                     onClick={() => setMissionHidden(false)}
                                                 >
                                                     <span className="mr-2">Voir plus</span>
@@ -95,7 +113,7 @@ const ExperienceForm = () => {
                                             ))}
                                             {!missionHiden && 
                                                 <button 
-                                                    className="flex flex-row items-center rounded-[2rem] px-4 py-2 border-1 border-custom-black mt-3 "
+                                                    className="flex flex-row items-center rounded-[2rem] px-4 py-2 border-1 border-custom-black mt-3 cursor-pointer"
                                                     onClick={() => setMissionHidden(true)}
                                                 >
                                                     <span className="mr-2">Voir moins</span>
@@ -112,6 +130,30 @@ const ExperienceForm = () => {
                     ))}
                 </div>
             )}
+
+            {showPopup && (
+                <div className="fixed inset-0 flex items-center justify-center bg-black/30 backdrop-blur-sm">
+                    <div className="bg-white rounded-[1rem] p-6 w-[600px] px-14 py-10 text-center">
+                        <h3 className="text-[24px] font-Jakarta-bold text-custom-black">Êtes-vous sûr(e) de vouloir supprimer cette expérience ?</h3>
+                        <p className="text-[16px] font-Jakarta-semi-bold-bold text-[#9FA6B2] mt-8 mb-14">Cette action est irréversible.</p>
+                        <div className="flex justify-center">
+                            <button
+                                className="bg-custom-black py-3 rounded-[2rem] mr-3 text-white w-[150px] cursor-pointer"
+                                onClick={() => setShowPopup(false)}
+                            >
+                                Annuler
+                            </button>
+                            <button
+                                className="bg-lilas py-3 rounded-[2rem] ml-3 text-white w-[150px] cursor-pointer"
+                                onClick={deleteExperience}
+                            >
+                                Supprimer
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            )}
+
 
             {!expeAdded  && (
                 <form className="">
