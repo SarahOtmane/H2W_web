@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import { Portfolio } from "../types/Portfolio.types";
+import { Experience, Portfolio } from "../types/Portfolio.types";
 
 
 const CreatePortfolioController = () =>{
@@ -25,7 +25,7 @@ const CreatePortfolioController = () =>{
         title: "Choisissez une template",
     }]
 
-    const [etape, setEtape] = useState(1);
+    const [etape, setEtape] = useState<number>(1);
 
     const [portfolio, setPortfolio] = useState<Portfolio>({
         title: "",
@@ -34,8 +34,20 @@ const CreatePortfolioController = () =>{
         hardSkills: [],
         softSkills: [],
         softwares: [],
-        // projects: [],
+        experiences: [],
     });
+
+    const [experience, setExperience] = useState<Experience>({
+        title: "",
+        companyName: "",
+        description: "",
+        teleworking: false,
+        startDate: "",
+        endDate: "",
+        location: "",
+        stillWorking: false,
+        missions: [],
+    })
 
     const metiers = [
         'Développeur web',
@@ -122,6 +134,33 @@ const CreatePortfolioController = () =>{
         }
     };
 
+    const handleChangeExperienceCheckbox = (e: React.ChangeEvent<HTMLInputElement>, name: string) => {
+        const { checked } = e.target;
+        if(name === "stillWorking") {
+            setExperience({ ...experience, stillWorking: checked });
+        } else if(name === "teleworking") {
+            setExperience({ ...experience, teleworking: checked });
+        }
+    }
+
+    const handleAddExperienceInPortfolio = () => {
+        setPortfolio({
+            ...portfolio,
+            experiences: [...portfolio.experiences, experience]
+        });
+        setExperience({
+            title: "",
+            companyName: "",
+            description: "",
+            teleworking: false,
+            startDate: "",
+            endDate: "",
+            location: "",
+            stillWorking: false,
+            missions: [],
+        })
+    }
+
     return({
         etapes,
         portfolio,
@@ -137,7 +176,11 @@ const CreatePortfolioController = () =>{
         handleChangePortfolio,
         maxChars,
         etape,
-        setEtape
+        setEtape,
+        experience,
+        setExperience,
+        handleChangeExperienceCheckbox,
+        handleAddExperienceInPortfolio,
     })
 }
 
