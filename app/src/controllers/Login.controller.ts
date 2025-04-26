@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import instance, { addToken } from "../axiosConfig";
+import instance, { addToken } from "../utils/axiosConfig";
 
 export interface Information {
     email: string;
