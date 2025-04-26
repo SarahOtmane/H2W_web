@@ -3,6 +3,7 @@ import SelectCompetences from "../student/SelectCompetences";
 
 import CreatePortfolioController from "../../controllers/CreatePortfolio.controller";
 import ExperienceForm from "./ExperienceForm";
+import ProjectsForm from "./ProjectsForm";
 
 const CreatePortfolio = () => {
     const {
@@ -91,6 +92,10 @@ const CreatePortfolio = () => {
 
             {etape === 3 && (
                 <ExperienceForm />
+            )}
+
+            {etape === 4 && (
+                <ProjectsForm />
             )}
         </div>
     )
