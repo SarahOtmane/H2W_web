@@ -242,7 +242,7 @@ const ExperienceForm = () => {
                 </form>
             )}
             <CreatePortfolioButton 
-                suivantSelected={(portfolio.experiences.length > 0) ? true : false} 
+                suivantSelected={(experiences.length > 0) ? true : false} 
                 setEtape={setEtape} etape={etape} 
             />
         </div>
