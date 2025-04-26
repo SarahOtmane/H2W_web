@@ -163,6 +163,14 @@ const CreatePortfolioController = () =>{
         })
     }
 
+    const handleDeleteExperience = (experience: Experience) => {
+        setPortfolio((prevPortfolio) => ({
+            ...prevPortfolio,
+            experiences: prevPortfolio.experiences.filter((exp) => exp !== experience),
+        }));
+    }
+
+
     useEffect(() => {
         const savedPortfolio = localStorage.getItem("portfolio");
         if (savedPortfolio) {
@@ -200,6 +208,7 @@ const CreatePortfolioController = () =>{
         setExperience,
         handleChangeExperienceCheckbox,
         handleAddExperienceInPortfolio,
+        handleDeleteExperience,
     })
 }
 
