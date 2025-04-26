@@ -1,6 +1,14 @@
 import React from 'react';
 
 const icons = {
+    addButton : (
+        <svg width="30" height="31" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect y="0.5" width="30" height="30" rx="15" fill="#FF9B3E"/>
+            <path d="M9 15.5H21" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M15 21.5V9.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    ),
+
     send : (
         <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M5.55172 4.74012L11.9192 2.61762C14.7767 1.66512 16.3292 3.22512 15.3842 6.08262L13.2617 12.4501C11.8367 16.7326 9.49672 16.7326 8.07172 12.4501L7.44172 10.5601L5.55172 9.93012C1.26922 8.50512 1.26922 6.17262 5.55172 4.74012Z" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
