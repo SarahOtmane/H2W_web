@@ -6,7 +6,7 @@ import AnnoncesController from "../../controllers/Annonces.controller";
 
 
 const CreateAnnonce = () => {
-    const {teleworkingOptions} = AnnoncesController();
+    const {teleworkingOptions, dureeContratOptions} = AnnoncesController();
     const [annonce, setAnnonce] = useState<CreateAnnoncesType>({
         title: "",
         location: "",
@@ -57,13 +57,26 @@ const CreateAnnonce = () => {
                     style="mt-10"
                 />
 
-                <div className="flex">
+                <p className="font-Jakarta-bold text-sm sm:text-base md:text-lg lg:text-body ml-1 mt-10">Télétravail</p>
+                <div className="flex ml-2 mt-2">
                     {teleworkingOptions.map((option) => (
                         <InputRadio
                             key={option}
                             option={option}
                             checked={annonce.teleworking}
                             setChecked={(value) => setAnnonce({ ...annonce, teleworking: value })}
+                        />
+                    ))}
+                </div>
+
+                <p className="font-Jakarta-bold text-sm sm:text-base md:text-lg lg:text-body ml-1 mt-10">Durée de contrat</p>
+                <div className="flex ml-2 mt-2">
+                    {dureeContratOptions.map((option) => (
+                        <InputRadio
+                            key={option}
+                            option={option}
+                            checked={annonce.duration}
+                            setChecked={(value) => setAnnonce({ ...annonce, duration: value })}
                         />
                     ))}
                 </div>
