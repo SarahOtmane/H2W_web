@@ -88,10 +88,19 @@ const AnnoncesController = () =>{
         "Pas de télétravail"
     ];
 
+    const dureeContratOptions : string[] = [
+        "6 mois",
+        "12 mois",
+        "12 à 24 mois",
+        "24 mois",
+        "plus de 24 mois"
+    ];
+
     return({
         annonces,
         addAnnonce,
         teleworkingOptions,
+        dureeContratOptions,
     })
 }
 
