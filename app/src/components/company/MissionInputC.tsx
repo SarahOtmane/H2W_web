@@ -29,7 +29,7 @@ const MissionsInputC: React.FC<MissionsInputCProps> = ({ annonce, setAnnonce }) 
     };
 
     return (
-        <div className="space-y-4 mt-10">
+        <div className="space-y-4 my-10">
             <label className="font-Jakarta-bold text-sm sm:text-base md:text-lg lg:text-body ml-1">Description des missions</label>
 
             <ul className="space-y-2 pl-4">
