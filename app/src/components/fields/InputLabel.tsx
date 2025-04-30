@@ -15,7 +15,7 @@ interface InputLabelProps {
 const InputLabel: React.FC<InputLabelProps> = ({label, onChange, value, placeholder, type, style, name, error}) => {
     return (
         <div className={`flex flex-col ${style? style : ''}`}>
-            <label className="font-Jakarta-medium text-sm sm:text-base md:text-lg lg:text-body ml-1">{label}</label>
+            <label className="font-Jakarta-bold text-sm sm:text-base md:text-lg lg:text-body ml-1">{label}</label>
             <input 
                 type={type} 
                 defaultValue={value} 
