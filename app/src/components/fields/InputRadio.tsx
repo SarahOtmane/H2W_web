@@ -9,7 +9,7 @@ interface InputRadioProps {
 
 const InputRadio : React.FC<InputRadioProps> = ({option, checked, setChecked}) => {
     return(
-        <label key={option} className="flex items-center gap-2 cursor-pointer">
+        <label key={option} className="flex items-center gap-2 cursor-pointer mr-6">
             <input
                 type="radio"
                 name="teletravail"
