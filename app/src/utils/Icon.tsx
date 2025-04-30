@@ -9,6 +9,50 @@ const icons = {
         </svg>
     ),
 
+    match : (
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M19.86 8.09009C19.86 8.51009 19.83 8.92009 19.78 9.31009C19.32 9.11009 18.82 9.00009 18.29 9.00009C17.07 9.00009 15.99 9.59008 15.32 10.4901C14.64 9.59008 13.56 9.00009 12.34 9.00009C10.29 9.00009 8.63 10.6701 8.63 12.7401C8.63 15.4201 10.05 17.4701 11.63 18.8601C11.58 18.8901 11.53 18.9001 11.48 18.9201C11.18 19.0301 10.68 19.0301 10.38 18.9201C7.79 18.0301 2 14.3501 2 8.09009C2 5.33009 4.21999 3.1001 6.95999 3.1001C8.58999 3.1001 10.03 3.88009 10.93 5.09009C11.84 3.88009 13.28 3.1001 14.9 3.1001C17.64 3.1001 19.86 5.33009 19.86 8.09009Z" stroke="#292D32" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+            <path d="M22.0028 12.74C22.0028 17.42 17.6728 20.18 15.7328 20.84C15.5028 20.92 15.1328 20.92 14.9028 20.84C14.0728 20.56 12.8028 19.89 11.6328 18.86C10.0528 17.47 8.63281 15.42 8.63281 12.74C8.63281 10.67 10.2928 9 12.3428 9C13.5628 9 14.6428 9.58999 15.3228 10.49C15.9928 9.58999 17.0728 9 18.2928 9C18.8228 9 19.3228 9.11 19.7828 9.31C21.0928 9.89 22.0028 11.2 22.0028 12.74Z" stroke="#292D32" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+    ),
+
+    candidat : (
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.9981 7.16C17.9381 7.15 17.8681 7.15 17.8081 7.16C16.4281 7.11 15.3281 5.98 15.3281 4.58C15.3281 3.15 16.4781 2 17.9081 2C19.3381 2 20.4881 3.16 20.4881 4.58C20.4781 5.98 19.3781 7.11 17.9981 7.16Z" stroke="#292D32" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+            <path d="M16.9675 14.4399C18.3375 14.6699 19.8475 14.4299 20.9075 13.7199C22.3175 12.7799 22.3175 11.2399 20.9075 10.2999C19.8375 9.58992 18.3075 9.34991 16.9375 9.58991" stroke="#292D32" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+            <path d="M5.96656 7.16C6.02656 7.15 6.09656 7.15 6.15656 7.16C7.53656 7.11 8.63656 5.98 8.63656 4.58C8.63656 3.15 7.48656 2 6.05656 2C4.62656 2 3.47656 3.16 3.47656 4.58C3.48656 5.98 4.58656 7.11 5.96656 7.16Z" stroke="#292D32" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+            <path d="M6.9975 14.4399C5.6275 14.6699 4.1175 14.4299 3.0575 13.7199C1.6475 12.7799 1.6475 11.2399 3.0575 10.2999C4.1275 9.58992 5.6575 9.34991 7.0275 9.58991" stroke="#292D32" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+            <path d="M11.9981 14.63C11.9381 14.62 11.8681 14.62 11.8081 14.63C10.4281 14.58 9.32812 13.45 9.32812 12.05C9.32812 10.62 10.4781 9.46997 11.9081 9.46997C13.3381 9.46997 14.4881 10.63 14.4881 12.05C14.4781 13.45 13.3781 14.59 11.9981 14.63Z" stroke="#292D32" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+            <path d="M9.08875 17.7799C7.67875 18.7199 7.67875 20.2599 9.08875 21.1999C10.6888 22.2699 13.3087 22.2699 14.9087 21.1999C16.3187 20.2599 16.3187 18.7199 14.9087 17.7799C13.3187 16.7199 10.6888 16.7199 9.08875 17.7799Z" stroke="#292D32" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+    ),
+
+    calendrier : (
+        <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8 2.5V5.5" stroke="#969696" strokeWidth="1.5" stroke-miterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
+            <path d="M16 2.5V5.5" stroke="#969696" strokeWidth="1.5" stroke-miterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
+            <path d="M3.5 9.59009H20.5" stroke="#969696" strokeWidth="1.5" stroke-miterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
+            <path d="M21 9V17.5C21 20.5 19.5 22.5 16 22.5H8C4.5 22.5 3 20.5 3 17.5V9C3 6 4.5 4 8 4H16C19.5 4 21 6 21 9Z" stroke="#969696" strokeWidth="1.5" stroke-miterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
+            <path d="M15.6976 14.2H15.7066" stroke="#969696" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            <path d="M15.6976 17.2H15.7066" stroke="#969696" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            <path d="M11.9945 14.2H12.0035" stroke="#969696" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            <path d="M11.9945 17.2H12.0035" stroke="#969696" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            <path d="M8.29138 14.2H8.30036" stroke="#969696" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            <path d="M8.29138 17.2H8.30036" stroke="#969696" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+    ),
+
+    filtre : (
+        <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M22.5 6.99976H16.5" stroke="white" strokeWidth="1.71875" stroke-miterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
+            <path d="M6.5 6.99976H2.5" stroke="white" strokeWidth="1.71875" stroke-miterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
+            <path d="M10.5 10.5C12.433 10.5 14 8.933 14 7C14 5.067 12.433 3.5 10.5 3.5C8.567 3.5 7 5.067 7 7C7 8.933 8.567 10.5 10.5 10.5Z" stroke="white" strokeWidth="1.71875" stroke-miterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
+            <path d="M22.5 18H18.5" stroke="white" strokeWidth="1.71875" stroke-miterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
+            <path d="M8.5 18H2.5" stroke="white" strokeWidth="1.71875" stroke-miterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
+            <path d="M14.5 21.5C16.433 21.5 18 19.933 18 18C18 16.067 16.433 14.5 14.5 14.5C12.567 14.5 11 16.067 11 18C11 19.933 12.567 21.5 14.5 21.5Z" stroke="white" strokeWidth="1.71875" stroke-miterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+    ),
+
     send : (
         <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M5.55172 4.74012L11.9192 2.61762C14.7767 1.66512 16.3292 3.22512 15.3842 6.08262L13.2617 12.4501C11.8367 16.7326 9.49672 16.7326 8.07172 12.4501L7.44172 10.5601L5.55172 9.93012C1.26922 8.50512 1.26922 6.17262 5.55172 4.74012Z" stroke="#292D32" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
