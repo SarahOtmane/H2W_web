@@ -11,7 +11,8 @@ export interface AnnoncesType {
     software: string[];
     companyDescription: string;
     companyName: string;
-    remuneration : string;
+    remunerationMin : string;
+    remunerationMax : string;
     avantages: string[];
     derniereModif: string;
     nbProfilMatch : number;
@@ -31,7 +32,8 @@ export interface CreateAnnoncesType {
     software: string[];
     companyDescription: string;
     companyName: string;
-    remuneration : string;
+    remunerationMin : string;
+    remunerationMax : string;
     avantages: string[];
     derniereModif: string;
     nbProfilMatch : number;
