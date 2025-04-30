@@ -5,7 +5,7 @@ export interface AnnoncesType {
     teleworking: string;
     duration: string;
     missions: string[];
-    profile: string[];
+    profile: string;
     softSkills: string[];
     hardSkills: string[];
     software: string[];
@@ -25,7 +25,7 @@ export interface CreateAnnoncesType {
     teleworking: string;
     duration: string;
     missions: string[];
-    profile: string[];
+    profile: string;
     softSkills: string[];
     hardSkills: string[];
     software: string[];
