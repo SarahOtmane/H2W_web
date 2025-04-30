@@ -3,6 +3,7 @@ import { CreateAnnoncesType } from "../../types/Annonces.type";
 import InputLabel from "../fields/InputLabel";
 import InputRadio from "../fields/InputRadio";
 import AnnoncesController from "../../controllers/Annonces.controller";
+import MissionsInputC from "../company/MissionInputC";
 
 
 const CreateAnnonce = () => {
@@ -13,7 +14,7 @@ const CreateAnnonce = () => {
         teleworking: "",
         duration: "",
         missions: [],
-        profile: [],
+        profile: "",
         softSkills: [],
         hardSkills: [],
         software: [],
@@ -58,7 +59,7 @@ const CreateAnnonce = () => {
                 />
 
                 <p className="font-Jakarta-bold text-sm sm:text-base md:text-lg lg:text-body ml-1 mt-10">Télétravail</p>
-                <div className="flex ml-2 mt-2">
+                <div className="flex ml-2 mt-2 mb-10">
                     {teleworkingOptions.map((option) => (
                         <InputRadio
                             key={option}
@@ -69,7 +70,7 @@ const CreateAnnonce = () => {
                     ))}
                 </div>
 
-                <p className="font-Jakarta-bold text-sm sm:text-base md:text-lg lg:text-body ml-1 mt-10">Durée de contrat</p>
+                <label className="font-Jakarta-bold text-sm sm:text-base md:text-lg lg:text-body ml-1">Durée de contrat</label>
                 <div className="flex ml-2 mt-2">
                     {dureeContratOptions.map((option) => (
                         <InputRadio
@@ -80,6 +81,23 @@ const CreateAnnonce = () => {
                         />
                     ))}
                 </div>
+                
+                <MissionsInputC annonce={annonce} setAnnonce={setAnnonce} />
+
+                <label className="font-Jakarta-bold text-sm sm:text-base md:text-lg lg:text-body ml-1">Description du profil recherché</label>
+                <div className="relative">
+                    <textarea
+                        maxLength={300}
+                        value={annonce.profile}
+                        onChange={(e) => setAnnonce({ ...annonce, profile: e.target.value })}
+                        placeholder="Expliquez  votre projet, son objectif et votre rôle."
+                        className="w-full mt-3 min-h-[200px] p-4 rounded-[1rem] bg-gray-100 focus:outline-none focus:ring-2 focus:ring-lilas resize-none"
+                    />
+                    <span className="absolute bottom-2 right-4 text-sm text-custom-black">
+                        {annonce.profile.length}/300
+                    </span>
+                </div>
+
             </div>
         </div>
     )
