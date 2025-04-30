@@ -30,7 +30,7 @@ const MissionsInput: React.FC<MissionsInputProps> = ({ experience, setExperience
 
     return (
         <div className="space-y-4 mt-10">
-            <label className="font-Jakarta-medium text-sm sm:text-base md:text-lg lg:text-body ml-1">Listez vos missions</label>
+            <label className="font-Jakarta-bold text-sm sm:text-base md:text-lg lg:text-body ml-1">Listez vos missions</label>
 
             <ul className="space-y-2 pl-4">
                 {experience.missions.map((mission, index) => (
