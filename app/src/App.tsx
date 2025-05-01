@@ -12,7 +12,7 @@ import PolitiqueConfidentialite from './pages/PolitiqueConfidentialité';
 import EngagementAccessibilite from './pages/EngagementAccessibilite';
 import LandingPage from './pages/LandingPage';
 import TableauBord from './pages/student/TableauBord';
-import Portfolio from './pages/student/Portfolio';
+import PortfolioC from './pages/student/Portfolio';
 import Error404 from './pages/Error404';
 import Error500 from './pages/Error500';
 import Error403 from './pages/Error403';
@@ -49,7 +49,7 @@ const AppContent: React.FC = () => {
 
                 <Route path='etudiant'>
                     <Route path='tableau-de-bord' element={<TableauBord />} />
-                    <Route path='portfolio' element={<Portfolio />} />
+                    <Route path='portfolio' element={<PortfolioC />} />
                 </Route>
 
                 <Route path='company'>
