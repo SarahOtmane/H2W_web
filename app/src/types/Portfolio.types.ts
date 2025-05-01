@@ -19,3 +19,13 @@ export interface Experience {
     location: string;
     missions: string[];
 }
+
+export interface Project {
+    name: string;
+    description: string;
+    media: File[];
+    cover: File[];
+    hardSkills: string[];
+    softSkills: string[];
+    softwares: string[];
+}
