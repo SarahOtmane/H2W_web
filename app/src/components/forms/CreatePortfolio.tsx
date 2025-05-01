@@ -20,6 +20,7 @@ const CreatePortfolio = () => {
         softSkills: [],
         softwares: [],
         experiences: [],
+        projects: [],
     });
 
     const [etape, setEtape] = useState<number>(1);
@@ -94,7 +95,7 @@ const CreatePortfolio = () => {
                         maxSkills={20}
                         skillsList={softwares}
                         selectedSkills={portfolio.softwares}
-                        setSelectedSkills={(event) => setPortfolio({ ...portfolio, softSkills: event })}
+                        setSelectedSkills={(event) => setPortfolio({ ...portfolio, softwares: event })}
                         isSingleSelect={false}
                         placeholder="Figma, Photoshop, Visual studio code etc."
                     />
