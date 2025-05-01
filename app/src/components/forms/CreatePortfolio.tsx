@@ -5,12 +5,22 @@ import CreatePortfolioController from "../../controllers/CreatePortfolio.control
 import ExperienceForm from "./ExperienceForm";
 import ProjectsForm from "./ProjectsForm";
 import { useState } from "react";
+import SkillsController from "../../controllers/Skills.controller";
+import { Portfolio } from "../../types/Portfolio.types";
 
 const CreatePortfolio = () => {
-    const {
-        etapes, portfolio, maxChars, hardSkills, handleChangePortfolio, updateSoftwares,
-        metiers, softSkills, softwares, updateHardSkills, updateSoftSkills, updateMetiers,
-    } = CreatePortfolioController()
+    const {etapes, maxChars, metiers, } = CreatePortfolioController();
+    const {hardSkills, softSkills, softwares} = SkillsController();
+
+    const [portfolio, setPortfolio] = useState<Portfolio>({
+        title: "",
+        description: "",
+        metier: "",
+        hardSkills: [],
+        softSkills: [],
+        softwares: [],
+        experiences: [],
+    });
 
     const [etape, setEtape] = useState<number>(1);
 
@@ -33,7 +43,7 @@ const CreatePortfolio = () => {
                         maxSkills={1}
                         skillsList={metiers}
                         selectedSkill={portfolio.metier}
-                        setSelectedSkill={updateMetiers}
+                        setSelectedSkill={(event) => setPortfolio({ ...portfolio, metier: event })}
                         isSingleSelect={true}
                         placeholder="Développeur web, Designer UI/UX, etc."
                     />
@@ -41,11 +51,11 @@ const CreatePortfolio = () => {
                     <label className="text-[16px] font-Jakarta-bold mt-8">Biographie</label>
                     <div className="flex flex-col mt-4 relative">
                         <textarea
-                            className="bg-gray-100 text-sm text-gray-700 w-full rounded-[1rem] p-4 outline-none resize-none"
+                            className="text-input-text bg-gray-background border-gray-background focus:outline-lilas text-sm sm:text-base md:text-lg lg:text-body  w-full rounded-[1rem] p-4 outline-none resize-none"
                             placeholder="Parlez nous de vous..."
                             rows={5}
                             value={portfolio.description}
-                            onChange={handleChangePortfolio}
+                            onChange={(event) => setPortfolio({ ...portfolio, description: event.target.value })}
                         />
                         <span className="absolute bottom-0 right-2 text-sm text-gray-600">
                             {portfolio.description.length}/{maxChars}
@@ -64,7 +74,7 @@ const CreatePortfolio = () => {
                         maxSkills={20}
                         skillsList={hardSkills}
                         selectedSkills={portfolio.hardSkills}
-                        setSelectedSkills={updateHardSkills}
+                        setSelectedSkills={(event) => setPortfolio({ ...portfolio, hardSkills: event })}
                         isSingleSelect={false}
                         placeholder="HTML, CSS, JavaScript, etc."
                     />
@@ -74,7 +84,7 @@ const CreatePortfolio = () => {
                         maxSkills={20}
                         skillsList={softSkills}
                         selectedSkills={portfolio.softSkills}
-                        setSelectedSkills={updateSoftSkills}
+                        setSelectedSkills={(event) => setPortfolio({ ...portfolio, softSkills: event })}
                         isSingleSelect={false}
                         placeholder="Travail en équipe, Autonomie, etc."
                     />
@@ -84,7 +94,7 @@ const CreatePortfolio = () => {
                         maxSkills={20}
                         skillsList={softwares}
                         selectedSkills={portfolio.softwares}
-                        setSelectedSkills={updateSoftwares}
+                        setSelectedSkills={(event) => setPortfolio({ ...portfolio, softSkills: event })}
                         isSingleSelect={false}
                         placeholder="Figma, Photoshop, Visual studio code etc."
                     />
@@ -93,9 +103,9 @@ const CreatePortfolio = () => {
                 </div>
             )}
 
-            {etape === 3 && <ExperienceForm setEtape={setEtape} />}
+            {etape === 3 && <ExperienceForm portfolio={portfolio} setPortfolio={setPortfolio} setEtape={setEtape} />}
 
-            {etape === 4 && <ProjectsForm />}
+            {etape === 4 && <ProjectsForm portfolio={portfolio} />}
         </div>
     )
 }
