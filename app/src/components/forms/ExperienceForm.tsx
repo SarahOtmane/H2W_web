@@ -40,7 +40,9 @@ const ExperienceForm : React.FC<ExperienceFormProps> = ({setEtape, setPortfolio,
     
     const addExpe = async(e: React.MouseEvent<HTMLButtonElement>) => {
         e.preventDefault()
-        experiences = [...experiences, experience]
+        console.log("Experience added", experience)
+        experiences.push(experience)
+        console.log("Experiences", experiences)
         setExpeAdded(true)
     }
 
@@ -66,7 +68,7 @@ const ExperienceForm : React.FC<ExperienceFormProps> = ({setEtape, setPortfolio,
             {experiences.length>0  && (
                 <div >
                     <ButtonBlack handleClick={() => setExpeAdded(false)} style="ml-auto" text="Ajouter une expérience" icon={<Icon name="addButton" />} />
-                    {portfolio.experiences.map((experience, index) => (
+                    {experiences.map((experience, index) => (
                         <div key={index} className="border-lilas bg-[#F8F7FF] border-1 rounded-[1rem] mt-6 px-12 py-8">
                             <div className="flex flex-row items-center mb-10">
                                 <p className="w-1/5 text-input-text text-[16px] font-Jakarta-semi-bold ">Intitulé du poste</p>
