@@ -106,7 +106,7 @@ const CreatePortfolio = () => {
 
             {etape === 3 && <ExperienceForm portfolio={portfolio} setPortfolio={setPortfolio} setEtape={setEtape} />}
 
-            {etape === 4 && <ProjectsForm portfolio={portfolio} />}
+            {etape === 4 && <ProjectsForm portfolio={portfolio} setPortfolio={setPortfolio} />}
         </div>
     )
 }
