@@ -237,7 +237,7 @@ const ExperienceForm = () => {
                             experience.missions.length > 0
                         )}
                     >
-                        Valider
+                        Ajouter
                     </button>
                 </form>
             )}
