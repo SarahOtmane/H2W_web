@@ -1,26 +1,36 @@
 import { useState } from "react";
 
-import CreatePortfolioController from "../../controllers/CreatePortfolio.controller";
 import ButtonBlack from "../buttons/ButtonBlack";
 import InputCheckbox from "../fields/InputCheckbox"
 import InputLabel from "../fields/InputLabel"
 import MissionsInput from "../student/MissionsInput"
 
 import Icon from "../../utils/Icon";
-import { Experience } from "../../types/Portfolio.types";
+import { Experience, Portfolio } from "../../types/Portfolio.types";
 
 interface ExperienceFormProps {
-    setEtape : (value: number) => void
+    setEtape : (value: number) => void,
+    portfolio : Portfolio,
+    setPortfolio : (value: Portfolio) => void,
 }
 
 
-const ExperienceForm : React.FC<ExperienceFormProps> = ({setEtape}) => {
+const ExperienceForm : React.FC<ExperienceFormProps> = ({setEtape, setPortfolio, portfolio}) => {
 
-    const {
-        portfolio, experience, setExperience, handleChangeExperienceCheckbox, handleAddExperienceInPortfolio, handleDeleteExperience
-    } = CreatePortfolioController()
 
     let experiences = portfolio.experiences;
+
+    const [experience, setExperience] = useState<Experience>({
+        companyName: "",
+        title: "",
+        description: "",
+        teleworking: false,
+        startDate: "",
+        endDate: "",
+        location: "",
+        stillWorking: false,
+        missions: [],
+    })
 
     const [expeAdded, setExpeAdded] = useState(false);
     const [missionHiden, setMissionHidden] = useState(true);
@@ -30,7 +40,6 @@ const ExperienceForm : React.FC<ExperienceFormProps> = ({setEtape}) => {
     
     const addExpe = async(e: React.MouseEvent<HTMLButtonElement>) => {
         e.preventDefault()
-        await handleAddExperienceInPortfolio()
         experiences = [...experiences, experience]
         setExpeAdded(true)
     }
@@ -38,10 +47,18 @@ const ExperienceForm : React.FC<ExperienceFormProps> = ({setEtape}) => {
     const deleteExperience = () => {
         if (experienceToDelete) {
             experiences = experiences.filter((exp) => exp !== experienceToDelete);
-            handleDeleteExperience(experienceToDelete);
             setShowPopup(false);
         }
     };
+
+    const handleChangeExperienceCheckbox = (e: React.ChangeEvent<HTMLInputElement>, name: string) => {
+        const { checked } = e.target;
+        if(name === "stillWorking") {
+            setExperience({ ...experience, stillWorking: checked });
+        } else if(name === "teleworking") {
+            setExperience({ ...experience, teleworking: checked });
+        }
+    }
 
     return(
         <div className="bg-white rounded-[1rem] py-12 px-10 mt-4 flex flex-col">
@@ -246,7 +263,7 @@ const ExperienceForm : React.FC<ExperienceFormProps> = ({setEtape}) => {
             )}
             <div className="flex flex-row justify-center items-center mt-15">
                 <button className="text-[16px] py-4 w-[9rem] rounded-[2rem] text-white bg-custom-black mr-4 cursor-pointer " onClick={(e) => { e.preventDefault(); setEtape(2); }}>Précédent</button>
-                <button className={`text-[16px] py-4 w-[9rem] rounded-[2rem] text-white cursor-pointer ${experiences.length>0 ? 'bg-custom-orange' : 'bg-[#9FA6B2]'}`} onClick={(e) => { e.preventDefault(); setEtape(4); }} disabled={!(experiences.length>0)} >Suivant</button>
+                <button className={`text-[16px] py-4 w-[9rem] rounded-[2rem] text-white cursor-pointer ${experiences.length>0 ? 'bg-custom-orange' : 'bg-[#9FA6B2]'}`} onClick={(e) => { e.preventDefault(); setPortfolio({ ...portfolio, experiences: experiences }); setEtape(4); }} disabled={!(experiences.length>0)} >Suivant</button>
             </div>
         </div>
     )
