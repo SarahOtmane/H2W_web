@@ -20,12 +20,8 @@ const CreatePortfolioController = () =>{
         num: 4,
         title: "Ajoutez vos projets",
     },
-    {
-        num: 5,
-        title: "Choisissez une template",
-    }]
-
-    const [etape, setEtape] = useState<number>(1);
+    // 
+    ]
 
     const [portfolio, setPortfolio] = useState<Portfolio>({
         title: "",
@@ -202,8 +198,6 @@ const CreatePortfolioController = () =>{
         updateMetiers,
         handleChangePortfolio,
         maxChars,
-        etape,
-        setEtape,
         experience,
         setExperience,
         handleChangeExperienceCheckbox,
