@@ -45,6 +45,27 @@ const CreateAnnonce = () => {
         setAnnonce(prev => ({ ...prev, softwares: softwares }));
     };
 
+    const isButtonDisabled = () => {
+        return !(
+            annonce.title.length > 0 &&
+            annonce.location.length > 0 &&
+            annonce.teleworking.length > 0 &&
+            annonce.duration.length > 0 &&
+            annonce.missions.length > 0 &&
+            annonce.profile.length > 0 &&
+            annonce.hardSkills.length > 0 &&
+            annonce.softSkills.length > 0 &&
+            annonce.software.length > 0 &&
+            annonce.companyDescription.length > 0 &&
+            annonce.remunerationMin.length > 0 &&
+            annonce.remunerationMax.length > 0 &&
+            annonce.avantages.length > 0
+        );
+    };
+
+    const [popupPublierAnnonce, setPopupPublierAnnonce] = useState(false); 
+    // const [popupVisualAnnonce, setPopupVisualAnnonce] = useState(false); 
+
 
     return(
         <div>
@@ -191,7 +212,59 @@ const CreateAnnonce = () => {
                 </div>
 
                 <Avantages annonce={annonce} setAnnonce={setAnnonce} />
+
+                <div className="flex justify-center mt-10">
+                    <button
+                        className={`text-[16px] py-4 w-max px-10 rounded-[2rem] text-white mr-4 cursor-pointer mt-6
+                            ${(isButtonDisabled()) ? 'bg-[#9FA6B2]' : 'bg-custom-black'}`}
+                            disabled={isButtonDisabled()}
+                    >
+                        Enregistrer en brouillon
+                    </button>
+                    <button
+                        className={`text-[16px] py-4 w-max px-10 rounded-[2rem] text-white mr-4 cursor-pointer mt-6
+                            ${(isButtonDisabled()) ? 'bg-[#9FA6B2]' : 'bg-lilas'}`}
+                            disabled={isButtonDisabled()}
+                    >
+                        Prévisualiser l’offre
+                    </button>
+                    <button
+                        className={`text-[16px] py-4 w-max px-10 rounded-[2rem] text-white mr-4 cursor-pointer mt-6
+                            ${(isButtonDisabled()) ? 'bg-[#9FA6B2]' : 'bg-custom-orange'}`}
+                            disabled={isButtonDisabled()}
+                    >
+                        Poster l’offre
+                    </button>
+                </div>
             </div>
+
+            {popupPublierAnnonce && (
+                <div className="fixed inset-0 flex items-center justify-center bg-black/30 backdrop-blur-sm">
+                    <div className="bg-white rounded-[1rem] p-6 w-[600px] px-14 py-10 text-center">
+                        <h3 className="text-[24px] font-Jakarta-bold text-custom-black">Êtes vous sûr de vouloir poste votre offre ?</h3>
+                        <p className="text-[16px] font-Jakarta-semi-bold-bold text-[#9FA6B2] mt-8 mb-14">Vous pourrez ensuite la modifier sur votre tableau de bord.</p>
+                        <div className="flex justify-center">
+                            <button
+                                className="bg-custom-black py-3 rounded-[2rem] mr-3 text-white w-[150px] cursor-pointer"
+                                onClick={() => setPopupPublierAnnonce(false)}
+                            >
+                                Annuler
+                            </button>
+                            <button
+                                className="bg-custom-orange py-3 rounded-[2rem] ml-3 text-white w-[150px] cursor-pointer"
+                            >
+                                Publier l'offre
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            )}
+
+            {/* {popupVisualAnnonce && (
+                <div className="fixed inset-0 flex items-center justify-center bg-black/30 backdrop-blur-sm">
+                    <AnnonceDetail />
+                </div>
+            )} */}
         </div>
     )
 }
