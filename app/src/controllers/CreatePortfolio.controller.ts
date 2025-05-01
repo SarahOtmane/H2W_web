@@ -1,6 +1,4 @@
-import { useState, useEffect } from "react";
 
-import { Experience, Portfolio } from "../types/Portfolio.types";
 
 
 const CreatePortfolioController = () =>{
@@ -23,28 +21,6 @@ const CreatePortfolioController = () =>{
     // 
     ]
 
-    const [portfolio, setPortfolio] = useState<Portfolio>({
-        title: "",
-        description: "",
-        metier: "",
-        hardSkills: [],
-        softSkills: [],
-        softwares: [],
-        experiences: [],
-    });
-
-    const [experience, setExperience] = useState<Experience>({
-        title: "",
-        companyName: "",
-        description: "",
-        teleworking: false,
-        startDate: "",
-        endDate: "",
-        location: "",
-        stillWorking: false,
-        missions: [],
-    })
-
     const metiers = [
         'Développeur web',
         'Développeur front-end',
@@ -61,148 +37,14 @@ const CreatePortfolioController = () =>{
         'Développeur de jeux vidéo',
         'Développeur de logiciels',
     ]
-    const hardSkills = [
-        'Design graphique',
-        'HTML',
-        'CSS',
-        'UI/UX',
-        'React',
-        'Node.js',
-        'JavaScript',
-        'TypeScript',
-        'PHP',
-        'Python',
-        'Java',
-        'C++',
-    ];
-    const softwares = [
-        'Photoshop',
-        'Figma',
-        'Illustrator',
-        'WordPress',
-        'Adobe XD',
-        'Sketch',
-        'InVision',
-        'After Effects',
-        'Premiere Pro',
-        'Postman',
-        'Visual Studio Code',
-        'Sublime Text',
-        'Docker'
-    ];
-    const softSkills = [
-        'Communication claire',
-        'Travail d\'équipe',
-        'Résolution de problèmes',
-        'Gestion du temps',
-        'Créativité',
-        'Adaptabilité',
-        'Esprit critique',
-        'Gestion du stress',
-        'Leadership',
-        'Empathie',
-        'Prise de décision',
-    ];
-
-    const updateHardSkills = (skills: string[]) => {
-        setPortfolio(prev => ({ ...prev, hardSkills: skills }));
-    };
-    
-    const updateSoftSkills = (skills: string[]) => {
-        setPortfolio(prev => ({ ...prev, softSkills: skills }));
-    };
-    
-    const updateSoftwares = (softwares: string[]) => {
-        setPortfolio(prev => ({ ...prev, softwares: softwares }));
-    };
-
-    const updateMetiers = (metier: string) => {
-        setPortfolio(prev => ({ ...prev, metier: metier }));
-    }
 
 
     const maxChars = 350;
 
-    const handleChangePortfolio = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
-        const value = e.target.value;
-        if (value.length <= maxChars) {
-            setPortfolio({ ...portfolio, description: value });
-        }
-    };
-
-    const handleChangeExperienceCheckbox = (e: React.ChangeEvent<HTMLInputElement>, name: string) => {
-        const { checked } = e.target;
-        if(name === "stillWorking") {
-            setExperience({ ...experience, stillWorking: checked });
-        } else if(name === "teleworking") {
-            setExperience({ ...experience, teleworking: checked });
-        }
-    }
-
-    const handleAddExperienceInPortfolio = async() => {
-        const updatedPortfolio : Portfolio = {
-            ...portfolio,
-            experiences: [...portfolio.experiences, experience],
-        };
-        setPortfolio(updatedPortfolio);
-        
-        setExperience({
-            title: "",
-            companyName: "",
-            description: "",
-            teleworking: false,
-            startDate: "",
-            endDate: "",
-            location: "",
-            stillWorking: false,
-            missions: [],
-        })
-    }
-
-    const handleDeleteExperience = (experience: Experience) => {
-        setPortfolio((prevPortfolio) => ({
-            ...prevPortfolio,
-            experiences: prevPortfolio.experiences.filter((exp) => exp !== experience),
-        }));
-    }
-
-
-    useEffect(() => {
-        const savedPortfolio = localStorage.getItem("portfolio");
-        if (savedPortfolio) {
-            try {
-                const parsedPortfolio = JSON.parse(savedPortfolio);
-                setPortfolio(parsedPortfolio);
-            } catch (error) {
-                console.error("Erreur lors du chargement du portfolio depuis le localStorage :", error);
-            }
-        }
-    }, []);
-
-    useEffect(() => {
-        localStorage.setItem("portfolio", JSON.stringify(portfolio));
-    }, [portfolio]);
-
-
     return({
         etapes,
-        portfolio,
-        setPortfolio,
-        hardSkills,
-        softSkills,
-        softwares,
         metiers,
-        updateHardSkills,
-        updateSoftSkills,
-        updateSoftwares,
-        updateMetiers,
-        handleChangePortfolio,
         maxChars,
-        experience,
-        setExperience,
-        handleChangeExperienceCheckbox,
-        handleAddExperienceInPortfolio,
-        handleDeleteExperience,
     })
 }
 
