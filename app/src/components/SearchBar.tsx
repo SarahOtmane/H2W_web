@@ -20,7 +20,7 @@ const SearchBar: React.FC<SearchBarProps> = ({ metier, localisation, setLocalisa
                     placeholder="Métier, entreprise, compétences..."
                     defaultValue={metier}
                     onChange={(e) => setMetier(e.target.value)}
-                    className="border-none text-body focus:outline-none text-search-text"
+                    className="bg-gray-background border-none text-body focus:outline-none text-search-text"
                 />
             </div>
 
@@ -33,7 +33,7 @@ const SearchBar: React.FC<SearchBarProps> = ({ metier, localisation, setLocalisa
                     defaultValue={localisation}
                     onChange={(e) => setLocalisation(e.target.value)}
                     placeholder="Ville, département, code postal..."
-                    className="border-none text-body focus:outline-none text-search-text"
+                    className="bg-gray-background border-none text-body focus:outline-none text-search-text"
                 />
             </div>
 

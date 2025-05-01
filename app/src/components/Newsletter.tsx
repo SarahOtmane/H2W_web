@@ -22,7 +22,7 @@ const Newsletter: React.FC = () => {
                     placeholder="Métier, entreprise, compétences..."
                     defaultValue={metier}
                     onChange={(e) => setMetier(e.target.value)}
-                    className="border-none text-body focus:outline-none text-search-text flex-grow"
+                    className="bg-gray-background border-none text-body focus:outline-none text-search-text flex-grow"
                 />
                 <button className="flex items-center justify-center bg-black text-white font-Jakarta-semi-bold px-5 py-3 rounded-full transition duration-300 w-full sm:w-auto self-end sm:self-center">
                     Je m'abonne !
