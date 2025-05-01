@@ -29,10 +29,10 @@ const icons = {
 
     calendrier : (
         <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M8 2.5V5.5" stroke="#969696" strokeWidth="1.5" stroke-miterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
-            <path d="M16 2.5V5.5" stroke="#969696" strokeWidth="1.5" stroke-miterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
-            <path d="M3.5 9.59009H20.5" stroke="#969696" strokeWidth="1.5" stroke-miterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
-            <path d="M21 9V17.5C21 20.5 19.5 22.5 16 22.5H8C4.5 22.5 3 20.5 3 17.5V9C3 6 4.5 4 8 4H16C19.5 4 21 6 21 9Z" stroke="#969696" strokeWidth="1.5" stroke-miterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
+            <path d="M8 2.5V5.5" stroke="#969696" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
+            <path d="M16 2.5V5.5" stroke="#969696" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
+            <path d="M3.5 9.59009H20.5" stroke="#969696" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
+            <path d="M21 9V17.5C21 20.5 19.5 22.5 16 22.5H8C4.5 22.5 3 20.5 3 17.5V9C3 6 4.5 4 8 4H16C19.5 4 21 6 21 9Z" stroke="#969696" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
             <path d="M15.6976 14.2H15.7066" stroke="#969696" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
             <path d="M15.6976 17.2H15.7066" stroke="#969696" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
             <path d="M11.9945 14.2H12.0035" stroke="#969696" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -44,12 +44,12 @@ const icons = {
 
     filtre : (
         <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M22.5 6.99976H16.5" stroke="white" strokeWidth="1.71875" stroke-miterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
-            <path d="M6.5 6.99976H2.5" stroke="white" strokeWidth="1.71875" stroke-miterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
-            <path d="M10.5 10.5C12.433 10.5 14 8.933 14 7C14 5.067 12.433 3.5 10.5 3.5C8.567 3.5 7 5.067 7 7C7 8.933 8.567 10.5 10.5 10.5Z" stroke="white" strokeWidth="1.71875" stroke-miterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
-            <path d="M22.5 18H18.5" stroke="white" strokeWidth="1.71875" stroke-miterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
-            <path d="M8.5 18H2.5" stroke="white" strokeWidth="1.71875" stroke-miterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
-            <path d="M14.5 21.5C16.433 21.5 18 19.933 18 18C18 16.067 16.433 14.5 14.5 14.5C12.567 14.5 11 16.067 11 18C11 19.933 12.567 21.5 14.5 21.5Z" stroke="white" strokeWidth="1.71875" stroke-miterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
+            <path d="M22.5 6.99976H16.5" stroke="white" strokeWidth="1.71875" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
+            <path d="M6.5 6.99976H2.5" stroke="white" strokeWidth="1.71875" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
+            <path d="M10.5 10.5C12.433 10.5 14 8.933 14 7C14 5.067 12.433 3.5 10.5 3.5C8.567 3.5 7 5.067 7 7C7 8.933 8.567 10.5 10.5 10.5Z" stroke="white" strokeWidth="1.71875" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
+            <path d="M22.5 18H18.5" stroke="white" strokeWidth="1.71875" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
+            <path d="M8.5 18H2.5" stroke="white" strokeWidth="1.71875" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
+            <path d="M14.5 21.5C16.433 21.5 18 19.933 18 18C18 16.067 16.433 14.5 14.5 14.5C12.567 14.5 11 16.067 11 18C11 19.933 12.567 21.5 14.5 21.5Z" stroke="white" strokeWidth="1.71875" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
         </svg>
     ),
 
