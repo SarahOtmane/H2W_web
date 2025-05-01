@@ -4,12 +4,15 @@ import SelectCompetences from "../student/SelectCompetences";
 import CreatePortfolioController from "../../controllers/CreatePortfolio.controller";
 import ExperienceForm from "./ExperienceForm";
 import ProjectsForm from "./ProjectsForm";
+import { useState } from "react";
 
 const CreatePortfolio = () => {
     const {
-        etapes, etape, setEtape, portfolio, maxChars, hardSkills, handleChangePortfolio, updateSoftwares,
+        etapes, portfolio, maxChars, hardSkills, handleChangePortfolio, updateSoftwares,
         metiers, softSkills, softwares, updateHardSkills, updateSoftSkills, updateMetiers,
     } = CreatePortfolioController()
+
+    const [etape, setEtape] = useState<number>(1);
 
     return(
         <div className="mx-4 md:px-36 mt-4 ">
@@ -90,13 +93,9 @@ const CreatePortfolio = () => {
                 </div>
             )}
 
-            {etape === 3 && (
-                <ExperienceForm />
-            )}
+            {etape === 3 && <ExperienceForm setEtape={setEtape} />}
 
-            {etape === 4 && (
-                <ProjectsForm />
-            )}
+            {etape === 4 && <ProjectsForm />}
         </div>
     )
 }
