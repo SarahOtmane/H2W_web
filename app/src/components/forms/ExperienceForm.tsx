@@ -18,7 +18,7 @@ interface ExperienceFormProps {
 const ExperienceForm : React.FC<ExperienceFormProps> = ({setEtape, setPortfolio, portfolio}) => {
 
 
-    let experiences = portfolio.experiences;
+    const experiences = portfolio.experiences;
 
     const [experience, setExperience] = useState<Experience>({
         companyName: "",
@@ -40,15 +40,25 @@ const ExperienceForm : React.FC<ExperienceFormProps> = ({setEtape, setPortfolio,
     
     const addExpe = async(e: React.MouseEvent<HTMLButtonElement>) => {
         e.preventDefault()
-        console.log("Experience added", experience)
         experiences.push(experience)
-        console.log("Experiences", experiences)
         setExpeAdded(true)
+        setExperience({
+            companyName: "",
+            title: "",
+            description: "",
+            teleworking: false,
+            startDate: "",
+            endDate: "",
+            location: "",
+            stillWorking: false,
+            missions: [],
+        })
     }
 
     const deleteExperience = () => {
         if (experienceToDelete) {
-            experiences = experiences.filter((exp) => exp !== experienceToDelete);
+            const updatedExperiences = portfolio.experiences.filter((exp) => exp !== experienceToDelete);
+            setPortfolio({ ...portfolio, experiences: updatedExperiences });
             setShowPopup(false);
         }
     };
@@ -65,7 +75,7 @@ const ExperienceForm : React.FC<ExperienceFormProps> = ({setEtape, setPortfolio,
     return(
         <div className="bg-white rounded-[1rem] py-12 px-10 mt-4 flex flex-col">
             <h2 className="text-[24px] font-Jakarta-bold">Parlez-nous de vos expériences passées et actuelles.</h2>
-            {experiences.length>0  && (
+            {portfolio.experiences.length>0  && (
                 <div >
                     <ButtonBlack handleClick={() => setExpeAdded(false)} style="ml-auto" text="Ajouter une expérience" icon={<Icon name="addButton" />} />
                     {experiences.map((experience, index) => (
