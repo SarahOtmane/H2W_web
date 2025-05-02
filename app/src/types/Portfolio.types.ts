@@ -6,6 +6,7 @@ export interface Portfolio {
     metier: string;
     softwares: string[];
     experiences: Experience[];
+    projects: Project[];
 }
 
 export interface Experience {
