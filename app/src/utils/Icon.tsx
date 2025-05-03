@@ -1,6 +1,64 @@
 import React from 'react';
 
 const icons = {
+    drapeauFrancais : (
+        <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_2714_15316)">
+<mask id="mask0_2714_15316" style={{ maskType: "luminance" }} maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="25">
+<rect y="0.5" width="24" height="24" fill="white"/>
+</mask>
+<g mask="url(#mask0_2714_15316)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M16.5 0.5H24V24.5H16.5V0.5Z" fill="#F50100"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0.5H9V24.5H0V0.5Z" fill="#2E42A5"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M7.5 0.5H16.5V24.5H7.5V0.5Z" fill="#F7FCFF"/>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_2714_15316">
+<rect y="0.5" width="24" height="24" rx="12" fill="white"/>
+</clipPath>
+</defs>
+</svg>
+
+    ),
+
+    drapeauAnglais : (
+        <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_2714_15333)">
+            <mask id="mask0_2714_15333" style={{ maskType: "luminance" }} maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="25">
+            <rect y="0.5" width="24" height="24" fill="white"/>
+            </mask>
+            <g mask="url(#mask0_2714_15333)">
+            <path fillRule="evenodd" clipRule="evenodd" d="M0 0.5V24.5H24V0.5H0Z" fill="#2E42A5"/>
+            <mask id="mask1_2714_15333" style={{ maskType: "luminance" }} maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="25">
+            <path fillRule="evenodd" clipRule="evenodd" d="M0 0.5V24.5H24V0.5H0Z" fill="white"/>
+            </mask>
+            <g mask="url(#mask1_2714_15333)">
+            <mask id="mask2_2714_15333" style={{ maskType: "luminance" }} maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="25">
+            <rect y="0.5" width="24" height="24" fill="white"/>
+            </mask>
+            <g mask="url(#mask2_2714_15333)">
+            <path d="M-2.67188 22.7854L2.60939 25.7634L24.1203 3.73781L26.9061 -0.687674L21.2585 -1.68303L12.4847 7.80844L5.42272 14.2035L-2.67188 22.7854Z" fill="white"/>
+            <path d="M-1.94922 24.8719L0.741343 26.6001L25.9054 -1.09884H22.1275L-1.94922 24.8719Z" fill="#F50100"/>
+            <path d="M26.6758 22.7854L21.3945 25.7634L-0.116413 3.73781L-2.90216 -0.687674L2.74539 -1.68303L11.5192 7.80844L18.5812 14.2035L26.6758 22.7854Z" fill="white"/>
+            <path d="M26.4961 24.2828L23.8055 26.011L13.0904 14.1516L9.91363 12.8266L-3.1697 -0.672585H0.608166L13.6841 12.5062L17.1574 14.095L26.4961 24.2828Z" fill="#F50100"/>
+            <mask id="path-10-inside-1_2714_15333" fill="white">
+            <path d="M14.8359 8.5H25.5234V16.5H14.8359V26.5H9.16992V16.5H-1.47656V8.5H9.16992V-1.5H14.8359V8.5Z"/>
+            </mask>
+            <path d="M14.8359 8.5H25.5234V16.5H14.8359V26.5H9.16992V16.5H-1.47656V8.5H9.16992V-1.5H14.8359V8.5Z" fill="#F50100"/>
+            <path d="M14.8359 8.5H12.8359V10.5H14.8359V8.5ZM25.5234 8.5H27.5234V6.5H25.5234V8.5ZM25.5234 16.5V18.5H27.5234V16.5H25.5234ZM14.8359 16.5V14.5H12.8359V16.5H14.8359ZM14.8359 26.5V28.5H16.8359V26.5H14.8359ZM9.16992 26.5H7.16992V28.5H9.16992V26.5ZM9.16992 16.5H11.1699V14.5H9.16992V16.5ZM-1.47656 16.5H-3.47656V18.5H-1.47656V16.5ZM-1.47656 8.5V6.5H-3.47656V8.5H-1.47656ZM9.16992 8.5V10.5H11.1699V8.5H9.16992ZM9.16992 -1.5V-3.5H7.16992V-1.5H9.16992ZM14.8359 -1.5H16.8359V-3.5H14.8359V-1.5ZM14.8359 8.5V10.5H25.5234V8.5V6.5H14.8359V8.5ZM25.5234 8.5H23.5234V16.5H25.5234H27.5234V8.5H25.5234ZM25.5234 16.5V14.5H14.8359V16.5V18.5H25.5234V16.5ZM14.8359 16.5H12.8359V26.5H14.8359H16.8359V16.5H14.8359ZM14.8359 26.5V24.5H9.16992V26.5V28.5H14.8359V26.5ZM9.16992 26.5H11.1699V16.5H9.16992H7.16992V26.5H9.16992ZM9.16992 16.5V14.5H-1.47656V16.5V18.5H9.16992V16.5ZM-1.47656 16.5H0.523438V8.5H-1.47656H-3.47656V16.5H-1.47656ZM-1.47656 8.5V10.5H9.16992V8.5V6.5H-1.47656V8.5ZM9.16992 8.5H11.1699V-1.5H9.16992H7.16992V8.5H9.16992ZM9.16992 -1.5V0.5H14.8359V-1.5V-3.5H9.16992V-1.5ZM14.8359 -1.5H12.8359V8.5H14.8359H16.8359V-1.5H14.8359Z" fill="white" mask="url(#path-10-inside-1_2714_15333)"/>
+            </g>
+            </g>
+            </g>
+            </g>
+            <defs>
+            <clipPath id="clip0_2714_15333">
+            <rect y="0.5" width="24" height="24" rx="12" fill="white"/>
+            </clipPath>
+            </defs>
+        </svg>
+    ),
+
     starColor : (
         <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M12.225 1.4325L13.985 4.9525C14.225 5.4425 14.865 5.9125 15.405 6.0025L18.595 6.5325C20.635 6.8725 21.115 8.3525 19.645 9.8125L17.165 12.2925C16.745 12.7125 16.515 13.5225 16.645 14.1025L17.355 17.1725C17.915 19.6025 16.625 20.5425 14.475 19.2725L11.485 17.5025C10.945 17.1825 10.055 17.1825 9.50503 17.5025L6.51503 19.2725C4.37503 20.5425 3.07503 19.5925 3.63503 17.1725L4.34503 14.1025C4.47503 13.5225 4.24503 12.7125 3.82503 12.2925L1.34503 9.8125C-0.114974 8.3525 0.355026 6.8725 2.39503 6.5325L5.58503 6.0025C6.11503 5.9125 6.75503 5.4425 6.99503 4.9525L8.75503 1.4325C9.71503 -0.4775 11.275 -0.4775 12.225 1.4325Z" fill="#FFD15C"/>
