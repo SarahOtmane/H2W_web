@@ -1,6 +1,42 @@
 import React from 'react';
 
 const icons = {
+
+    checkOrangeExpe: (
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 22C17.5 22 22 17.5 22 12C22 6.5 17.5 2 12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22Z" fill="#FF9B3E" fillOpacity="0.2" stroke="#FF9B3E" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+            <path d="M7.75 11.9999L10.58 14.8299L16.25 9.16992" stroke="#FF9B3E" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+    ),
+
+    flecheButtonHautOrange: (
+        <svg width="27" height="28" viewBox="0 0 27 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_2775_88074)">
+            <path d="M6.83887 21.0646L20.2789 7.62451" stroke="#FF9B3E" strokeWidth="2.24" strokeLinecap="round" strokeLinejoin="round"/>
+            <path d="M9.36133 7.62451H20.2813V18.5446" stroke="#FF9B3E" strokeWidth="2.24" strokeLinecap="round" strokeLinejoin="round"/>
+            </g>
+            <defs>
+            <clipPath id="clip0_2775_88074">
+            <rect width="26.88" height="28" fill="white" transform="translate(0.120117)"/>
+            </clipPath>
+            </defs>
+        </svg>
+    ),
+
+    flecheButtonBasNoir: (
+        <svg width="27" height="28" viewBox="0 0 27 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_2775_89666)">
+            <path d="M6.83887 6.93544L20.2789 20.3755" stroke="#1D1D1B" strokeWidth="2.24" strokeLinecap="round" strokeLinejoin="round"/>
+            <path d="M9.36133 20.3755H20.2813V9.45544" stroke="#1D1D1B" strokeWidth="2.24" strokeLinecap="round" strokeLinejoin="round"/>
+            </g>
+            <defs>
+            <clipPath id="clip0_2775_89666">
+            <rect width="26.88" height="28" fill="white" transform="matrix(1 0 0 -1 0.120117 28)"/>
+            </clipPath>
+            </defs>
+        </svg>
+    ),
+
     drapeauFrancais : (
         <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_2714_15316)">
