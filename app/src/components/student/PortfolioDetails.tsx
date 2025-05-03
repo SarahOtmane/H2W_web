@@ -6,6 +6,7 @@ import ButtonWhite from "../buttons/ButtonWhite";
 import cover1 from '../../assets/images/portfolio_cover1.svg';
 import cover2 from '../../assets/images/portfolio_cover2.svg';
 import cover3 from '../../assets/images/portfolio_cover3.svg'
+import AccordionExperience from "./AccordionExperience";
 
 interface PortfolioDetailsProps {
     portfolio: Portfolio;
@@ -142,6 +143,10 @@ const PortfolioDetails : React.FC<PortfolioDetailsProps> = ({portfolio}) => {
                                 </button>
                             </article>
                         </div>
+                    )}
+
+                    {btnSelected === 'Expériences' && (
+                        <AccordionExperience experiences={portfolio.experiences} />
                     )}
                 </div>
                 <div className="w-[50%] ml-3 mt-9">
