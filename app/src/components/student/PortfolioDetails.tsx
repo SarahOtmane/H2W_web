@@ -8,6 +8,7 @@ import cover2 from '../../assets/images/student/portfolio_cover2.svg';
 import cover3 from '../../assets/images/student/portfolio_cover3.svg'
 import AccordionExperience from "./AccordionExperience";
 import ButtonBlack from "../buttons/ButtonBlack";
+import ProjectDetail from "./ProjectDetail";
 
 interface PortfolioDetailsProps {
     portfolio: PortfolioWithBase64;
@@ -15,8 +16,6 @@ interface PortfolioDetailsProps {
 
 
 const PortfolioDetails : React.FC<PortfolioDetailsProps> = ({portfolio}) => {
-
-    console.log(portfolio);
 
     const avis : Avis[] = [{
         id: 1,
@@ -60,6 +59,8 @@ const PortfolioDetails : React.FC<PortfolioDetailsProps> = ({portfolio}) => {
         }
         return stars;
     };
+
+    const [open, setOpen] = useState(false);
 
     const boutonToSelect =[{
         id: 'Compétences',
@@ -248,13 +249,14 @@ const PortfolioDetails : React.FC<PortfolioDetailsProps> = ({portfolio}) => {
                                     <h4 className="font-Jakarta-bold text-[24px] text-custom-orange text-center my-8">{project.name}</h4>
                                     <div className="flex justify-center">
                                         <ButtonBlack text="fermer" handleClick={() => setSelectedSkill(null)} style="w-[9rem] mr-3" />
-                                        <ButtonWhite text="Voir le projet" icon={<Icon name="flecheButton" />} />
+                                        <ButtonWhite text="Voir le projet" icon={<Icon name="flecheButton" />} handleClick={() => setOpen(true) } />
                                     </div>
                                 </div>
                             ))
                         ) : (
                             <p className="text-gray-400 text-center">Aucun projet lié à cette compétence.</p>
                         )}
+                        {open && <ProjectDetail setOpen={setOpen} />}
                     </div>
                 </div>
             </div>
