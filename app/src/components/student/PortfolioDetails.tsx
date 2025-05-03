@@ -1,19 +1,21 @@
 import React, { useState } from "react";
-import { Avis, Portfolio } from "../../types/Portfolio.types";
+import { Avis, PortfolioWithBase64 } from "../../types/Portfolio.types";
 import Icon from "../../utils/Icon";
 import ButtonWhite from "../buttons/ButtonWhite";
 
-import cover1 from '../../assets/images/portfolio_cover1.svg';
-import cover2 from '../../assets/images/portfolio_cover2.svg';
-import cover3 from '../../assets/images/portfolio_cover3.svg'
+import cover1 from '../../assets/images/student/portfolio_cover1.svg';
+import cover2 from '../../assets/images/student/portfolio_cover2.svg';
+import cover3 from '../../assets/images/student/portfolio_cover3.svg'
 import AccordionExperience from "./AccordionExperience";
 
 interface PortfolioDetailsProps {
-    portfolio: Portfolio;
+    portfolio: PortfolioWithBase64;
 }
 
 
 const PortfolioDetails : React.FC<PortfolioDetailsProps> = ({portfolio}) => {
+
+    console.log(portfolio);
 
     const avis : Avis[] = [{
         id: 1,
@@ -71,6 +73,35 @@ const PortfolioDetails : React.FC<PortfolioDetailsProps> = ({portfolio}) => {
         title: 'Formations'
     }]
 
+    const formations = [{
+        startedDate: 'Septembre 2020',
+        endDate: 'Juin 2023',
+        title: 'Master Direction Artistique',
+        school: 'Ecole de Design Nantes Atlantique',
+        description: 'Formation axée sur le design graphique, la direction artistique et la création de contenu visuel. Projets pratiques en collaboration avec des entreprises locales.',
+    }, {
+        startedDate: 'Septembre 2018',
+        endDate: 'Juin 2020',
+        title: 'Bachelor Design Graphique',
+        school: 'Ecole de Design Nantes Atlantique',
+        description: 'Formation en design graphique, incluant des cours sur la typographie, la mise en page et l’identité visuelle. Projets en équipe pour des clients réels.',
+    }]
+    
+    const [selectedSkill, setSelectedSkill] = useState<string | null>(null);
+
+    const handleSkillClick = (skill: string) => {
+        setSelectedSkill(prev => (prev === skill ? null : skill));
+    };
+
+    const filteredProjects = selectedSkill
+        ? portfolio.projects.filter(project =>
+            project.hardSkills.includes(selectedSkill) ||
+            project.softSkills.includes(selectedSkill) ||
+            project.softwares.includes(selectedSkill)
+        )
+        : portfolio.projects;
+
+
     return(
         <div className="mx-4 md:px-36 mt-8 ">
             <div className="flex bg-white rounded-[2rem] py-12 px-20 mt-4 items-start w-full">
@@ -118,7 +149,11 @@ const PortfolioDetails : React.FC<PortfolioDetailsProps> = ({portfolio}) => {
                             <h3 className='uppercase font-Jakarta-bold text-[20px] border-b-1 border-[#DBDEEF] pb-2 mb-4'>Hardskills</h3>
                             <article className='flex flex-wrap text-[16px]'>
                                 {portfolio.hardSkills.map((skill, index) => (
-                                    <button key={index} className='cursor-pointer min-w-max border-1 px-6 py-4 mr-4 mb-2 rounded-[2rem] border-[#DBDEEF]'>
+                                    <button 
+                                        key={index} 
+                                        onClick={() => handleSkillClick(skill)}
+                                        className='cursor-pointer min-w-max border-1 px-6 py-4 mr-4 mb-2 rounded-[2rem] border-[#DBDEEF]'
+                                    >
                                         {skill}
                                     </button>
                                 ))}
@@ -126,7 +161,10 @@ const PortfolioDetails : React.FC<PortfolioDetailsProps> = ({portfolio}) => {
                             <h3 className='uppercase font-Jakarta-bold text-[20px] border-b-1 border-[#DBDEEF] pb-2 mb-4 mt-8'>Softskills</h3>
                             <article className='flex flex-wrap text-[16px]'>
                                 {portfolio.softSkills.map((skill, index) => (
-                                    <button key={index} className='cursor-pointer min-w-max border-1 px-6 py-4 mr-4 mb-2 rounded-[2rem] border-[#DBDEEF]'>
+                                    <button 
+                                        key={index} onClick={() => handleSkillClick(skill)} 
+                                        className='cursor-pointer min-w-max border-1 px-6 py-4 mr-4 mb-2 rounded-[2rem] border-[#DBDEEF]'
+                                    >
                                         #{skill}
                                     </button>
                                 ))}
@@ -148,13 +186,56 @@ const PortfolioDetails : React.FC<PortfolioDetailsProps> = ({portfolio}) => {
                     {btnSelected === 'Expériences' && (
                         <AccordionExperience experiences={portfolio.experiences} />
                     )}
+
+                    {btnSelected === 'Formations' && (
+                        <div className="bg-white rounded-b-[2rem] rounded-tl-[2rem] py-8 px-6 items-start w-full">
+                            {formations.map((formation, index) => (
+                                <div key={index} className="mb-6 flex">  
+                                    <svg width="38" height="38" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 22C17.5 22 22 17.5 22 12C22 6.5 17.5 2 12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22Z" fill="#B6A7FC" fillOpacity="0.2" stroke="#FF9B3E" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                                        <path d="M12 18C15.3 18 18 15.3 18 12C18 8.7 15.3 6 12 6C8.7 6 6 8.7 6 12C6 15.3 8.7 18 12 18Z" fill="#FF9B3E"/>
+                                    </svg>
+                                    <article className="ml-4">
+                                        <h3 className="text-[20px] font-Jakarta-bold text-custom-orange mb-2 ">{formation.startedDate} {formation.endDate ? ` - ${formation.endDate}` : " - Ajoud'hui"} : {formation.title} à {formation.school} </h3>
+                                        <p className="text-[16px] font-Jakarta-medium ">{formation.description}</p>
+                                    </article>
+                                </div>
+                            ))}
+                        </div>
+                    )}
                 </div>
                 <div className="w-[50%] ml-3 mt-9">
-                    <h3 className="text-center font-Jakarta-extra-bold text-[20px] uppercase ">Mes 3 projets incontournables</h3>
+                    <h3 className="text-center font-Jakarta-extra-bold text-[20px] uppercase">
+                        {selectedSkill ? `Projet(s) lié(s) à : ${selectedSkill}` : "Mes 3 projets incontournables"}
+                    </h3>
+
                     <div className="bg-white flex flex-col items-center justify-center rounded-[2rem] py-6 mt-4 w-full">
-                        <img src={cover1} alt="cover1" className="" />
-                        <img src={cover2} alt="cover2" className="mt-3" />
-                        <img src={cover3} alt="cover3" className="mt-3" />
+                        {!selectedSkill ? (
+                            <>
+                                <img src={cover1} alt="cover1" className="" />
+                                <img src={cover2} alt="cover2" className="mt-3" />
+                                <img src={cover3} alt="cover3" className="mt-3" />
+                            </>
+                        ) : filteredProjects.length > 0 ? (
+                            filteredProjects.map((project, index) => (
+                                <div key={index} className="mb-4 px-4 w-full">
+                                    {project.media.length > 0 && (
+                                        <>
+                                            {console.log(project.media)}
+                                            <img
+                                            src={project.media[0]}
+                                            alt={`cover-${index}`}
+                                            className="w-full object-cover rounded-lg"
+                                            />
+                                        </>
+                                    )}
+                                    <h4 className="font-Jakarta-bold text-[18px] mt-2">{project.name}</h4>
+                                    <p className="text-sm text-gray-600">{project.description}</p>
+                                </div>
+                            ))
+                        ) : (
+                            <p className="text-gray-400 text-center">Aucun projet lié à cette compétence.</p>
+                        )}
                     </div>
                 </div>
             </div>
