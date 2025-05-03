@@ -29,7 +29,7 @@ const AccordionExperience : React.FC<AccordionExperienceProps> = ({experiences})
                                 onClick={() => toggle(index)}
                                 className="w-full flex justify-between text-left text-[20px] font-Jakarta-bold focus:outline-none my-4 px-6 cursor-pointer"
                             >
-                                <span className={`capitalize ${isOpen ? "text-custom-orange" : "text-custom-black "}`}>{experience.startDate} {experience.endDate ? ` - ${experience.endDate}` : ' - maintenant'} : {experience.title} - {experience.companyName}</span>
+                                <span className={`capitalize ${isOpen ? "text-custom-orange" : "text-custom-black "}`}>{experience.startDate} {experience.endDate ? ` - ${experience.endDate}` : " - Ajoud'hui"} : {experience.title} - {experience.companyName}</span>
                                 <span className="ml-2">
                                     <Icon name={isOpen ? "flecheButtonHautOrange" : "flecheButtonBasNoir"} />
                                 </span>
