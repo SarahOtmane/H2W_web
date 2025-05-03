@@ -3,7 +3,7 @@ import ButtonBlack from "../../components/buttons/ButtonBlack";
 import MenuItem from "../../components/student/MenuItem";
 import TitrePage from "../../components/student/TitrePage";
 import CreatePortfolio from "../../components/forms/CreatePortfolio";
-import { Portfolio } from "../../types/Portfolio.types";
+import { PortfolioWithBase64 } from "../../types/Portfolio.types";
 import PortfolioDetails from "../../components/student/PortfolioDetails";
 
 
@@ -11,10 +11,10 @@ import PortfolioDetails from "../../components/student/PortfolioDetails";
 
 const PortfolioC = () => {
     const [createPortfolio, setCreatePortfolio] = useState(false);
-    const [portfolio, setPortfolio] = useState<Portfolio | null>(null);
+    const [portfolio, setPortfolio] = useState<PortfolioWithBase64 | null>(null);
 
     useEffect(() => {
-        const storedPortfolio = localStorage.getItem("portfolio");
+        const storedPortfolio = sessionStorage.getItem("portfolio");
         if (storedPortfolio) {
             setPortfolio(JSON.parse(storedPortfolio));
         }
