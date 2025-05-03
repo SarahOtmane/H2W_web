@@ -8,9 +8,10 @@ interface ProjectsFormProps {
     portfolio: Portfolio,
     setPortfolio : (value: Portfolio) => void,
     setEtape : (value: number) => void,
+    setCreatePortfolio : (value: boolean) => void,
 }
 
-const ProjectsForm : React.FC<ProjectsFormProps> = ({setEtape, portfolio, setPortfolio}) => {
+const ProjectsForm : React.FC<ProjectsFormProps> = ({setEtape, portfolio, setPortfolio, setCreatePortfolio}) => {
 
     const [projetAdded, setProjetAdded] = useState(false);
     const [showPopup, setShowPopup] = useState(false); 
@@ -45,7 +46,10 @@ const ProjectsForm : React.FC<ProjectsFormProps> = ({setEtape, portfolio, setPor
         }
     };
 
-    const toggleSkill = (skillType: "hardSkills" | "softSkills" | "softwares", skill: string) => {
+    const toggleSkill = (event: React.FormEvent, skillType: "hardSkills" | "softSkills" | "softwares", skill: string) => {
+        event.preventDefault();
+        console.log('add skill')
+        console.log(skillType, skill);
         setProjet((prevProjet) => {
             const skills = prevProjet[skillType];
             if (skills.includes(skill)) {
@@ -65,7 +69,8 @@ const ProjectsForm : React.FC<ProjectsFormProps> = ({setEtape, portfolio, setPor
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
         setPortfolio({ ...portfolio, projects: projects }); 
-        localStorage.setItem("portfolio", JSON.stringify({ ...portfolio})); 
+        localStorage.setItem("portfolio", JSON.stringify({ ...portfolio}));
+        setCreatePortfolio(false); 
     };
 
     const addProject = async(e: React.MouseEvent<HTMLButtonElement>) => {
@@ -170,7 +175,7 @@ const ProjectsForm : React.FC<ProjectsFormProps> = ({setEtape, portfolio, setPor
                 </div>
             )}
         
-            {!projetAdded && <form onSubmit={handleSubmit} className="space-y-6">
+            {!projetAdded && <form className="space-y-6">
                 <InputLabel 
                     name="Titre du post"
                     type='text'
@@ -243,7 +248,7 @@ const ProjectsForm : React.FC<ProjectsFormProps> = ({setEtape, portfolio, setPor
                     {portfolio.hardSkills.map((skill, index) => (
                         <button
                             key={index}
-                            onClick={() => toggleSkill("hardSkills", skill)}
+                            onClick={(e) => toggleSkill(e,"hardSkills", skill)}
                             className={`px-6 py-2 border-2 rounded-[2rem] cursor-pointer ${
                                 projet.hardSkills.includes(skill)
                                     ? "border-custom-orange text-custom-orange"
@@ -260,7 +265,7 @@ const ProjectsForm : React.FC<ProjectsFormProps> = ({setEtape, portfolio, setPor
                     {portfolio.softSkills.map((skill, index) => (
                         <button
                             key={index}
-                            onClick={() => toggleSkill("softSkills", skill)}
+                            onClick={(e) => toggleSkill(e, "softSkills", skill)}
                             className={`px-6 py-2 border-2 rounded-[2rem] ${
                                 projet.softSkills.includes(skill)
                                     ? "border-custom-orange text-custom-orange"
@@ -277,7 +282,7 @@ const ProjectsForm : React.FC<ProjectsFormProps> = ({setEtape, portfolio, setPor
                     {portfolio.softwares.map((skill, index) => (
                         <button
                             key={index}
-                            onClick={() => toggleSkill("softwares", skill)}
+                            onClick={(e) => toggleSkill(e,"softwares", skill)}
                             className={`px-6 py-2 border-2 rounded-[2rem] ${
                                 projet.softwares.includes(skill)
                                     ? "border-custom-orange text-custom-orange"
