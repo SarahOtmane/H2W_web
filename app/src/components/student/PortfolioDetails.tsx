@@ -7,6 +7,7 @@ import cover1 from '../../assets/images/student/portfolio_cover1.svg';
 import cover2 from '../../assets/images/student/portfolio_cover2.svg';
 import cover3 from '../../assets/images/student/portfolio_cover3.svg'
 import AccordionExperience from "./AccordionExperience";
+import ButtonBlack from "../buttons/ButtonBlack";
 
 interface PortfolioDetailsProps {
     portfolio: PortfolioWithBase64;
@@ -146,25 +147,40 @@ const PortfolioDetails : React.FC<PortfolioDetailsProps> = ({portfolio}) => {
                     </div>
                     {btnSelected === 'Compétences' && (
                         <div className='bg-white rounded-b-[2rem] rounded-tr-[2rem] py-8 px-6 items-start w-full'>
-                            <h3 className='uppercase font-Jakarta-bold text-[20px] border-b-1 border-[#DBDEEF] pb-2 mb-4'>Hardskills</h3>
+                            <h3 className='uppercase font-Jakarta-bold text-[20px] border-b-1 border-[#DBDEEF] pb-2 mb-4'>Compétences techniques</h3>
                             <article className='flex flex-wrap text-[16px]'>
                                 {portfolio.hardSkills.map((skill, index) => (
                                     <button 
                                         key={index} 
                                         onClick={() => handleSkillClick(skill)}
-                                        className='cursor-pointer min-w-max border-1 px-6 py-4 mr-4 mb-2 rounded-[2rem] border-[#DBDEEF]'
+                                        className={`cursor-pointer min-w-max border-1 px-6 py-4 mr-4 mb-2 rounded-[2rem] border-[#DBDEEF] ${
+                                            selectedSkill === skill ? 'bg-[#FFE1C6]' : ''
+                                        }`}
                                     >
                                         {skill}
                                     </button>
                                 ))}
                             </article>
-                            <h3 className='uppercase font-Jakarta-bold text-[20px] border-b-1 border-[#DBDEEF] pb-2 mb-4 mt-8'>Softskills</h3>
+                            <h3 className='uppercase font-Jakarta-bold text-[20px] border-b-1 border-[#DBDEEF] pb-2 mb-4 mt-8'>Logiciels</h3>
+                            <article className='flex flex-wrap text-[16px]'>
+                                {portfolio.softwares.map((skill, index) => (
+                                    <button 
+                                        key={index} onClick={() => handleSkillClick(skill)} 
+                                        className={`cursor-pointer min-w-max border-1 px-6 py-4 mr-4 mb-2 rounded-[2rem] border-[#DBDEEF] ${
+                                            selectedSkill === skill ? 'bg-[#FFE1C6]' : ''
+                                        }`}                                    >
+                                        #{skill}
+                                    </button>
+                                ))}
+                            </article>
+                            <h3 className='uppercase font-Jakarta-bold text-[20px] border-b-1 border-[#DBDEEF] pb-2 mb-4 mt-8'>Compétences générales</h3>
                             <article className='flex flex-wrap text-[16px]'>
                                 {portfolio.softSkills.map((skill, index) => (
                                     <button 
                                         key={index} onClick={() => handleSkillClick(skill)} 
-                                        className='cursor-pointer min-w-max border-1 px-6 py-4 mr-4 mb-2 rounded-[2rem] border-[#DBDEEF]'
-                                    >
+                                        className={`cursor-pointer min-w-max border-1 px-6 py-4 mr-4 mb-2 rounded-[2rem] border-[#DBDEEF] ${
+                                            selectedSkill === skill ? 'bg-[#FFE1C6]' : ''
+                                        }`}                                    >
                                         #{skill}
                                     </button>
                                 ))}
@@ -229,8 +245,11 @@ const PortfolioDetails : React.FC<PortfolioDetailsProps> = ({portfolio}) => {
                                             />
                                         </>
                                     )}
-                                    <h4 className="font-Jakarta-bold text-[18px] mt-2">{project.name}</h4>
-                                    <p className="text-sm text-gray-600">{project.description}</p>
+                                    <h4 className="font-Jakarta-bold text-[24px] text-custom-orange text-center my-8">{project.name}</h4>
+                                    <div className="flex justify-center">
+                                        <ButtonBlack text="fermer" handleClick={() => setSelectedSkill(null)} style="w-[9rem] mr-3" />
+                                        <ButtonWhite text="Voir le projet" icon={<Icon name="flecheButton" />} />
+                                    </div>
                                 </div>
                             ))
                         ) : (
