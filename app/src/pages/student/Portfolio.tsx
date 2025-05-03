@@ -1,22 +1,23 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import ButtonBlack from "../../components/buttons/ButtonBlack";
 import MenuItem from "../../components/student/MenuItem";
 import TitrePage from "../../components/student/TitrePage";
 import CreatePortfolio from "../../components/forms/CreatePortfolio";
 import { Portfolio } from "../../types/Portfolio.types";
+import PortfolioDetails from "../../components/student/PortfolioDetails";
 
 
 
 
 const PortfolioC = () => {
     const [createPortfolio, setCreatePortfolio] = useState(false);
-    const portfolioRef = useRef<Portfolio | null>(null);
+    const [portfolio, setPortfolio] = useState<Portfolio | null>(null);
 
     useEffect(() => {
         const storedPortfolio = localStorage.getItem("portfolio");
         if (storedPortfolio) {
-            portfolioRef.current = JSON.parse(storedPortfolio); 
-        } 
+            setPortfolio(JSON.parse(storedPortfolio));
+        }
     }, []);
 
     const handleCreatePortfolio = () => {
@@ -28,8 +29,7 @@ const PortfolioC = () => {
         <main className="md:pt-10 md:pb-20 bg-gray-background">
             <TitrePage title="Portfolio" />
             <MenuItem linkSelected="portfolio" style="bg-white text-custom-black" textColor="black" />
-
-            {!portfolioRef.current && !createPortfolio && (
+            {!portfolio && !createPortfolio && (
                 <div className="flex flex-col items-center justify-center mt-15">
                     <p className="text-[#9FA6B2] mb-5">Vous n’avez pas encore créé votre portfolio.</p>
                     <ButtonBlack
@@ -47,14 +47,10 @@ const PortfolioC = () => {
                 </div>
             )}
 
-            {createPortfolio && <CreatePortfolio />}
+            {createPortfolio  && <CreatePortfolio setCreatePortfolio={setCreatePortfolio} />}
 
-            {portfolioRef.current && (
-                <div className="flex flex-col items-center justify-center mt-15">
-                    <h2 className="text-[24px] font-bold">Votre Portfolio</h2>
-                    <p className="text-[#9FA6B2] mt-4">Voici les détails de votre portfolio :</p>
-                    <p>{portfolioRef.current.description}</p>
-                </div>
+            {portfolio && !createPortfolio && (
+                <PortfolioDetails portfolio={portfolio} />
             )}
         </main>
     )
