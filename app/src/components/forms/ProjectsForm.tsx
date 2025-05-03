@@ -3,6 +3,7 @@ import InputLabel from "../fields/InputLabel";
 import { Portfolio, Project } from "../../types/Portfolio.types";
 import Icon from "../../utils/Icon";
 import ButtonBlack from "../buttons/ButtonBlack";
+import { transformProjectMediaToBase64 } from "../../utils/functionsConvert";
 
 interface ProjectsFormProps {
     portfolio: Portfolio,
@@ -48,8 +49,6 @@ const ProjectsForm : React.FC<ProjectsFormProps> = ({setEtape, portfolio, setPor
 
     const toggleSkill = (event: React.FormEvent, skillType: "hardSkills" | "softSkills" | "softwares", skill: string) => {
         event.preventDefault();
-        console.log('add skill')
-        console.log(skillType, skill);
         setProjet((prevProjet) => {
             const skills = prevProjet[skillType];
             if (skills.includes(skill)) {
@@ -66,10 +65,15 @@ const ProjectsForm : React.FC<ProjectsFormProps> = ({setEtape, portfolio, setPor
         });
     };
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async(e: React.FormEvent) => {
         e.preventDefault();
+        const projectsWithBase64 = await Promise.all(
+            portfolio.projects.map(p => transformProjectMediaToBase64(p))
+        );
+        
+        const updatedPortfolio = { ...portfolio, projects: projectsWithBase64 };
         setPortfolio({ ...portfolio, projects: projects }); 
-        localStorage.setItem("portfolio", JSON.stringify({ ...portfolio}));
+        sessionStorage.setItem("portfolio", JSON.stringify(updatedPortfolio));
         setCreatePortfolio(false); 
     };
 
@@ -314,7 +318,7 @@ const ProjectsForm : React.FC<ProjectsFormProps> = ({setEtape, portfolio, setPor
 
             <div className="flex flex-row justify-center items-center mt-15">
                 <button className="text-[16px] py-4 w-[9rem] rounded-[2rem] text-white bg-custom-black mr-4 cursor-pointer " onClick={(e) => { e.preventDefault(); setEtape(3); }}>Précédent</button>
-                <button className={`text-[16px] py-4 w-[9rem] rounded-[2rem] text-white cursor-pointer ${projects.length>0 ? 'bg-custom-orange' : 'bg-[#9FA6B2]'}`} onClick={(e) => { handleSubmit(e) }} disabled={!(projects.length>0)} >Publier le portfolio</button>
+                <button className={`text-[16px] px-6 py-4 w-max rounded-[2rem] text-white cursor-pointer ${projects.length>0 ? 'bg-custom-orange' : 'bg-[#9FA6B2]'}`} onClick={(e) => { handleSubmit(e) }} disabled={!(projects.length>0)} >Publier le portfolio</button>
             </div>
         </div>
     );  
