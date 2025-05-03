@@ -42,7 +42,13 @@ const CreateAnnonce = () => {
     };
     
     const updateSoftwares = (softwares: string[]) => {
-        setAnnonce(prev => ({ ...prev, softwares: softwares }));
+        setAnnonce(prev => ({ ...prev, software: softwares }));
+    };
+
+    const handleSubmit = async(e: React.FormEvent) => {
+        e.preventDefault();
+        
+        sessionStorage.setItem("portfolio", JSON.stringify(annonce));
     };
 
     const isButtonDisabled = () => {
@@ -252,6 +258,7 @@ const CreateAnnonce = () => {
                             </button>
                             <button
                                 className="bg-custom-orange py-3 rounded-[2rem] ml-3 text-white w-[150px] cursor-pointer"
+                                onClick={(event) => handleSubmit(event)}
                             >
                                 Publier l'offre
                             </button>
