@@ -7,6 +7,7 @@ import MissionsInputC from "../company/MissionInputC";
 import SelectCompetences from "../student/SelectCompetences";
 import SkillsController from "../../controllers/Skills.controller";
 import Avantages from "../company/Avantages";
+import AnnonceDetail from "../company/AnnonceDetail";
 
 
 const CreateAnnonce = () => {
@@ -70,7 +71,7 @@ const CreateAnnonce = () => {
     };
 
     const [popupPublierAnnonce, setPopupPublierAnnonce] = useState(false); 
-    // const [popupVisualAnnonce, setPopupVisualAnnonce] = useState(false); 
+    const [popupVisualAnnonce, setPopupVisualAnnonce] = useState(false); 
 
 
     return(
@@ -267,11 +268,11 @@ const CreateAnnonce = () => {
                 </div>
             )}
 
-            {/* {popupVisualAnnonce && (
+            {popupVisualAnnonce && (
                 <div className="fixed inset-0 flex items-center justify-center bg-black/30 backdrop-blur-sm">
-                    <AnnonceDetail />
+                    <AnnonceDetail annonce={annonce} setPopupVisualAnnonce={setPopupVisualAnnonce} />
                 </div>
-            )} */}
+            )}
         </div>
     )
 }
