@@ -13,7 +13,7 @@ const MenuBurger:React.FC<MenuBurgerProps> = ({isOpen, onClose}) => {
     return(
         <div className={`fixed rounded-b-[2rem] top-0 right-0 w-full bg-white shadow-lg z-50 transform transition-transform duration-300 ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}>
             <div className='flex justify-end p-4'>
-                <button onClick={onClose}>
+                <button onClick={onClose} className='cursor-pointer'>
                     <Icon name='closeMenu' />
                 </button>
             </div>

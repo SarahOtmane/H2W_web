@@ -4,14 +4,15 @@ interface ButtonProps {
     icon?: React.ReactElement;
     handleClick?: () => void;
     style?: string;
+    textStyle?: string;
 }
 
-const ButtonWhite: React.FC<ButtonProps> = ({text, icon, handleClick, style}) => {
+const ButtonWhite: React.FC<ButtonProps> = ({text, icon, handleClick, style, textStyle}) => {
     return (
         <button onClick={handleClick} className={`flex items-center justify-center px-5 py-3 cursor-pointer bg-white border-gray-border border-1  text-black rounded-[2rem] hover:text-white hover:bg-black hover:border-black ${style? style : ''}`}>
             {icon && icon}
             {icon && <span>&nbsp;</span>}
-            <p className={icon ? 'ml-1.5' : ''}>{text}</p>
+            <p className={`${icon ? 'ml-1.5' : ''} ${textStyle ? textStyle : ''}`}>{text}</p>
         </button>
     );
 };

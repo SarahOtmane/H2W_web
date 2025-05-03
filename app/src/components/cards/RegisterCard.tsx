@@ -21,7 +21,7 @@ const RegisterCard: React.FC<RegisterCardProps> = ({icon, titre, description, st
     return (
         <button 
             className={`
-                flex flex-col w-full h-full py-4 px-5 rounded-[1rem] border border-solid
+                flex flex-col w-full h-full py-4 px-5 rounded-[1rem] border border-solid cursor-pointer
                 ${registerSelect ? 'border-lilas border-2 bg-lilas-light' : 'bg-white border-black'}
                 ${style ? style : ''}
             `}

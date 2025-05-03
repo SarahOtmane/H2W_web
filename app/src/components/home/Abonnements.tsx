@@ -45,8 +45,8 @@ const Abonnements: React.FC = () => {
                     </div>
                 </div>
                 <div className="flex my-4">
-                    <SectionTitle text="3.99€" />
-                    <span className="text-gray-dark self-end">/mois</span>
+                    <SectionTitle text="19.99€ " />
+                    <span className="text-gray-dark self-end"> / an</span>
                 </div>
                 <div className="h-[1px] w-full bg-gray-dark m-auto"></div>
                 <ul className="my-6">
