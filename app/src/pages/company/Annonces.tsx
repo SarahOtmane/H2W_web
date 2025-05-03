@@ -44,7 +44,7 @@ const Annonces = () => {
                     <p className="font-Jakarta-extra-bold text-[24px] text-custom-black ">{Annonces.length} annonce(s)</p>
                     <div className="flex flex-row items-center justify-between">
                         <button className="bg-custom-orange rounded-[2rem] py-4 px-6 text-white cursor-pointer " onClick={() => setCreateAnnonce(true)}>+ Ajouter une annonce</button>
-                        <button className="bg-custom-black rounded-[1rem] py-4 px-6 text-white flex items-center ml-3 ">
+                        <button className="bg-custom-black rounded-[1rem] py-4 px-6 text-white flex items-center ml-3 cursor-pointer ">
                             <Icon name="filtre" />
                             <span className="ml-2">Filtres</span>
                         </button>

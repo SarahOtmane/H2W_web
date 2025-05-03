@@ -19,7 +19,7 @@ const SelectEspace: React.FC<SelectEspaceProps> = ({ espaceSelected, setEspaceSe
         <div className='relative w-max'>
             <button 
                 onClick={() => setIsOpen(!isOpen)}
-                className="w-[12rem] bg-black text-white px-5 py-3 rounded-[2rem] flex items-center justify-between" 
+                className="w-[12rem] bg-black text-white px-5 py-3 rounded-[2rem] flex items-center justify-between cursor-pointer" 
             >
                 {espaceSelected === 'Espace recruteur' && <span>Espace <span className='text-custom-orange'>recruteur</span></span>}
                 {espaceSelected === 'Espace étudiant' && <span>Espace <span className='bg-gradient-to-r from-custom-orange to-lilas text-transparent bg-clip-text'>étudiant</span></span>}

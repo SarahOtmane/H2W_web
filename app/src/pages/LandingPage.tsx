@@ -46,7 +46,7 @@ const LandingPage = () => {
                 </ul>
                 {isMobile && (
                     <>
-                        <button className='ml-4' onClick={toggleMenu}>
+                        <button className='ml-4 cursor-pointer' onClick={toggleMenu}>
                         <Icon name='burgerMenu' />
                         </button>
                         <MenuBurger isOpen={isMenuOpen} onClose={toggleMenu} />

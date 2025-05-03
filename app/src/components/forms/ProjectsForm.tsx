@@ -266,7 +266,7 @@ const ProjectsForm : React.FC<ProjectsFormProps> = ({setEtape, portfolio, setPor
                         <button
                             key={index}
                             onClick={(e) => toggleSkill(e, "softSkills", skill)}
-                            className={`px-6 py-2 border-2 rounded-[2rem] ${
+                            className={`px-6 py-2 border-2 rounded-[2rem] cursor-pointer ${
                                 projet.softSkills.includes(skill)
                                     ? "border-custom-orange text-custom-orange"
                                     : "border-custom-black text-custom-black"
@@ -283,7 +283,7 @@ const ProjectsForm : React.FC<ProjectsFormProps> = ({setEtape, portfolio, setPor
                         <button
                             key={index}
                             onClick={(e) => toggleSkill(e,"softwares", skill)}
-                            className={`px-6 py-2 border-2 rounded-[2rem] ${
+                            className={`px-6 py-2 border-2 rounded-[2rem] cursor-pointer ${
                                 projet.softwares.includes(skill)
                                     ? "border-custom-orange text-custom-orange"
                                     : "border-custom-black text-custom-black"

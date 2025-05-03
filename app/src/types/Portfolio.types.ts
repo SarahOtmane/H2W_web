@@ -30,3 +30,12 @@ export interface Project {
     softSkills: string[];
     softwares: string[];
 }
+
+export interface Avis {
+    id: number;
+    person: string;
+    lienEtudiant: string;
+    profession: string;
+    description: string;
+    rate: number;
+}

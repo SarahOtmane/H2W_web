@@ -64,7 +64,7 @@ const MissionsInputC: React.FC<MissionsInputCProps> = ({ annonce, setAnnonce }) 
             
             <button
                 onClick={handleAddMission}
-                className="rounded-xl px-4 py-2 bg-lilas text-white text-2xl font-bold hover:bg-lilas transition disabled:opacity-40"
+                className="rounded-xl cursor-pointer px-4 py-2 bg-lilas text-white text-2xl font-bold hover:bg-lilas transition disabled:opacity-40"
                 disabled={!inputValue.trim()}
             >
                 +

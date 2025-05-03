@@ -83,7 +83,7 @@ const Offres = () => {
             <div className="flex justify-between items-center mb-4 pr-8">
                 <h1 className="font-Jakarta-extra-bold text-[36px]">Offres recommandées</h1>
                 <div className="flex items-center space-x-4">
-                    <button onClick={() => scrollBy(-300)} disabled={!canScrollLeft}>
+                    <button onClick={() => scrollBy(-300)} disabled={!canScrollLeft} className='cursor-pointer' >
                         <svg
                             width="52"
                             height="52"
@@ -115,7 +115,7 @@ const Offres = () => {
                         </svg>
                     </button>
 
-                    <button onClick={() => scrollBy(300)} disabled={!canScrollRight}>
+                    <button onClick={() => scrollBy(300)} disabled={!canScrollRight} className='cursor-pointer'>
                         <svg
                             width="52"
                             height="52"

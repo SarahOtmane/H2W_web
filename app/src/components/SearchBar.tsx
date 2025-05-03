@@ -37,7 +37,7 @@ const SearchBar: React.FC<SearchBarProps> = ({ metier, localisation, setLocalisa
                 />
             </div>
 
-            <button className="flex items-center justify-center bg-black text-white font-Jakarta-semi-bold px-5 py-3 rounded-full transition duration-300 w-full sm:w-auto self-end sm:self-center">
+            <button className="flex cursor-pointer items-center justify-center bg-black text-white font-Jakarta-semi-bold px-5 py-3 rounded-full transition duration-300 w-full sm:w-auto self-end sm:self-center">
                 <p className="mr-2">Rechercher</p>
                 <Icon name='research' />
             </button>

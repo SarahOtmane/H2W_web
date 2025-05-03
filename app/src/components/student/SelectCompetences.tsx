@@ -82,7 +82,7 @@ const SelectCompetences: React.FC<SelectCompetencesProps> = ({
                     <div className="flex w-max items-center border border-black rounded-[2rem] px-8 py-4 font-Jakarta-bold relative text-[16px] mt-6">
                         {selectedSkill}
                         <button
-                            className="ml-2 right-[-.8rem] top-[-.4rem] absolute"
+                            className="ml-2 right-[-.8rem] top-[-.4rem] absolute cursor-pointer"
                             onClick={() => handleRemove(selectedSkill)}
                         >
                             <svg
@@ -123,7 +123,7 @@ const SelectCompetences: React.FC<SelectCompetencesProps> = ({
                         >
                             {skill}
                             <button
-                                className="ml-2 right-[-.8rem] top-[-.4rem] absolute"
+                                className="ml-2 right-[-.8rem] top-[-.4rem] absolute cursor-pointer"
                                 onClick={() => handleRemove(skill)}
                             >
                                 <svg
