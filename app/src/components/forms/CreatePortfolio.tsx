@@ -4,11 +4,15 @@ import SelectCompetences from "../student/SelectCompetences";
 import CreatePortfolioController from "../../controllers/CreatePortfolio.controller";
 import ExperienceForm from "./ExperienceForm";
 import ProjectsForm from "./ProjectsForm";
-import { useState } from "react";
+import React, { useState } from "react";
 import SkillsController from "../../controllers/Skills.controller";
 import { Portfolio } from "../../types/Portfolio.types";
 
-const CreatePortfolio = () => {
+interface CreatePortfolioProps {
+    setCreatePortfolio: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+const CreatePortfolio : React.FC<CreatePortfolioProps> = ({setCreatePortfolio}) => {
     const {etapes, maxChars, metiers, } = CreatePortfolioController();
     const {hardSkills, softSkills, softwares} = SkillsController();
 
@@ -106,7 +110,7 @@ const CreatePortfolio = () => {
 
             {etape === 3 && <ExperienceForm portfolio={portfolio} setPortfolio={setPortfolio} setEtape={setEtape} />}
 
-            {etape === 4 && <ProjectsForm portfolio={portfolio} setPortfolio={setPortfolio} setEtape={setEtape} />}
+            {etape === 4 && <ProjectsForm portfolio={portfolio} setPortfolio={setPortfolio} setEtape={setEtape} setCreatePortfolio={setCreatePortfolio} />}
         </div>
     )
 }
