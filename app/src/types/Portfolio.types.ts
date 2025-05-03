@@ -9,6 +9,17 @@ export interface Portfolio {
     projects: Project[];
 }
 
+export interface PortfolioWithBase64 {
+    title: string;
+    description: string;
+    hardSkills: string[];
+    softSkills: string[];
+    metier: string;
+    softwares: string[];
+    experiences: Experience[];
+    projects: ProjectWithBase64[];
+}
+
 export interface Experience {
     title: string;
     companyName: string;
@@ -25,6 +36,16 @@ export interface Project {
     name: string;
     description: string;
     media: File[];
+    cover: File[];
+    hardSkills: string[];
+    softSkills: string[];
+    softwares: string[];
+}
+
+export interface ProjectWithBase64 {
+    name: string;
+    description: string;
+    media: string[];
     cover: File[];
     hardSkills: string[];
     softSkills: string[];
