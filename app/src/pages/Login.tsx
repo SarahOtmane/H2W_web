@@ -25,7 +25,7 @@ const Login = () => {
                 className={`hidden lg:w-[45%] rounded-l-[2rem] bg-cover bg-no-repeat relative lg:flex flex-col justify-center items-center pb-50`}
                 style={{ backgroundImage: `url(${back})` }}
             >
-                <div className="w-[55%] m-auto mt-14">
+                <div className="w-[58%] m-auto mt-14">
                     <SectionTitle text='Étudiants, entreprises, écoles :' style="text-white text-center font-Jakarta-extra-bold" /> 
                     <SectionTitle text='connectons les talents de demain !' style="text-center font-Jakarta-extra-bold" />
                 </div>
@@ -46,7 +46,7 @@ const Login = () => {
                 <form className="flex flex-col w-full">
                     <InputLabel name="email" type='email' style='w-full ' label="E-mail" placeholder="Entrez votre adresse e-mail" value={information.email} onChange={handleChange} error={validForm ? '' : error.email}/>
                     <InputLabelPassword name="motDePasse" style='w-full mt-5' label="Mot de passe" placeholder="********" value={information.motDePasse} onChange={handleChange} error={validForm ? '' : error.motDePasse}/>
-                    <ButtonBlack text="Je m'inscris" style="py-5 mt-10" handleClick={(e) => login(e)} />
+                    <ButtonBlack text="Je me connecte" style="py-5 mt-10" handleClick={(e) => login(e)} />
                     <p className="text-center mt-7">Vous n’avez pas encore de compte ? <Link to='/register' className="text-lilas">S'inscrire</Link></p>
                 </form>
 
