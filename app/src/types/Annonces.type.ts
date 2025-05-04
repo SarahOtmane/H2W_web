@@ -38,6 +38,8 @@ export interface CreateAnnoncesType {
     derniereModif: string;
     nbProfilMatch : number;
     candidats : number;
-    statut : string
+    statut : string;
+    secteurActivity : string;
+    startDate : string
 }
 
