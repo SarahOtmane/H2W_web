@@ -7,12 +7,14 @@ import { AnnoncesType } from "../../types/Annonces.type";
 import Icon from "../../utils/Icon";
 import ButtonBlack from "../../components/buttons/ButtonBlack";
 import CreateAnnonce from "../../components/forms/CreateAnnonce";
+import { useNavigate } from "react-router-dom";
 
 
 
 
 const Annonces = () => {
     const { annonces } = AnnoncesController();
+    const navigate = useNavigate();
 
     const Annonces: AnnoncesType[] = annonces;
     const [selectedAnnonceId, setSelectedAnnonceId] = useState<number>(0);
@@ -93,7 +95,7 @@ const Annonces = () => {
                                         <p className="ml-2 mr-6">Candidat(s) : {annonce.candidats}</p>
                                         {renderStatut(annonce.statut)}
                                     </div>
-                                    <ButtonBlack text={renderButtonContent(annonce.statut)} />
+                                    <ButtonBlack handleClick={() => navigate('/company/suivi-candidature')} text={renderButtonContent(annonce.statut)} />
                                 </div>
                             </div>
                         ))
