@@ -18,8 +18,8 @@ const Footer: React.FC = () => {
                 </ul>
                 <ul className="md:mt-12 mt-6 font-Jakarta-bold text-body md:ml-30">
                     <li><Link to='#'>Nous contacter</Link></li>
-                    <li><Link to='#'>Mentions légales</Link></li>
-                    <li><Link to='#'>Politique de confidentialité</Link></li>
+                    <li><Link to='/engagement-accessibilite'>Mentions légales</Link></li>
+                    <li><Link to='/politique-confidentialite'>Politique de confidentialité</Link></li>
                 </ul>
             </nav>
 
