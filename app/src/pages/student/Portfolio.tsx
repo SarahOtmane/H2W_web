@@ -50,7 +50,7 @@ const PortfolioC = () => {
             {createPortfolio  && <CreatePortfolio setCreatePortfolio={setCreatePortfolio} />}
 
             {portfolio && !createPortfolio && (
-                <PortfolioDetails portfolio={portfolio} />
+                <PortfolioDetails portfolio={portfolio} partage={true} />
             )}
         </main>
     )
