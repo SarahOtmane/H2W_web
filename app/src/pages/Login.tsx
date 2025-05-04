@@ -1,4 +1,4 @@
-import back from '../assets/images/login_back.png';
+import back from '../assets/images/login_back.svg';
 
 import Icon from "../utils/Icon";
 
