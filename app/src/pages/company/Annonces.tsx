@@ -102,7 +102,7 @@ const Annonces = () => {
                 </>
             )}
             {createAnnonce && (
-                <CreateAnnonce />
+                <CreateAnnonce setCreateAnnonce={setCreateAnnonce} />
             )}
         </main>
     )
