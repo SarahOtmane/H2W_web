@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom';
 import back from '../../assets/images/home_section1_back.png'
 import Icon from '../../utils/Icon';
 import ButtonBlack from '../buttons/ButtonBlack';
@@ -9,6 +10,8 @@ interface SectionAlternanceProps {
 
 
 const SectionAlternance: React.FC<SectionAlternanceProps> = ({isLanding}) => {
+    const navigate = useNavigate();
+
     return(
         <section className='flex flex-col md:flex-row mb-20' id='services'>
             <div className='w-full md:w-1/2 md:mr-4 md:pr-20'>
@@ -30,8 +33,8 @@ const SectionAlternance: React.FC<SectionAlternanceProps> = ({isLanding}) => {
                 )}
                 {!isLanding && (
                     <div className="flex flex-col md:flex-row mt-6 md:mt-10 mb-4 md:mb-20">
-                    <ButtonBlack text="Créer mon portfolio" icon={<Icon name="flecheButton" />} style=" w-max m-auto md:m-0 md:mr-4 " />
-                    <ButtonWhite text="Publier une offre" icon={<Icon name="flecheButton" />} style="w-max m-auto mt-4 md:m-0 " />
+                        <ButtonBlack handleClick={() => navigate('/etudiant/portfolio')} text="Créer mon portfolio" icon={<Icon name="flecheButton" />} style=" w-max m-auto md:m-0 md:mr-4 " />
+                        <ButtonWhite handleClick={() => navigate('/company/offers')} text="Publier une offre" icon={<Icon name="flecheButton" />} style="w-max m-auto mt-4 md:m-0 " />
                     </div>
                 )}
             </div>
