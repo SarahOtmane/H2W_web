@@ -18,6 +18,7 @@ import Error500 from './pages/Error500';
 import Error403 from './pages/Error403';
 import TableauBordC from './pages/company/TableauBord';
 import Annonces from './pages/company/Annonces';
+import SuiviCandidature from './pages/company/SuiviCandidature';
 
 const AppContent: React.FC = () => {
     const location = useLocation();
@@ -55,6 +56,7 @@ const AppContent: React.FC = () => {
                 <Route path='company'>
                     <Route path='tableau-de-bord' element={<TableauBordC />} />
                     <Route path='offers' element={<Annonces />} />
+                    <Route path='suivi-candidature' element={<SuiviCandidature />} />
                 </Route>
             </Routes>
             <Footer />
