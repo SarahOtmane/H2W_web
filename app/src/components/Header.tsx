@@ -31,7 +31,7 @@ const Header : React.FC<HeaderProps> = ({style}) => {
 
     return (
         <header className={`flex flex-row justify-between items-center bg-white ${style==='white' ? 'md:bg-white' : 'md:bg-gray-background'} px-4 py-4 md:px-16 md:py-3 lg:px-38 lg:py-8`}>
-            <Link to='/' className='z-99'><Icon name={isMobile ? 'logoHeaderMobile' : 'logoHeader'} /></Link>
+            <Link to='/' className='z-98 cursor-pointer'><Icon name={isMobile ? 'logoHeaderMobile' : 'logoHeader'} /></Link>
             <ul className='md:flex md:flex-row font-Jakarta-semi-bold hidden'>
                 <li className='mr-8 md:text-[.7rem] lg:text-[1rem]'><Link to='#'>Nos services</Link></li>
                 <li className='mr-8 md:text-[.7rem] lg:text-[1rem]'><Link to='#'>Étudiant</Link></li>
