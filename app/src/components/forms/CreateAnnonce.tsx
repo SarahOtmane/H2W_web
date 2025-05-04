@@ -10,7 +10,12 @@ import Avantages from "../company/Avantages";
 import AnnonceDetail from "../company/AnnonceDetail";
 
 
-const CreateAnnonce = () => {
+interface CreateAnnonceProps {
+    setCreateAnnonce : React.Dispatch<React.SetStateAction<boolean>>
+}
+
+const CreateAnnonce : React.FC<CreateAnnonceProps> = ({setCreateAnnonce}) => {
+
     const {teleworkingOptions, dureeContratOptions} = AnnoncesController();
     const {hardSkills, softSkills, softwares} = SkillsController();
     const [annonce, setAnnonce] = useState<CreateAnnoncesType>({
@@ -50,8 +55,8 @@ const CreateAnnonce = () => {
 
     const handleSubmit = async(e: React.FormEvent) => {
         e.preventDefault();
-        
-        sessionStorage.setItem("portfolio", JSON.stringify(annonce));
+        console.log('ffff')
+        setCreateAnnonce(false)
     };
 
     const isButtonDisabled = () => {
@@ -262,6 +267,7 @@ const CreateAnnonce = () => {
                         className={`text-[16px] py-4 w-max px-10 rounded-[2rem] text-white mr-4 cursor-pointer mt-6
                             ${(isButtonDisabled()) ? 'bg-[#9FA6B2]' : 'bg-custom-orange'}`}
                             disabled={isButtonDisabled()}
+                            onClick={() => setPopupPublierAnnonce(true)}
                     >
                         Poster l’offre
                     </button>
