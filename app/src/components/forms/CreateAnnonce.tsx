@@ -55,7 +55,6 @@ const CreateAnnonce : React.FC<CreateAnnonceProps> = ({setCreateAnnonce}) => {
 
     const handleSubmit = async(e: React.FormEvent) => {
         e.preventDefault();
-        console.log('ffff')
         setCreateAnnonce(false)
     };
 
