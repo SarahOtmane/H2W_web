@@ -46,7 +46,7 @@ const TableauBord = () => {
                             <input 
                                 type="email"
                                 placeholder="Mélina.dupont@gmail.com"
-                                className="bg-[#4E4E4E] w-full text-body rounded-[1.3rem] px-5 py-4 text-gray-dark flex-grow"
+                                className="bg-[#4E4E4E] w-full text-body rounded-[1.3rem] px-5 py-4 flex-grow"
                             />
                         </div>
                         <ButtonWhite text="S'abonner" icon={<Icon name="flecheButton" />} style="mt-1"/> 

@@ -22,7 +22,7 @@ const InputLabel: React.FC<InputLabelProps> = ({label, onChange, value, placehol
                 placeholder={placeholder} 
                 onChange={onChange} 
                 name={name}
-                className={`font-Jakarta-regular italic text-sm sm:text-base md:text-lg lg:text-body  py-4 pl-4 mt-2 rounded-2xl border-1 ${error ? 'text-custom-red border-custom-red bg-red-background' : 'text-input-text bg-gray-background border-gray-background focus:outline-lilas'} `}
+                className={`font-Jakarta-regular text-sm sm:text-base md:text-lg lg:text-body  py-4 pl-4 mt-2 rounded-2xl border-1 ${error ? 'text-custom-red border-custom-red bg-red-background' : 'bg-gray-background border-gray-background focus:outline-lilas'} `}
             />
             {error &&
                 <div className="mt-2 pl-2 flex">

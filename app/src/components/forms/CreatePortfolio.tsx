@@ -56,7 +56,7 @@ const CreatePortfolio : React.FC<CreatePortfolioProps> = ({setCreatePortfolio}) 
                     <label className="text-[16px] font-Jakarta-bold mt-8">Biographie</label>
                     <div className="flex flex-col mt-4 relative">
                         <textarea
-                            className="text-input-text bg-gray-background border-gray-background focus:outline-lilas text-sm sm:text-base md:text-lg lg:text-body  w-full rounded-[1rem] p-4 outline-none resize-none"
+                            className=" bg-gray-background border-gray-background focus:outline-lilas text-sm sm:text-base md:text-lg lg:text-body  w-full rounded-[1rem] p-4 outline-none resize-none"
                             placeholder="Parlez nous de vous..."
                             rows={5}
                             value={portfolio.description}

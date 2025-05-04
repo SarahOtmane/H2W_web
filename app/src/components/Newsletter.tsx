@@ -22,7 +22,7 @@ const Newsletter: React.FC = () => {
                     placeholder="Métier, entreprise, compétences..."
                     defaultValue={metier}
                     onChange={(e) => setMetier(e.target.value)}
-                    className=" border-none text-body focus:outline-none text-search-text flex-grow"
+                    className=" border-none text-body focus:outline-none flex-grow"
                 />
                 <button className="flex cursor-pointer items-center justify-center bg-black text-white font-Jakarta-semi-bold px-5 py-3 rounded-full transition duration-300 w-full sm:w-auto self-end sm:self-center">
                     Je m'abonne !
@@ -34,7 +34,7 @@ const Newsletter: React.FC = () => {
                     placeholder="Métier, entreprise, compétences..."
                     defaultValue={metier}
                     onChange={(e) => setMetier(e.target.value)}
-                    className="border bg-white text-body border-gray-border rounded-[4rem] focus:outline-none text-search-text flex-grow px-8 py-6 mb-6"
+                    className="border bg-white text-body border-gray-border rounded-[4rem] focus:outline-none flex-grow px-8 py-6 mb-6"
                 />
                 <button className="flex cursor-pointer items-center justify-center bg-black text-white font-Jakarta-semi-bold px-5 py-3 rounded-full transition duration-300 w-max m-auto mb-16">
                     Je m'abonne !

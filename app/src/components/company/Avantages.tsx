@@ -55,7 +55,7 @@ const Avantages: React.FC<AvantagesProps> = ({ annonce, setAnnonce }) => {
                     value={inputValue}
                     onChange={(e) => setInputValue(e.target.value)}
                     placeholder="Listez les avantages de votre annonce"
-                    className="w-full min-h-[100px] p-4 rounded-[1rem] bg-gray-100 focus:outline-none focus:ring-2 focus:ring-lilas resize-none"
+                    className="w-full min-h-[100px] p-4 rounded-[1rem] bg-gray-background focus:outline-none focus:ring-2 focus:ring-lilas resize-none"
                 />
                 <span className="absolute bottom-2 right-4 text-sm text-custom-black">
                     {inputValue.length}/160

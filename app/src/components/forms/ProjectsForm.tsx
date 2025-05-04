@@ -240,7 +240,7 @@ const ProjectsForm : React.FC<ProjectsFormProps> = ({setEtape, portfolio, setPor
                         value={projet.description}
                         onChange={(e) => setProjet({ ...projet, description: e.target.value })}
                         placeholder="Expliquez  votre projet, son objectif et votre rôle."
-                        className="text-input-text h-[10rem] mt-2 bg-gray-background border-gray-background focus:outline-lilas w-full rounded-[1rem] p-4 outline-none resize-none"
+                        className="h-[10rem] mt-2 bg-gray-background border-gray-background focus:outline-lilas w-full rounded-[1rem] p-4 outline-none resize-none"
                     />
                     <span className="absolute bottom-2 right-4 text-sm text-custom-black">
                         {projet.description.length}/300

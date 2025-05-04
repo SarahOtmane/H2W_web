@@ -59,7 +59,7 @@ const SelectCompetences: React.FC<SelectCompetencesProps> = ({
                 type="text"
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full p-4 rounded-xl text-input-text bg-gray-background border-gray-background focus:outline-lilas"
+                className="w-full p-4 rounded-xl bg-gray-background border-gray-background focus:outline-lilas"
                 placeholder={placeholder}
             />
 
