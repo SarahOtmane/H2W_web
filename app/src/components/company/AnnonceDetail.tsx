@@ -10,9 +10,10 @@ interface AnnonceDetailProps {
     setPopupVisualAnnonce : React.Dispatch<React.SetStateAction<boolean>>,
 }
 
-const AnnonceDetail : React.FC<AnnonceDetailProps> = ({annonce}) => {
+const AnnonceDetail : React.FC<AnnonceDetailProps> = ({annonce, setPopupVisualAnnonce}) => {
     return(
-        <div className="bg-[#F6F6F6] w-[80%] max-h-[90vh] overflow-y-auto px-14 py-20 ">
+        <>
+        <div className="bg-[#F6F6F6] w-[90%] max-h-[90vh] overflow-y-auto px-14 py-20 ">
             <section className="bg-white rounded-[1rem] flex justify-between px-6 py-10 mb-10">
                 <div>
                     <article className="flex items-center mb-10 ">
@@ -101,6 +102,15 @@ const AnnonceDetail : React.FC<AnnonceDetailProps> = ({annonce}) => {
                 </ul>
             </section>
         </div>
+
+        <button className="cursor-pointer absolute left-[96%] top-[6%]" onClick={()=>setPopupVisualAnnonce(false)}>
+            <svg width="55" height="55" viewBox="0 0 55 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M27.5026 50.4168C40.1068 50.4168 50.4193 40.1043 50.4193 27.5002C50.4193 14.896 40.1068 4.5835 27.5026 4.5835C14.8984 4.5835 4.58594 14.896 4.58594 27.5002C4.58594 40.1043 14.8984 50.4168 27.5026 50.4168Z" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                <path d="M21.0234 33.9855L33.9943 21.0146" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                <path d="M33.9943 33.9855L21.0234 21.0146" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+        </button>
+        </>
     )
 }
 
