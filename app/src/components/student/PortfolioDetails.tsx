@@ -12,10 +12,11 @@ import ProjectDetail from "./ProjectDetail";
 
 interface PortfolioDetailsProps {
     portfolio: PortfolioWithBase64;
+    partage: boolean;
 }
 
 
-const PortfolioDetails : React.FC<PortfolioDetailsProps> = ({portfolio}) => {
+const PortfolioDetails : React.FC<PortfolioDetailsProps> = ({portfolio, partage}) => {
 
     const avis : Avis[] = [{
         id: 1,
@@ -114,7 +115,7 @@ const PortfolioDetails : React.FC<PortfolioDetailsProps> = ({portfolio}) => {
                     <div className="flex flex-row mt-2">
                         {renderStars(4)}
                     </div>
-                    <ButtonWhite text="Partager ce profil" icon={<Icon name="flecheButtonViolet" />} style="mt-10" />
+                    {partage ? <ButtonWhite text="Partager ce profil" icon={<Icon name="flecheButtonViolet" />} style="mt-10" /> : null}
                 </article>
                 <article className="mx-10 w-[77%]">
                     <h1 className="font-Jakarta-bold text-[32px] mt-6" >Je postule pour être</h1>
