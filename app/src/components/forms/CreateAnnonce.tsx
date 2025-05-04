@@ -31,7 +31,9 @@ const CreateAnnonce = () => {
         derniereModif: "",
         nbProfilMatch : 0,
         candidats : 0,
-        statut : ""
+        statut : "",
+        secteurActivity : "",
+        startDate : ""
     })
 
     const updateHardSkills = (skills: string[]) => {
@@ -93,6 +95,16 @@ const CreateAnnonce = () => {
                     onChange={(e) => setAnnonce({ ...annonce, title: e.target.value })}
                     style="mt-10"
                 />
+                
+                <InputLabel 
+                    name="Secteur d'activité"
+                    type='text'
+                    label="Secteur d'activité"
+                    placeholder="Design / Digital / Communication visuelle"
+                    value={annonce.secteurActivity}
+                    onChange={(e) => setAnnonce({ ...annonce, secteurActivity: e.target.value })}
+                    style="mt-10"
+                />
 
                 <InputLabel 
                     name="Lieu de travail"
@@ -115,6 +127,16 @@ const CreateAnnonce = () => {
                         />
                     ))}
                 </div>
+
+                <InputLabel 
+                    name="Date de début de contrat"
+                    type='text'
+                    label="Date de début de contrat"
+                    placeholder="Septembre 2026"
+                    value={annonce.startDate}
+                    onChange={(e) => setAnnonce({ ...annonce, startDate: e.target.value })}
+                    style="my-10"
+                />
 
                 <label className="font-Jakarta-bold text-sm sm:text-base md:text-lg lg:text-body ml-1">Durée de contrat</label>
                 <div className="flex ml-2 mt-2">
@@ -270,7 +292,7 @@ const CreateAnnonce = () => {
             )}
 
             {popupVisualAnnonce && (
-                <div className="fixed inset-0 flex items-center justify-center bg-black/30 backdrop-blur-sm">
+                <div className="fixed inset-0 flex items-center justify-center bg-black/70 backdrop-blur-sm">
                     <AnnonceDetail annonce={annonce} setPopupVisualAnnonce={setPopupVisualAnnonce} />
                 </div>
             )}
