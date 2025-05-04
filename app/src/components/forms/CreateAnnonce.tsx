@@ -249,14 +249,14 @@ const CreateAnnonce : React.FC<CreateAnnonceProps> = ({setCreateAnnonce}) => {
                 <div className="flex justify-center mt-10">
                     <button
                         className={`text-[16px] py-4 w-max px-10 rounded-[2rem] text-white mr-4 cursor-pointer mt-6
-                            ${(isButtonDisabled()) ? 'bg-[#9FA6B2]' : 'bg-custom-black'}`}
+                            ${(isButtonDisabled()) ? 'bg-input-text' : 'bg-custom-black'}`}
                             disabled={isButtonDisabled()}
                     >
                         Enregistrer en brouillon
                     </button>
                     <button
                         className={`text-[16px] py-4 w-max px-10 rounded-[2rem] text-white mr-4 cursor-pointer mt-6
-                            ${(isButtonDisabled()) ? 'bg-[#9FA6B2]' : 'bg-lilas'}`}
+                            ${(isButtonDisabled()) ? 'bg-input-text' : 'bg-lilas'}`}
                             disabled={isButtonDisabled()}
                             onClick={() => setPopupVisualAnnonce(true)}
                     >
@@ -264,7 +264,7 @@ const CreateAnnonce : React.FC<CreateAnnonceProps> = ({setCreateAnnonce}) => {
                     </button>
                     <button
                         className={`text-[16px] py-4 w-max px-10 rounded-[2rem] text-white mr-4 cursor-pointer mt-6
-                            ${(isButtonDisabled()) ? 'bg-[#9FA6B2]' : 'bg-custom-orange'}`}
+                            ${(isButtonDisabled()) ? 'bg-input-text' : 'bg-custom-orange'}`}
                             disabled={isButtonDisabled()}
                             onClick={() => setPopupPublierAnnonce(true)}
                     >
@@ -277,7 +277,7 @@ const CreateAnnonce : React.FC<CreateAnnonceProps> = ({setCreateAnnonce}) => {
                 <div className="fixed inset-0 flex items-center justify-center bg-black/30 backdrop-blur-sm">
                     <div className="bg-white rounded-[1rem] p-6 w-[600px] px-14 py-10 text-center">
                         <h3 className="text-[24px] font-Jakarta-bold text-custom-black">Êtes vous sûr de vouloir poste votre offre ?</h3>
-                        <p className="text-[16px] font-Jakarta-semi-bold-bold text-[#9FA6B2] mt-8 mb-14">Vous pourrez ensuite la modifier sur votre tableau de bord.</p>
+                        <p className="text-[16px] font-Jakarta-semi-bold-bold text-input-text mt-8 mb-14">Vous pourrez ensuite la modifier sur votre tableau de bord.</p>
                         <div className="flex justify-center">
                             <button
                                 className="bg-custom-black py-3 rounded-[2rem] mr-3 text-white w-[150px] cursor-pointer"

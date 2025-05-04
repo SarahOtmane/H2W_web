@@ -20,15 +20,15 @@ const TableauBord = () => {
             <div className="flex flex-row mt-8 px-4 md:px-38">
                 <div className="w-1/3 bg-white rounded-[1rem] mr-4 text-center p-4">
                     <h2 className="font-Jakarta-extra-bold text-[36px] mb-6">Bonjour Mélina !</h2>
-                    <p className="font-Jakarta-medium text-[18px] text-[#9FA6B2] mb-4 ">Pour pouvoir publier votre portfolio, il est nécessaire de vous abonner.</p>
-                    <p className="font-Jakarta-medium text-[18px] text-[#9FA6B2]"><span className="text-custom-orange font-Jakarta-extra-bold text-[36px] ">3.99€</span> par mois</p>
-                    <p className="font-Jakarta-medium text-[18px] text-[#9FA6B2] mb-2">(soit 47,88€ pour 1 an)</p>
+                    <p className="font-Jakarta-medium text-[18px] text-input-text mb-4 ">Pour pouvoir publier votre portfolio, il est nécessaire de vous abonner.</p>
+                    <p className="font-Jakarta-medium text-[18px] text-input-text"><span className="text-custom-orange font-Jakarta-extra-bold text-[36px] ">3.99€</span> par mois</p>
+                    <p className="font-Jakarta-medium text-[18px] text-input-text mb-2">(soit 47,88€ pour 1 an)</p>
                     <p className="font-Jakarta-medium text-[18px] mb-4 ">Essai gratuit pendant 30 jours.</p>
                     <ButtonBlack text='Démarrer votre essai gratuit' icon={<Icon name='flecheButton' />} style="m-auto mb-4" />
                 </div>
                 <div className="w-2/3 bg-white rounded-[1rem] px-8 py-4 items-start flex flex-col">
                     <h2 className="font-Jakarta-extra-bold text-[36px] ">Votre coaching</h2>
-                    <p className="font-Jakarta-medium text-[18px] text-[#9FA6B2] mt-4 w-1/2">Pour accéder aux coaching, il est nécessaire de prendre l’abonnement.</p>
+                    <p className="font-Jakarta-medium text-[18px] text-input-text mt-4 w-1/2">Pour accéder aux coaching, il est nécessaire de prendre l’abonnement.</p>
                     <ButtonGray text='Accéder aux coaching' icon={<Icon name="flecheButtonGray" />} style="mt-auto mb-4" />
                 </div>
             </div>

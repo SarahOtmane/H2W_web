@@ -13,7 +13,7 @@ interface AnnonceDetailProps {
 const AnnonceDetail : React.FC<AnnonceDetailProps> = ({annonce, setPopupVisualAnnonce}) => {
     return(
         <>
-        <div className="bg-[#F6F6F6] w-[90%] max-h-[90vh] overflow-y-auto px-14 py-20 z-99 ">
+        <div className="bg-gray-background w-[90%] max-h-[90vh] overflow-y-auto px-14 py-20 z-99 ">
             <section className="bg-white rounded-[1rem] flex justify-between px-6 py-10 mb-10">
                 <div>
                     <article className="flex items-center mb-10 ">
@@ -26,14 +26,14 @@ const AnnonceDetail : React.FC<AnnonceDetailProps> = ({annonce, setPopupVisualAn
                     </article>
                     <h1 className="text-[23px] font-Jakarta-extra-bold ">{annonce.title}</h1>
                     <article className="flex mt-3">
-                        <p className="flex px-4 py-2 bg-[#F6F6F6] mr-4 rounded-[.6rem] ">
+                        <p className="flex px-4 py-2 bg-gray-background mr-4 rounded-[.6rem] ">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M12.3217 13.6619C13.9577 13.6619 15.284 12.3357 15.284 10.6996C15.284 9.06358 13.9577 7.7373 12.3217 7.7373C10.6856 7.7373 9.35938 9.06358 9.35938 10.6996C9.35938 12.3357 10.6856 13.6619 12.3217 13.6619Z" stroke="#6F6F6F" strokeWidth="1.42419"/>
                                 <path d="M4.35549 8.97156C6.22592 0.749245 18.4075 0.75874 20.2684 8.98106C21.3603 13.8043 18.36 17.887 15.73 20.4126C13.8216 22.2545 10.8023 22.2545 8.88441 20.4126C6.2639 17.887 3.26361 13.7948 4.35549 8.97156Z" stroke="#6F6F6F" strokeWidth="1.42419"/>
                             </svg>
-                            <span className="text-[#6F6F6F] ml-2 text-[15px] font-Jakarta-medium ">{annonce.location}</span>
+                            <span className="text-gray-text ml-2 text-[15px] font-Jakarta-medium ">{annonce.location}</span>
                         </p>
-                        <p className="flex px-4 py-2 bg-[#F6F6F6] rounded-[.6rem] ">
+                        <p className="flex px-4 py-2 bg-gray-background rounded-[.6rem] ">
                             <svg width="23" height="24" viewBox="0 0 23 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M2.04688 21.7988H21.0361" stroke="#6F6F6F" strokeWidth="1.42419" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
                                 <path d="M2.95312 21.7985L3.0006 10.3764C3.0006 9.79727 3.27594 9.24663 3.73168 8.88584L10.3779 3.71127C11.0615 3.17958 12.0205 3.17958 12.7136 3.71127L19.3598 8.87634C19.825 9.23713 20.0909 9.78777 20.0909 10.3764V21.7985" stroke="#6F6F6F" strokeWidth="1.42419" strokeMiterlimit="10" strokeLinejoin="round"/>
@@ -42,7 +42,7 @@ const AnnonceDetail : React.FC<AnnonceDetailProps> = ({annonce, setPopupVisualAn
                                 <path d="M15.8171 13.9657H13.9182C13.396 13.9657 12.9688 13.5384 12.9688 13.0162V11.592C12.9688 11.0698 13.396 10.6426 13.9182 10.6426H15.8171C16.3393 10.6426 16.7666 11.0698 16.7666 11.592V13.0162C16.7666 13.5384 16.3393 13.9657 15.8171 13.9657Z" stroke="#6F6F6F" strokeWidth="1.42419" strokeMiterlimit="10" strokeLinejoin="round"/>
                                 <path d="M18.1905 7.55687L18.162 4.7085H13.9844" stroke="#6F6F6F" strokeWidth="1.42419" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
                             </svg>
-                            <span className="text-[#6F6F6F] ml-2 text-[15px] font-Jakarta-medium ">Télétravail : {annonce.teleworking}</span>
+                            <span className="text-gray-text ml-2 text-[15px] font-Jakarta-medium ">Télétravail : {annonce.teleworking}</span>
                         </p>
                     </article>
                     <ButtonBlack style="mt-8 w-[11rem]" text="Postuler" />
@@ -64,7 +64,7 @@ const AnnonceDetail : React.FC<AnnonceDetailProps> = ({annonce, setPopupVisualAn
                             </svg>
                         </button>
                     </article>
-                    <p className="mt-auto text-[#9FA6B2] text-[16px] font-Jakarta-medium ">Publiée le 05/05/2025</p>
+                    <p className="mt-auto text-input-text text-[16px] font-Jakarta-medium ">Publiée le 05/05/2025</p>
                 </div>
             </section>
 

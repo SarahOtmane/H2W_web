@@ -23,7 +23,7 @@ const AccordionExperience : React.FC<AccordionExperienceProps> = ({experiences})
                 const isOpen = openIndex === index;
 
                 return (
-                    <div key={index} className="border-b border-[#DBDEEF]">
+                    <div key={index} className="border-b border-gray-border">
                         <div className={`p-4 rounded-[1rem]`}>
                             <button
                                 onClick={() => toggle(index)}

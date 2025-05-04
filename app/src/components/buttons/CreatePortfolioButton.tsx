@@ -11,7 +11,7 @@ const CreatePortfolioButton  : React.FC<CreatePortfolioButtonProps> = ({suivantS
     return(
         <div className="flex flex-row justify-center items-center mt-15">
             <button className="text-[16px] py-4 w-[9rem] rounded-[2rem] text-white bg-custom-black mr-4 cursor-pointer " onClick={(e) => { e.preventDefault(); setEtape(etape - 1); }}>Précédent</button>
-            <button className={`text-[16px] py-4 w-[9rem] rounded-[2rem] text-white cursor-pointer ${suivantSelected ? 'bg-custom-orange' : 'bg-[#9FA6B2]'}`} onClick={(e) => { e.preventDefault(); setEtape(etape + 1); }} disabled={!suivantSelected} >Suivant</button>
+            <button className={`text-[16px] py-4 w-[9rem] rounded-[2rem] text-white cursor-pointer ${suivantSelected ? 'bg-custom-orange' : 'bg-input-text'}`} onClick={(e) => { e.preventDefault(); setEtape(etape + 1); }} disabled={!suivantSelected} >Suivant</button>
         </div>
     )
 }

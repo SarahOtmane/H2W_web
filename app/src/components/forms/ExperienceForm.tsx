@@ -167,7 +167,7 @@ const ExperienceForm : React.FC<ExperienceFormProps> = ({setEtape, setPortfolio,
                 <div className="fixed inset-0 flex items-center justify-center bg-black/30 backdrop-blur-sm">
                     <div className="bg-white rounded-[1rem] p-6 w-[600px] px-14 py-10 text-center">
                         <h3 className="text-[24px] font-Jakarta-bold text-custom-black">Êtes-vous sûr(e) de vouloir supprimer cette expérience ?</h3>
-                        <p className="text-[16px] font-Jakarta-semi-bold-bold text-[#9FA6B2] mt-8 mb-14">Cette action est irréversible.</p>
+                        <p className="text-[16px] font-Jakarta-semi-bold-bold text-input-text mt-8 mb-14">Cette action est irréversible.</p>
                         <div className="flex justify-center">
                             <button
                                 className="bg-custom-black py-3 rounded-[2rem] mr-3 text-white w-[150px] cursor-pointer"
@@ -258,7 +258,7 @@ const ExperienceForm : React.FC<ExperienceFormProps> = ({setEtape, setPortfolio,
                     <button
                         className={`text-[16px] py-4 w-max px-10 rounded-[2rem] text-white mr-4 cursor-pointer mt-6 ml-[45%]
                             ${(experience.title.length > 0 && experience.companyName.length > 0 && experience.location.length > 0 && experience.startDate.length > 0 && 
-                                (experience.endDate.length > 0 || experience.stillWorking === true) && experience.missions.length > 0) ? 'bg-custom-orange' : 'bg-[#9FA6B2]'}`}
+                                (experience.endDate.length > 0 || experience.stillWorking === true) && experience.missions.length > 0) ? 'bg-custom-orange' : 'bg-input-text'}`}
                         onClick={e => addExpe(e)}
                         disabled={!(
                             experience.title.length > 0 &&
@@ -275,7 +275,7 @@ const ExperienceForm : React.FC<ExperienceFormProps> = ({setEtape, setPortfolio,
             )}
             <div className="flex flex-row justify-center items-center mt-15">
                 <button className="text-[16px] py-4 w-[9rem] rounded-[2rem] text-white bg-custom-black mr-4 cursor-pointer " onClick={(e) => { e.preventDefault(); setEtape(2); }}>Précédent</button>
-                <button className={`text-[16px] py-4 w-[9rem] rounded-[2rem] text-white cursor-pointer ${experiences.length>0 ? 'bg-custom-orange' : 'bg-[#9FA6B2]'}`} onClick={(e) => { e.preventDefault(); setPortfolio({ ...portfolio, experiences: experiences }); setEtape(4); }} disabled={!(experiences.length>0)} >Suivant</button>
+                <button className={`text-[16px] py-4 w-[9rem] rounded-[2rem] text-white cursor-pointer ${experiences.length>0 ? 'bg-custom-orange' : 'bg-input-text'}`} onClick={(e) => { e.preventDefault(); setPortfolio({ ...portfolio, experiences: experiences }); setEtape(4); }} disabled={!(experiences.length>0)} >Suivant</button>
             </div>
         </div>
     )

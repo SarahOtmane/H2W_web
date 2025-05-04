@@ -117,11 +117,11 @@ const ProjectsForm : React.FC<ProjectsFormProps> = ({setEtape, portfolio, setPor
                             />
                             <div className="w-[75%] flex flex-col mx-6">
                                 <article className="flex items-center w-full">
-                                    <p className="w-[25%] text-[#9FA6B2]">Intitulé du projet</p>
+                                    <p className="w-[25%] text-input-text">Intitulé du projet</p>
                                     <p className="w-[75%]">{projet.name}</p>
                                 </article>
                                 <article className="flex items-center w-full mt-6">
-                                    <p className="w-[25%] text-[#9FA6B2]">Description du projet</p>
+                                    <p className="w-[25%] text-input-text">Description du projet</p>
                                     <p className="w-[75%]">{projet.description}</p>
                                 </article>
                             </div>
@@ -160,7 +160,7 @@ const ProjectsForm : React.FC<ProjectsFormProps> = ({setEtape, portfolio, setPor
                 <div className="fixed inset-0 flex items-center justify-center bg-black/30 backdrop-blur-sm">
                     <div className="bg-white rounded-[1rem] p-6 w-[600px] px-14 py-10 text-center">
                         <h3 className="text-[24px] font-Jakarta-bold text-custom-black">Êtes-vous sûr(e) de vouloir supprimer cette expérience ?</h3>
-                        <p className="text-[16px] font-Jakarta-semi-bold-bold text-[#9FA6B2] mt-8 mb-14">Cette action est irréversible.</p>
+                        <p className="text-[16px] font-Jakarta-semi-bold-bold text-input-text mt-8 mb-14">Cette action est irréversible.</p>
                         <div className="flex justify-center">
                             <button
                                 className="bg-custom-black py-3 rounded-[2rem] mr-3 text-white w-[150px] cursor-pointer"
@@ -192,7 +192,7 @@ const ProjectsForm : React.FC<ProjectsFormProps> = ({setEtape, portfolio, setPor
 
                 <div>
                     <label className="block mb-2 font-semibold">Ajoutez du contenu multimédia</label>
-                    <p className="text-[#9FA6B2] italic mb-4">La première image apparaîtra en grand dans votre projet, vous pouvez modifier l’ordre en les glissant.</p>
+                    <p className="text-input-text italic mb-4">La première image apparaîtra en grand dans votre projet, vous pouvez modifier l’ordre en les glissant.</p>
                     {projet.media.length > 0 && 
                         <img
                             src={URL.createObjectURL(projet.media[0])}
@@ -204,7 +204,7 @@ const ProjectsForm : React.FC<ProjectsFormProps> = ({setEtape, portfolio, setPor
                         <div className="w-1/6">
                             <label
                                 htmlFor="mediaUpload"
-                                className="w-full h-full flex items-center justify-center border-2 border-dashed border-[#E4E4E7] bg-[#F6F6F6] rounded cursor-pointer"
+                                className="w-full h-full flex items-center justify-center border-2 border-dashed border-[#E4E4E7] bg-gray-background rounded cursor-pointer"
                             >
                                 <svg width="66" height="66" viewBox="0 0 66 66" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M16.6309 33.001H49.3447" stroke="#E4E4E7" strokeWidth="4.08923" strokeLinecap="round" strokeLinejoin="round"/>
@@ -301,7 +301,7 @@ const ProjectsForm : React.FC<ProjectsFormProps> = ({setEtape, portfolio, setPor
                 <button
                         className={`text-[16px] py-4 w-max px-10 rounded-[2rem] text-white mr-4 cursor-pointer mt-6 ml-[45%]
                             ${(projet.name.length > 0 && projet.description.length > 0 && projet.media.length > 0 && projet.hardSkills.length > 0 && 
-                                projet.softSkills.length > 0 && projet.softwares.length > 0) ? 'bg-custom-orange' : 'bg-[#9FA6B2]'}`}
+                                projet.softSkills.length > 0 && projet.softwares.length > 0) ? 'bg-custom-orange' : 'bg-input-text'}`}
                         onClick={e => addProject(e)}
                         disabled={!(
                             projet.name.length > 0 &&
@@ -318,7 +318,7 @@ const ProjectsForm : React.FC<ProjectsFormProps> = ({setEtape, portfolio, setPor
 
             <div className="flex flex-row justify-center items-center mt-15">
                 <button className="text-[16px] py-4 w-[9rem] rounded-[2rem] text-white bg-custom-black mr-4 cursor-pointer " onClick={(e) => { e.preventDefault(); setEtape(3); }}>Précédent</button>
-                <button className={`text-[16px] px-6 py-4 w-max rounded-[2rem] text-white cursor-pointer ${projects.length>0 ? 'bg-custom-orange' : 'bg-[#9FA6B2]'}`} onClick={(e) => { handleSubmit(e) }} disabled={!(projects.length>0)} >Publier le portfolio</button>
+                <button className={`text-[16px] px-6 py-4 w-max rounded-[2rem] text-white cursor-pointer ${projects.length>0 ? 'bg-custom-orange' : 'bg-input-text'}`} onClick={(e) => { handleSubmit(e) }} disabled={!(projects.length>0)} >Publier le portfolio</button>
             </div>
         </div>
     );  

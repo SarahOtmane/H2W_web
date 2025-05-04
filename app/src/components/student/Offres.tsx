@@ -155,7 +155,7 @@ const Offres = () => {
                 {tabsAlternances.map((tab, index) => (
                     <div
                         key={index}
-                        className="min-w-1/3 max-w-1/3 flex-shrink-0 bg-white rounded-[1.5rem] border border-[#DBDEEF]"
+                        className="min-w-1/3 max-w-1/3 flex-shrink-0 bg-white rounded-[1.5rem] border border-gray-border"
                     >
                         <img src={tab.pic} className="w-full rounded-t-[1.5rem] h-[350px] object-cover" />
                         <article className="p-4">

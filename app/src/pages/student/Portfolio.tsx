@@ -31,7 +31,7 @@ const PortfolioC = () => {
             <MenuItem linkSelected="portfolio" style="bg-white text-custom-black" textColor="black" />
             {!portfolio && !createPortfolio && (
                 <div className="flex flex-col items-center justify-center mt-15">
-                    <p className="text-[#9FA6B2] mb-5">Vous n’avez pas encore créé votre portfolio.</p>
+                    <p className="text-input-text mb-5">Vous n’avez pas encore créé votre portfolio.</p>
                     <ButtonBlack
                         text="Créer mon portfolio"
                         icon={

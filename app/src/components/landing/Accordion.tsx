@@ -23,7 +23,7 @@ const Accordion : React.FC<AccordionProps> = ({ faqData }) => {
         const isOpen = openIndex === index;
 
         return (
-            <div key={index} className="border-b border-[#DBDEEF]">
+            <div key={index} className="border-b border-gray-border">
                 <div className={`p-4 rounded-[1rem] ${isOpen ? "bg-[#F8F6FF]" : ""}`}>
                 <button
                     onClick={() => toggle(index)}

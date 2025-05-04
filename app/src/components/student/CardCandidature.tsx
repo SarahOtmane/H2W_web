@@ -49,7 +49,7 @@ const CardCandidature : React.FC<CardCandidatureProps> = ({statut, poste, time, 
             <p className="text-black text-[20px] font-Jakarta-extra-bold ">{poste}</p>
             <div className="flex flex-row justify-between align-bottom mt-6">
                 <ButtonWhite text="Voir l'annonce" icon={<Icon name="flecheButton" />} textStyle="text-[16px]" />
-                <p className="text-[#9FA6B2] text-[14px] font-Jakarta-medium self-end ">Envoyé il y'a {time} </p>
+                <p className="text-input-text text-[14px] font-Jakarta-medium self-end ">Envoyé il y'a {time} </p>
             </div>
         </div>
     )
