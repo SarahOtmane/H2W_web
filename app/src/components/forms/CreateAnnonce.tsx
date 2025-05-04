@@ -137,7 +137,7 @@ const CreateAnnonce = () => {
                         value={annonce.profile}
                         onChange={(e) => setAnnonce({ ...annonce, profile: e.target.value })}
                         placeholder="Expliquez  votre projet, son objectif et votre rôle."
-                        className="w-full mt-3 mb-6 min-h-[200px] p-4 rounded-[1rem] bg-gray-100 focus:outline-none focus:ring-2 focus:ring-lilas resize-none"
+                        className="w-full mt-3 mb-6 min-h-[200px] p-4 rounded-[1rem] bg-gray-background focus:outline-none focus:ring-2 focus:ring-lilas resize-none"
                     />
                     <span className="absolute bottom-2 right-4 text-sm text-custom-black">
                         {annonce.profile.length}/300
@@ -182,7 +182,7 @@ const CreateAnnonce = () => {
                             value={annonce.companyDescription}
                             onChange={(e) => setAnnonce({ ...annonce, companyDescription: e.target.value })}
                             placeholder="Expliquez  votre projet, son objectif et votre rôle."
-                            className="w-full mt-3 min-h-[200px] p-4 rounded-[1rem] bg-gray-100 focus:outline-none focus:ring-2 focus:ring-lilas resize-none"
+                            className="w-full mt-3 min-h-[200px] p-4 rounded-[1rem] bg-gray-background focus:outline-none focus:ring-2 focus:ring-lilas resize-none"
                         />
                         <span className="absolute bottom-2 right-4 text-sm text-custom-black">
                             {annonce.companyDescription.length}/300
@@ -200,7 +200,7 @@ const CreateAnnonce = () => {
                             placeholder="EURO"
                             onChange={(e) => setAnnonce({ ...annonce, remunerationMin: e.target.value })} 
                             name="remunerationMin"
-                            className={`font-Jakarta-regular italic text-sm sm:text-base md:text-lg lg:text-body  py-4 pl-4 mt-2 rounded-2xl border-1 text-input-text bg-gray-background border-gray-background focus:outline-lilas `}
+                            className={`font-Jakarta-regular text-sm sm:text-base md:text-lg lg:text-body  py-4 pl-4 mt-2 rounded-2xl border-1 bg-gray-background border-gray-background focus:outline-lilas `}
                         />
                     </div>
                     <p className="mb-4 mr-6">/mois</p>
@@ -212,7 +212,7 @@ const CreateAnnonce = () => {
                             placeholder="EURO"
                             onChange={(e) => setAnnonce({ ...annonce, remunerationMax: e.target.value })} 
                             name="remunerationMin"
-                            className={`font-Jakarta-regular italic text-sm sm:text-base md:text-lg lg:text-body  py-4 pl-4 mt-2 rounded-2xl border-1 text-input-text bg-gray-background border-gray-background focus:outline-lilas `}
+                            className={`font-Jakarta-regular text-sm sm:text-base md:text-lg lg:text-body  py-4 pl-4 mt-2 rounded-2xl border-1 bg-gray-background border-gray-background focus:outline-lilas `}
                         />
                     </div>
                     <p className="mb-4">/mois</p>
@@ -232,6 +232,7 @@ const CreateAnnonce = () => {
                         className={`text-[16px] py-4 w-max px-10 rounded-[2rem] text-white mr-4 cursor-pointer mt-6
                             ${(isButtonDisabled()) ? 'bg-[#9FA6B2]' : 'bg-lilas'}`}
                             disabled={isButtonDisabled()}
+                            onClick={() => setPopupVisualAnnonce(true)}
                     >
                         Prévisualiser l’offre
                     </button>
