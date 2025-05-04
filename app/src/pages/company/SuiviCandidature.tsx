@@ -22,7 +22,7 @@ const SuiviCandidature = () => {
         <main className=" bg-gray-background md:pt-10 md:pb-20">
             <TitrePage title="Tableau de bord" />
             <MenuItem linkSelected="application" style="bg-white text-custom-black" textColor="black" />
-            <div className="flex mt-10 md:px-40 text-[16px] font-Jakarta-medium text-[#969696] ">
+            <div className="flex mt-10 md:px-40 text-[16px] font-Jakarta-medium text-gray-text-dark ">
                 <p>Tableau de bord </p>
                 <p className="mx-2"> &gt; </p>
                 <p> Suivis candidatures</p>

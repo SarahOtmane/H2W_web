@@ -19,9 +19,9 @@ const AnnonceDetail : React.FC<AnnonceDetailProps> = ({annonce, setPopupVisualAn
                     <article className="flex items-center mb-10 ">
                         <img src={Hive2Work} />
                         <h2 className="font-Jakarta-bold text-[19px] ml-10 mr-4 ">{annonce.companyName || 'Hive2Work'}</h2>
-                        <p className="flex py-2 px-5 bg-[#D6F9E3] rounded-[.6rem] ">
+                        <p className="flex py-2 px-5 bg-gray-background_2 rounded-[.6rem] ">
                             <Icon name="trust" />
-                            <span className="text-[#03682B] ml-2 text-[15px] font-Jakarta-medium ">BeeTrust</span>
+                            <span className="text-custom-green ml-2 text-[15px] font-Jakarta-medium ">BeeTrust</span>
                         </p>
                     </article>
                     <h1 className="text-[23px] font-Jakarta-extra-bold ">{annonce.title}</h1>

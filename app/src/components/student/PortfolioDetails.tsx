@@ -156,7 +156,7 @@ const PortfolioDetails : React.FC<PortfolioDetailsProps> = ({portfolio, partage}
                                         key={index} 
                                         onClick={() => handleSkillClick(skill)}
                                         className={`cursor-pointer min-w-max border-1 px-6 py-4 mr-4 mb-2 rounded-[2rem] border-gray-border ${
-                                            selectedSkill === skill ? 'bg-[#FFE1C6]' : ''
+                                            selectedSkill === skill ? 'bg-custom-orange-light' : ''
                                         }`}
                                     >
                                         {skill}
@@ -169,8 +169,8 @@ const PortfolioDetails : React.FC<PortfolioDetailsProps> = ({portfolio, partage}
                                     <button 
                                         key={index} onClick={() => handleSkillClick(skill)} 
                                         className={`cursor-pointer min-w-max border-1 px-6 py-4 mr-4 mb-2 rounded-[2rem] border-gray-border ${
-                                            selectedSkill === skill ? 'bg-[#FFE1C6]' : ''
-                                        }`}                                    >
+                                            selectedSkill === skill ? 'bg-custom-orange-light' : ''
+                                        }`}>
                                         #{skill}
                                     </button>
                                 ))}
@@ -181,7 +181,7 @@ const PortfolioDetails : React.FC<PortfolioDetailsProps> = ({portfolio, partage}
                                     <button 
                                         key={index} onClick={() => handleSkillClick(skill)} 
                                         className={`cursor-pointer min-w-max border-1 px-6 py-4 mr-4 mb-2 rounded-[2rem] border-gray-border ${
-                                            selectedSkill === skill ? 'bg-[#FFE1C6]' : ''
+                                            selectedSkill === skill ? 'bg-custom-orange-light' : ''
                                         }`}                                    >
                                         #{skill}
                                     </button>

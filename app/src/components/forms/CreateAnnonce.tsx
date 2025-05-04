@@ -82,7 +82,7 @@ const CreateAnnonce : React.FC<CreateAnnonceProps> = ({setCreateAnnonce}) => {
 
     return(
         <div>
-            <div className="flex mt-10 md:px-40 text-[16px] font-Jakarta-medium text-[#969696] ">
+            <div className="flex mt-10 md:px-40 text-[16px] font-Jakarta-medium text-gray-text-dark ">
                 <p>Mes annonces </p>
                 <p className="mx-2"> &gt; </p>
                 <p> Créer une offre</p>

@@ -21,7 +21,7 @@ const Annonces = () => {
     const [createAnnonce, setCreateAnnonce] = useState<boolean>(false);
 
     const renderStatut = (statut : string) => {
-        if(statut === 'publie') return <p className="bg-[#D6F9E3] text-[#03682B] px-6 py-3 rounded-[2rem] ">Publié</p>
+        if(statut === 'publie') return <p className="bg-gray-background_2 text-custom-green px-6 py-3 rounded-[2rem] ">Publié</p>
         else if (statut === 'brouillon') return <p className="bg-[#FFE1C5] text-[#934D0B] px-6 py-3 rounded-[2rem] ">Brouillon</p>
         else if (statut === 'archive') return <p className="bg-[#FFD0D0] text-[#871010] px-6 py-3 rounded-[2rem] ">Archivé</p>
     }
@@ -75,12 +75,12 @@ const Annonces = () => {
                                         />
                                         <div className="ml-4">
                                             <p className="font-Jakarta-semi-bold text-[24px] ">{annonce.title}</p>
-                                            <p className="font-Jakarta-medium text-[20px] text-[#969696] ">{annonce.companyName} - {annonce.location}</p>
+                                            <p className="font-Jakarta-medium text-[20px] text-gray-text-dark ">{annonce.companyName} - {annonce.location}</p>
                                         </div>
                                     </div>
                                     <div className="flex items-center font-Jakarta-medium text-[16px] text-custom-black">
                                         <Icon name="calendrier" />
-                                        <p className="text-[#969696] ml-2 mr-4">Dernière modification : {annonce.derniereModif}</p>
+                                        <p className="text-gray-text-dark ml-2 mr-4">Dernière modification : {annonce.derniereModif}</p>
                                         <button className="cursor-pointer">Modifier</button>
                                         <p className="mx-2">|</p>
                                         <button className="cursor-pointer">Supprimer</button>

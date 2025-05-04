@@ -109,7 +109,7 @@ const ProjectsForm : React.FC<ProjectsFormProps> = ({setEtape, portfolio, setPor
                 <div>
                     <ButtonBlack handleClick={() => setProjetAdded(false)} style="ml-auto" text="Ajouter un projet" icon={<Icon name="addButton" />} />
                     {projects.map((projet, index) => (
-                        <div key={index} className="border-lilas flex bg-[#F8F7FF] border-1 rounded-[1rem] mt-6 px-12 py-8 items-center">
+                        <div key={index} className="border-lilas flex bg-input-file border-1 rounded-[1rem] mt-6 px-12 py-8 items-center">
                             <img 
                                 src={URL.createObjectURL(projet.media[0])}
                                 alt={`Aperçu du fichier ${projet.media[0].name}`}

@@ -4,15 +4,20 @@
   --color-lilas: #8C73FF;
   --color-lilas-light: #F4F2FF;
   --color-custom-orange: #ff9b3e;
+  --color-custom-orange-light: #FFE1C6;
   --color-gray-background: #f6f6f6;
+  --color-gray-background_2: #D6F9E3;
   --color-gray-text: #6F6F6F;
+  --color-gray-text-dark: #969696;
   --color-gray-border: #dbdeef;
   --color-gray-dark: #c9c9c9;
   --color-input-text: #9FA6B2;
+  --color-input-file : #F8F7FF;
   --color-search-text: #9d9d9d;
   --color-custom-red : #C30000;
   --color-red-background : #F7DEDE;
   --color-custom-black: #1D1D1B;
+  --color-custom-green: #03682B;
 
   --font-Jakarta-extra-bold: 'Plus Jakarta Sans ExtraBold', sans-serif;
   --font-Jakarta-bold: 'Plus Jakarta Sans Bold', sans-serif;
