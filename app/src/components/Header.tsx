@@ -1,5 +1,6 @@
 import { Link, useNavigate } from 'react-router-dom';
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
+import avatar from '../assets/images/avatar.svg';
 
 import Icon from '../utils/Icon';
 import ButtonBlack from './buttons/ButtonBlack';
@@ -8,26 +9,17 @@ import MenuBurger from './MenuBurger';
 
 interface HeaderProps {
     style?: string;
+    connected?: boolean;
 }
 
-const Header : React.FC<HeaderProps> = ({style}) => {
+const Header : React.FC<HeaderProps> = ({style, connected}) => {
     const navigate = useNavigate();
-    const [isConnected, setIsConnected] = useState<boolean>(false);
 
     const size = WindowSize();
     const isMobile = size.width < 768;
 
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const toggleMenu = () => setIsMenuOpen(prev => !prev);
-
-    useEffect(() => {
-        const isConnected = localStorage.getItem('isConnected');
-        if (isConnected) {
-            setIsConnected(true);
-        } else {
-            setIsConnected(false);
-        }
-    }, []);
 
     return (
         <header className={`flex flex-row justify-between items-center bg-white ${style==='white' ? 'md:bg-white' : 'md:bg-gray-background'} px-4 py-4 md:px-16 md:py-3 lg:px-38 lg:py-8`}>
@@ -47,8 +39,8 @@ const Header : React.FC<HeaderProps> = ({style}) => {
                     <MenuBurger isOpen={isMenuOpen} onClose={toggleMenu} />
                 </>
             )}
-            {!isMobile && !isConnected && <ButtonBlack text='Se connecter' icon={<Icon name='avatar' />} handleClick={()=>navigate('/login')}/>}
-            {!isMobile && isConnected && <ButtonBlack text='Mon compte' icon={<Icon name='avatar' />} handleClick={()=>navigate('/student/dashboard')}/>}
+            {!isMobile && !connected && <ButtonBlack text='Se connecter' icon={<Icon name='avatar' />} handleClick={()=>navigate('/login')}/>}
+            {!isMobile && connected && <ButtonBlack text=' Mélina Dupont' icon={<img src={avatar} />} handleClick={()=>navigate('/etudiant/tableau-de-bord')}/>}
         </header>
     );
 }

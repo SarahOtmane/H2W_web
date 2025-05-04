@@ -29,7 +29,21 @@ const AppContent: React.FC = () => {
         }
         const whiteBackgroundPaths = ['/error-404', '/error-500'];
         const isWhiteBackground = whiteBackgroundPaths.includes(location.pathname);
-        return isWhiteBackground ? <Header style="white" /> : <Header />;
+
+        const connectedPaths = ['/etudiant/tableau-de-bord', '/etudiant/portfolio', '/company/tableau-de-bord', '/company/offers', '/company/suivi-candidature'];
+        const isConnected = connectedPaths.some(path => location.pathname.includes(path));
+        if(isConnected) {
+            if(isWhiteBackground) {
+                return <Header style="white" connected={true} />;
+            } else {
+                return <Header connected={true} />;
+            }
+        }else {
+            if(isWhiteBackground) {
+                return <Header style="white" connected={false} />;
+            }
+            return <Header connected={false} />;
+        }
     };
 
     return (
