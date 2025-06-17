@@ -17,13 +17,15 @@ RUN npm ci
 
 COPY ./app ./
 
+RUN ls -al /app && ls -al /app/src
+
 RUN npm run build
 
 # Étape 2 : Serveur Nginx pour la production
 FROM nginx:alpine
 
 # Copier les fichiers construits dans le dossier Nginx
-COPY --from=builder /dist /usr/share/nginx/html
+COPY --from=builder /app/dist /usr/share/nginx/html
 
 # Exposer le port
 EXPOSE 80
