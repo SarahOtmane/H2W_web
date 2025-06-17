@@ -1,0 +1,23 @@
+name: Deploy Develop Environment
+
+on:
+  push:
+    branches: main
+
+jobs:
+  deploy:
+    name: Deployment
+    runs-on: ubuntu-latest
+    steps:
+      - name: Connect to server user credientials and deploy
+        uses: appleboy/ssh-action@v1.2.0
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USERNAME }}
+          password: ${{ secrets.SSH_PASSWORD }}
+          script: |
+            cd /root/dev/H2W_web
+            git checkout main
+            git pull
+            docker compose down
+            docker compose -f compose.yml up --build
