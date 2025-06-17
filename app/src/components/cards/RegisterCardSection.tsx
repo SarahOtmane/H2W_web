@@ -35,7 +35,7 @@ const RegisterCardSection: React.FC<RegisterCardSectionProps> = ({selected, setS
                         select='entreprise'
                     />
                 </div>
-                <div className="flex-shrink-0 w-[70%]">
+                {/* <div className="flex-shrink-0 w-[70%]">
                     <RegisterCard
                         icon={<Icon name="registerSchool" />}
                         titre='École'
@@ -45,11 +45,11 @@ const RegisterCardSection: React.FC<RegisterCardSectionProps> = ({selected, setS
                         setRegisterEtape={setRegisterEtape}
                         select='ecole'
                     />
-                </div>
+                </div> */}
             </div>
 
             {/* Desktop grid */}
-            <div className="hidden md:grid md:grid-cols-3 md:gap-4">
+            <div className="hidden md:grid md:grid-cols-2 md:gap-4">
                 <RegisterCard 
                     icon={<Icon name="registerStudent" />}
                     titre='Étudiant' 
@@ -68,7 +68,7 @@ const RegisterCardSection: React.FC<RegisterCardSectionProps> = ({selected, setS
                     setRegisterEtape={setRegisterEtape}
                     select='entreprise'
                 />
-                <RegisterCard
+                {/* <RegisterCard
                     icon={<Icon name="registerSchool" />}
                     titre='École'
                     description="Créez un compte école et accompagnez vos étudiants dans la recherche d’alternance."
@@ -76,7 +76,7 @@ const RegisterCardSection: React.FC<RegisterCardSectionProps> = ({selected, setS
                     setSelected={setSelected}
                     setRegisterEtape={setRegisterEtape}
                     select='ecole'
-                />
+                /> */}
             </div>
         </div>
     )

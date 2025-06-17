@@ -181,9 +181,9 @@ const ProjectsForm : React.FC<ProjectsFormProps> = ({setEtape, portfolio, setPor
         
             {!projetAdded && <form className="space-y-6">
                 <InputLabel 
-                    name="Titre du post"
+                    name="Titre du projet"
                     type='text'
-                    label="Titre du post"
+                    label="Titre du projet"
                     placeholder="ex : Développeur web, Designer UI/UX, etc."
                     value={projet.name}
                     onChange={(e) => setProjet({ ...projet, name: e.target.value })}
