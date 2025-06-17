@@ -1,18 +1,4 @@
 services:
-  web-dev:
-    build:
-      context: .
-      dockerfile: Dockerfile.dev
-    ports:
-      - "5173:5173"
-    volumes:
-      - ./app:/app 
-      - /app/node_modules
-    environment:
-      - CHOKIDAR_USEPOLLING=true
-      - HOST=0.0.0.0
-    command: ["npm", "run", "dev"]
-
   web-prod:
     build:
       context: .
