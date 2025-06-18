@@ -1,24 +1,8 @@
 services:
-  web-dev:
-    build:
-      context: .
-      dockerfile: Dockerfile
-      target: dev
-    ports:
-      - "5173:5173"
-    volumes:
-      - ./app:/app 
-      - /app/node_modules
-    environment:
-      - CHOKIDAR_USEPOLLING=true
-      - HOST=0.0.0.0
-    command: ["npm", "run", "dev"]
-
   web-prod:
     build:
       context: .
-      dockerfile: Dockerfile
-      target: builder
+      dockerfile: Dockerfile.prod
     ports:
       - "3002:80"
     networks:
@@ -28,7 +12,6 @@ services:
       - 'traefik.http.routers.web-prod.rule=Host(`vps108082.serveur-vps.net`)'
       - 'traefik.http.routers.web-prod.entrypoints=websecure'
       - 'traefik.http.routers.web-prod.tls.certresolver=myresolver'
-
 
 networks:
   routing:

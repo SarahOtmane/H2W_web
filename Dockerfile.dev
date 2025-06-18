@@ -1,5 +1,5 @@
 # Étape 1 : Construction
-FROM node:20.17-slim AS dev
+FROM node:20.17-slim
 
 # Définir le répertoire de travail
 WORKDIR /app
@@ -24,28 +24,3 @@ ENV HOST=0.0.0.0
 
 # Exécuter Vite en mode développement
 CMD ["npm", "run", "dev"]
-
-
-
-
-
-# Étape 2 : Build pour la production
-FROM node:20.17-slim AS builder
-WORKDIR /app
-COPY --from=dev /app /app
-RUN npm run build
-
-
-
-
-# Étape 2 : Serveur Nginx pour la production
-FROM nginx:alpine
-
-# Copier les fichiers construits dans le dossier Nginx
-COPY --from=builder /dist /usr/share/nginx/html
-
-# Exposer le port
-EXPOSE 80
-
-# Commande par défaut pour Nginx
-CMD ["nginx", "-g", "daemon off;"]
