@@ -2,8 +2,7 @@ services:
   web-dev:
     build:
       context: .
-      dockerfile: Dockerfile
-      target: dev
+      dockerfile: Dockerfile.dev
     ports:
       - "5173:5173"
     volumes:
@@ -13,11 +12,3 @@ services:
       - CHOKIDAR_USEPOLLING=true
       - HOST=0.0.0.0
     command: ["npm", "run", "dev"]
-
-  web-prod:
-    build:
-      context: .
-      dockerfile: Dockerfile
-      target: builder
-    ports:
-      - "3002:80"

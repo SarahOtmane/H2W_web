@@ -46,6 +46,13 @@ const AppContent: React.FC = () => {
         }
     };
 
+    const renderFooter = () => {
+        if (location.pathname === '/') {
+            return null; 
+        }
+        return <Footer />; 
+    };
+
     return (
         <>
             {renderHeader()}
@@ -73,7 +80,7 @@ const AppContent: React.FC = () => {
                     <Route path='suivi-candidature' element={<SuiviCandidature />} />
                 </Route>
             </Routes>
-            <Footer />
+            {renderFooter()}
         </>
     );
 };

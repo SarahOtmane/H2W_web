@@ -27,7 +27,7 @@ const CvInteractif = () => {
                         <p className='text-[16px] font-Jakarta-medium text-gray-text'>Explorez des offres adaptées et postulez facilement.</p>
                     </article>
                     <div className='h-[1rem] w-[1rem] bg-white rounded-[50%] hidden md:block z-99'></div>
-                    <div className=' w-full md:w-1/2 flex justify-end mb-4 md:mb-0'><img src={etape2} /></div>
+                    <div className='w-full md:w-1/2 flex justify-end mb-4 md:mb-0'><img src={etape2} /></div>
                     <article className='w-full md:hidden'>
                         <h4 className='text-[24px] font-Jakarta-extra-bold'>Trouvez une offre et postulez en un clic</h4>
                         <p className='text-[16px] font-Jakarta-medium text-gray-text'>Explorez des offres adaptées et postulez facilement.</p>

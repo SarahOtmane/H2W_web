@@ -1,0 +1,18 @@
+services:
+  web-prod:
+    build:
+      context: .
+      dockerfile: Dockerfile.prod
+    ports:
+      - "3002:80"
+    networks:
+      - routing
+    labels:     
+      - 'traefik.enable=true'
+      - 'traefik.http.routers.web-prod.rule=Host(`vps108082.serveur-vps.net`)'
+      - 'traefik.http.routers.web-prod.entrypoints=websecure'
+      - 'traefik.http.routers.web-prod.tls.certresolver=myresolver'
+
+networks:
+  routing:
+    external: true
