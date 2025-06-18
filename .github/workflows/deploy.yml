@@ -9,7 +9,7 @@ jobs:
     name: Deployment
     runs-on: ubuntu-latest
     steps:
-      - name: Connect to server user credientials and deploy
+      - name: Connect to server using credentials and deploy
         uses: appleboy/ssh-action@v1.2.0
         with:
           host: ${{ secrets.SSH_HOST }}
@@ -20,4 +20,4 @@ jobs:
             git checkout main
             git pull
             docker compose down
-            docker compose -f compose.yml up --build
+            docker compose -f compose-prod.yml up --build -d
